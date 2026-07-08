@@ -1,0 +1,21 @@
+{
+  "entities": {
+    "Config": {
+      "title": "Config",
+      "description": "App configuration and dynamic metadata",
+      "type": "object",
+      "properties": {
+        "images": {
+          "type": "object",
+          "description": "Mapping of image keys to absolute CDN URLs"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "/config/images": {
+      "schema": "Config",
+      "description": "Stores the dynamic image URL mappings"
+    }
+  }
+}

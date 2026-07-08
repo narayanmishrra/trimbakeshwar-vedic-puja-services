@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+}
+
+/* Custom Utilities & Traditional Keyframe Animations */
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 60s linear infinite;
+  }
+}
+
+/* Custom stylized scrollbar for the premium traditional ivory theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFDF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7A1E1E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E88921;
+}
+
+/* Custom smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
