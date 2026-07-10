@@ -21,24 +21,24 @@ admin.initializeApp({
 const db = getFirestore();
 
 const IMAGES = {
-  "logo.jpg": "https://i.postimg.cc/2SLmvRmw/lord-shiva-face-silhouette-lord-shiva-logo-icon-illustration-silhouette-and-line-art-lord-shiva-face.jpg",
-  "priest.webp": "https://i.postimg.cc/CK1qgKV4/Jyotirlinga-Connection-to-Rudraksha-min.webp",
-  "kalsarp-puja.jpg": "https://i.postimg.cc/1X2rv2VF/kalsarp-puja.jpg",
-  "narayan-naagbali.jpg": "https://i.postimg.cc/Kz3mwp9y/narayan-naagbali.jpg",
-  "tripindi.jpg": "https://i.postimg.cc/3J1QSHKH/tripindi.jpg",
-  "mahamrityunjay.jpg": "https://i.postimg.cc/CxCSVfHq/mahamrityunjay.jpg",
-  "rudrabhishek.jpg": "https://i.postimg.cc/QxXRWncR/rudrabhishek.jpg",
-  "pitrudosh.jpg": "https://i.postimg.cc/mDKgrWcb/pitrudosh.jpg",
-  "navgrah.jpg": "https://i.postimg.cc/c4wrrCBW/navgrah.jpg",
-  "mangal-dosh.png": "https://i.postimg.cc/52WQ3LNG/mangal-dosh.png",
-  "online.jpg": "https://i.postimg.cc/7P9b8d9g/online.jpg",
-  "bramahagiri.webp": "https://i.postimg.cc/jS5RH1QS/bramahagiri.webp",
-  "main-photo.png": "https://i.postimg.cc/yd7QRMct/main-photo.png",
-  "gallery1.jpg": "https://i.postimg.cc/D0HPxH4y/gallery1.jpg",
-  "gallery2.jpg": "https://i.postimg.cc/PJ9QS9vN/gallery2.jpg",
-  "gallery3.jpg": "https://i.postimg.cc/L5w3xwgn/gallery3.jpg",
-  "galllery4.jpg": "https://i.postimg.cc/C5XscXnZ/galllery4.jpg",
-  "gallery7.jpg": "https://i.postimg.cc/vTkt0kx4/gallery7.jpg"
+  "logo.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "priest.webp": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "kalsarp-puja.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "narayan-naagbali.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "tripindi.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "mahamrityunjay.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "rudrabhishek.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "pitrudosh.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "navgrah.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "mangal-dosh.png": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "online.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "bramahagiri.webp": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "main-photo.png": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "gallery1.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "gallery2.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "gallery3.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "galllery4.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80",
+  "gallery7.jpg": "https://images.unsplash.com/photo-1602616191559-c34d88763294?w=600&q=80"
 };
 
 async function seed() {

@@ -185,8 +185,8 @@ export default function ContactPage({ lang }: ContactPageProps) {
               {/* Maps container */}
               <div className="relative w-full flex-grow min-h-[350px] bg-gradient-to-br from-[#7A1E1E]/5 to-[#E88921]/5 border border-[#F2E6CE] rounded-sm shadow-sm overflow-hidden flex flex-col">
                 <iframe
-                  title="Swami Samarth Kendra Trimbakeshwar Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.5397441584985!2d73.52843487507348!3d19.933306981454593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd131e649af8d3%3A0xe104fc558bb9f58c!2sKushavarta%20Kund!5e0!3m2!1sen!2sin!4v1719875429402!5m2!1sen!2sin"
+                  title="Our Location Map"
+                  src="https://www.google.com/maps?q=19.93438689014457,73.54113699702008&z=17&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: '350px' }}
@@ -200,7 +200,7 @@ export default function ContactPage({ lang }: ContactPageProps) {
               <div className="mt-3 flex items-center justify-between text-xs text-[#7A1E1E]/70 font-semibold font-sans">
                 <span>📍 Near Swami Samarth Kendra, Trimbakeshwar, Nashik</span>
                 <a
-                  href="https://maps.google.com/?q=Swami+Samarth+Kendra+Trimbakeshwar"
+                  href="https://www.google.com/maps/search/?api=1&query=19.93438689014457,73.54113699702008"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#E88921] hover:underline flex items-center gap-1"
