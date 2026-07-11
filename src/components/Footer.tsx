@@ -131,7 +131,13 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
             </h4>
             
             <div className="space-y-2 text-xs sm:text-sm text-[#FFFDF7]/80 font-semibold">
-              <a href={`tel:${businessConfig.phone}`} className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors">
+              <a href={`tel:${businessConfig.phone}`}
+          onClick={(e) => {
+            if (typeof (window as any).gtag_report_conversion === 'function') {
+              e.preventDefault();
+              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
+            }
+          }} className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors">
                 <Phone className="w-4 h-4 text-[#D4AF37]" />
                 <span>{businessConfig.phoneDisplay}</span>
               </a>

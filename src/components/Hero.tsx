@@ -172,6 +172,12 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
             >
               <a
                 href={`tel:${businessConfig.phone}`}
+          onClick={(e) => {
+            if (typeof (window as any).gtag_report_conversion === 'function') {
+              e.preventDefault();
+              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
+            }
+          }}
                 className="flex items-center justify-center gap-3 bg-[#7A1E1E] hover:bg-[#5a1616] text-white font-serif text-base tracking-wide py-4 px-8 rounded-sm shadow-xl transition-all duration-300 w-full sm:w-auto hover:-translate-y-0.5 border border-[#D4AF37]/20"
               >
                 <Phone className="w-5 h-5 fill-current text-white" />

@@ -81,6 +81,12 @@ export default function FloatingButtons({ lang }: FloatingButtonsProps) {
 
         <a
           href={`tel:${businessConfig.phone}`}
+          onClick={(e) => {
+            if (typeof (window as any).gtag_report_conversion === 'function') {
+              e.preventDefault();
+              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
+            }
+          }}
           aria-label="Call Panditji"
           className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#E88921] text-[#FFFDF7] shadow-xl hover:bg-[#d17415] transition-all duration-300 hover:scale-110 active:scale-95"
           style={{

@@ -11,6 +11,21 @@
 
     gtag('config', 'AW-18301107881');
   </script>
+  <!-- Event snippet for Click to call conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18301107881/mHjdCIve3s4cEKn90pZE',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({

@@ -103,6 +103,12 @@ export default function ServiceCard({ service, lang, onSelect }: ServiceCardProp
 
           <a
             href={`tel:${businessConfig.phone}`}
+          onClick={(e) => {
+            if (typeof (window as any).gtag_report_conversion === 'function') {
+              e.preventDefault();
+              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
+            }
+          }}
             className="text-[10px] uppercase tracking-wider font-serif font-bold bg-[#7A1E1E] hover:bg-[#E88921] text-[#FFFDF7] px-3.5 py-2 rounded-sm border border-[#D4AF37]/20 shadow-sm transition-colors"
           >
             {lang === 'en' ? 'Book Call' : 'बुक कॉल'}

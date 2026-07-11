@@ -75,6 +75,12 @@ export default function ContactSection({ lang }: ContactSectionProps) {
               {/* Phone info card */}
               <a
                 href={`tel:${businessConfig.phone}`}
+          onClick={(e) => {
+            if (typeof (window as any).gtag_report_conversion === 'function') {
+              e.preventDefault();
+              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
+            }
+          }}
                 className="flex items-center gap-4 bg-white hover:bg-[#F2E6CE]/30 border border-[#F2E6CE] p-4 rounded-sm shadow-sm transition-all group"
               >
                 <div className="p-3 rounded-sm bg-[#E88921]/15 text-[#E88921] group-hover:bg-[#7A1E1E] group-hover:text-white transition-colors">
