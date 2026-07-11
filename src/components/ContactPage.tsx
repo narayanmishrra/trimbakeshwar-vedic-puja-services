@@ -29,6 +29,11 @@ export default function ContactPage({ lang }: ContactPageProps) {
 
     // Simulate successful form receipt without storing any data (100% compliance with privacy consent)
     setSubmitted(true);
+
+    // Trigger Google Ads Contact Conversion
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'conversion', {'send_to': 'AW-18301107881/ZzB6CNLJ384cEKn90pZE'});
+    }
     setName('');
     setPhone('');
     setPuja('');
