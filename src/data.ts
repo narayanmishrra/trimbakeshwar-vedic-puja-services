@@ -1028,6 +1028,28 @@ export const faqsData: FAQItem[] = [
       en: 'Yes. Panditji and his assistants provide complete assistance in booking clean dharmashalas or premium hotels close to the Puja Sthal, along with arranging pure satvik (vegetarian) meals during your stay.',
       hi: 'हाँ। पंडितजी और उनके सहयोगी पूजा स्थल के करीब साफ धर्मशालाओं या होटलों की बुकिंग में पूरी सहायता प्रदान करते हैं, साथ ही ठहरने के दौरान सात्विक (शुद्ध शाकाहारी) भोजन की व्यवस्था भी करते हैं।'
     }
+  },
+  {
+    id: 'f5',
+    question: {
+      en: 'Why is Trimbakeshwar considered the best place for Kalsarpa Shanti?',
+      hi: 'कालसर्प शांति के लिए त्र्यंबकेश्वर को सबसे अच्छा स्थान क्यों माना जाता है?'
+    },
+    answer: {
+      en: 'Trimbakeshwar is home to a unique Jyotirlinga representing the Holy Trinity (Brahma, Vishnu, Mahesh). According to ancient scriptures, performing Kalsarpa Shanti or Narayan Nagbali here under the guidance of certified Vedic pandits like Pandit Bineet Shastriji yields immediate and powerful results due to the concentrated cosmic energy.',
+      hi: 'त्र्यंबकेश्वर एक अद्वितीय ज्योतिर्लिंग का घर है जो पवित्र त्रिदेव (ब्रह्मा, विष्णु, महेश) का प्रतिनिधित्व करता है। प्राचीन शास्त्रों के अनुसार, पंडित बिनीत शास्त्रीजी जैसे प्रमाणित वैदिक पंडितों के मार्गदर्शन में यहां कालसर्प शांति या नारायण नागबलि करने से केंद्रित ब्रह्मांडीय ऊर्जा के कारण तत्काल और शक्तिशाली परिणाम मिलते हैं।'
+    }
+  },
+  {
+    id: 'f6',
+    question: {
+      en: 'How to find the most authentic Pandit for Narayan Nagbali in Trimbakeshwar?',
+      hi: 'त्र्यंबकेश्वर में नारायण नागबलि के लिए सबसे प्रामाणिक पंडित कैसे खोजें?'
+    },
+    answer: {
+      en: 'Always look for traditional Tamrapatradhari (copper-plate holding) lineage or certified Vedic scholars. Pandit Bineet Shastriji is recognized as one of the top-rated and highly trusted pandits in Trimbakeshwar, known for performing rituals with 100% scriptural authenticity at a private and peaceful Puja Sthal.',
+      hi: 'हमेशा पारंपरिक ताम्रपत्रधारी वंश या प्रमाणित वैदिक विद्वानों की तलाश करें। पंडित बिनीत शास्त्रीजी को त्र्यंबकेश्वर में सबसे उच्च श्रेणी के और अत्यधिक विश्वसनीय पंडितों में से एक माना जाता है, जिन्हें एक निजी और शांतिपूर्ण पूजा स्थल पर 100% शास्त्रोक्त प्रामाणिकता के साथ अनुष्ठान करने के लिए जाना जाता है।'
+    }
   }
 ];
 

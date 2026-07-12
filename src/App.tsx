@@ -21,6 +21,7 @@ import AboutUsSection from './components/AboutUsSection';
 import ServiceCard from './components/ServiceCard';
 import ServiceDetail from './components/ServiceDetail';
 import GallerySection from './components/GallerySection';
+import WhyChooseUs from './components/WhyChooseUs';
 import BlogSection from './components/BlogSection';
 import BlogDetail from './components/BlogDetail';
 import FAQSection from './components/FAQSection';
@@ -300,6 +301,9 @@ export default function App() {
                 </p>
               </div>
             </section>
+
+            {/* Why Choose Us / USPs (E-E-A-T) */}
+            <WhyChooseUs lang={lang} />
 
             {/* Featured Ritual Services summary block */}
             <section className="py-20 bg-[#FAF8F2]">

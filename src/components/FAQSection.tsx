@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { faqsData } from '../data';
@@ -15,6 +15,39 @@ interface FAQSectionProps {
 
 export default function FAQSection({ lang }: FAQSectionProps) {
   const [openId, setOpenId] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Generate FAQ schema dynamically for SEO
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqsData.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question[lang],
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer[lang]
+        }
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    script.id = 'faq-schema';
+    
+    // Remove old schema if exists
+    const oldScript = document.getElementById('faq-schema');
+    if (oldScript) oldScript.remove();
+    
+    document.head.appendChild(script);
+
+    return () => {
+      if (document.getElementById('faq-schema')) {
+        document.getElementById('faq-schema')?.remove();
+      }
+    };
+  }, [lang]);
 
   const toggleFAQ = (id: string) => {
     setOpenId(openId === id ? null : id);
