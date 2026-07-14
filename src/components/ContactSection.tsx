@@ -27,13 +27,25 @@ export default function ContactSection({ lang }: ContactSectionProps) {
     e.preventDefault();
     if (!name || !phone || !consent) return;
 
-    // Simulate successful form receipt without storing any data (100% compliance with privacy consent)
-    setSubmitted(true);
-
     // Trigger Google Ads Contact Conversion
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', 'conversion', {'send_to': 'AW-18301107881/ZzB6CNLJ384cEKn90pZE'});
     }
+
+    // Format the message for WhatsApp
+    const selectedPujaDetails = servicesData.find(s => s.id === puja);
+    const pujaName = selectedPujaDetails ? selectedPujaDetails.title[lang] : (puja || (lang === 'en' ? 'Not specified' : 'निर्दिष्ट नहीं'));
+
+    const whatsappMessage = lang === 'en' 
+      ? `*New Consultation Request*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Puja:* ${pujaName}\n*Gotra:* ${gotra || 'Not specified'}\n*Message:* ${message || 'None'}`
+      : `*नया परामर्श अनुरोध*\n\n*नाम:* ${name}\n*फ़ोन:* ${phone}\n*पूजा:* ${pujaName}\n*गोत्र:* ${gotra || 'निर्दिष्ट नहीं'}\n*संदेश:* ${message || 'कोई नहीं'}`;
+
+    const url = `https://wa.me/${businessConfig.whatsapp}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(url, '_blank');
+
+    setSubmitted(true);
     setName('');
     setPhone('');
     setPuja('');
