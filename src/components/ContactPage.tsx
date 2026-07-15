@@ -205,11 +205,10 @@ export default function ContactPage({ lang }: ContactPageProps) {
                 {lang === 'en' ? 'Our Location on Google Maps' : 'गूगल मैप्स पर हमारा स्थान'}
               </h3>
               
-              {/* Maps container */}
               <div className="relative w-full flex-grow min-h-[350px] bg-gradient-to-br from-[#7A1E1E]/5 to-[#E88921]/5 border border-[#F2E6CE] rounded-sm shadow-sm overflow-hidden flex flex-col">
                 <iframe
                   title="Our Location Map"
-                  src="https://www.google.com/maps?q=19.93438689014457,73.54113699702008&z=17&output=embed"
+                  src="https://www.google.com/maps?q=19.9321592,73.5307823&z=17&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: '350px' }}
@@ -223,9 +222,8 @@ export default function ContactPage({ lang }: ContactPageProps) {
               <div className="mt-3 flex items-center justify-between text-xs text-[#7A1E1E]/70 font-semibold font-sans">
                 <span>📍 Near Swami Samarth Kendra, Trimbakeshwar, Nashik</span>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=19.93438689014457,73.54113699702008"
+                  href="https://www.google.com/maps/place/Trimbakeshwar+Jyotirling+Mandir/@19.9321592,73.5307823,824m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bddeb013af2e74b:0x716282a3a46b04cc!8m2!3d19.9321592!4d73.5307823!16s%2Fm%2F09gkmxs!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="text-[#E88921] hover:underline flex items-center gap-1"
                 >
                   {lang === 'en' ? 'Open in Google Maps App' : 'मैप्स ऐप में खोलें'} →
