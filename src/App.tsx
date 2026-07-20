@@ -30,7 +30,17 @@ import ContactSection from './components/ContactSection';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 export default function App() {
-  const [lang, setLang] = useState<Language>('hi');
+  const [lang, setLang] = useState<Language>(() => {
+    const params = new URLSearchParams(window.location.search);
+    const langParam = params.get('lang');
+    if (langParam === 'en' || langParam === 'hi') {
+      return langParam as Language;
+    }
+    if (window.location.pathname.startsWith('/en')) {
+      return 'en';
+    }
+    return 'hi';
+  });
   const [activeTab, setActiveTab] = useState<string>('home');
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
 
@@ -146,6 +156,13 @@ export default function App() {
     setActiveTab(tab);
     window.location.hash = `#/${tab}`;
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleLanguageChange = (newLang: Language) => {
+    setLang(newLang);
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', newLang);
+    window.history.replaceState({}, '', url.toString());
   };
 
   const handleSelectService = (id: string) => {
@@ -444,7 +461,7 @@ export default function App() {
       {/* Sticky responsive bilingual Header navbar */}
       <Navbar
         lang={lang}
-        setLang={setLang}
+        setLang={handleLanguageChange}
         activeTab={activeTab}
         setActiveTab={handleTabChange}
       />
