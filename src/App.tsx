@@ -192,23 +192,23 @@ export default function App() {
     switch (activeTab) {
       case 'trimbakeshwar':
         return (
-          <div className="pt-16">
+          <section className="pt-16">
             <TrimbakeshwarSection lang={lang} />
             <ContactSection lang={lang} />
-          </div>
+          </section>
         );
 
       case 'services':
         return (
-          <div className="pt-24 pb-16 bg-[#FFFDF7]">
+          <section className="pt-24 pb-16 bg-[#FFFDF7]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-3xl mx-auto mb-16">
                 <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
                   {lang === 'en' ? 'Divine Remedial Services' : 'दैवीय पूजा अनुष्ठान'}
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4">
+                <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4">
                   {lang === 'en' ? 'Authentic Vedic Ritual Procedures' : 'प्रामाणिक वैदिक पूजा एवं दोष निवारण'}
-                </h2>
+                </h1>
                 <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
                   {lang === 'en'
                     ? 'Explore complete preparation, durations, and scriptural procedures of sacred ceremonies conducted strictly in accordance with Sanskrit texts at our dedicated Puja Sthal.'
@@ -229,50 +229,50 @@ export default function App() {
               </div>
             </div>
             <ContactSection lang={lang} />
-          </div>
+          </section>
         );
 
       case 'about':
         return (
-          <div className="pt-16">
+          <section className="pt-16">
             <AboutUsSection lang={lang} />
             <ContactSection lang={lang} />
-          </div>
+          </section>
         );
 
       case 'gallery':
         return (
-          <div className="pt-16">
+          <section className="pt-16">
             <GallerySection lang={lang} />
             <ContactSection lang={lang} />
-          </div>
+          </section>
         );
 
       case 'blog':
         return (
-          <div className="pt-16">
+          <section className="pt-16">
             <BlogSection lang={lang} onSelectPost={handleSelectPost} />
             {/* User request: "blog section for all the blogs and testimonies" */}
             <div className="border-t border-[#F2E6CE]/30">
               <TestimonialsCarousel lang={lang} />
             </div>
             <ContactSection lang={lang} />
-          </div>
+          </section>
         );
 
       case 'faq':
         return (
-          <div className="pt-16">
+          <section className="pt-16">
             <FAQSection lang={lang} />
             <ContactSection lang={lang} />
-          </div>
+          </section>
         );
 
       case 'contact':
         return (
-          <div className="pt-16">
+          <section className="pt-16">
             <ContactPage lang={lang} />
-          </div>
+          </section>
         );
 
       case 'home':

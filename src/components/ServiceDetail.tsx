@@ -142,7 +142,7 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
   );
 
   return (
-    <div className="bg-[#FFFDF7] min-h-screen py-24">
+    <article className="bg-[#FFFDF7] min-h-screen py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back navigation button */}
@@ -426,6 +426,6 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
         </div>
 
       </div>
-    </div>
+    </article>
   );
 }
