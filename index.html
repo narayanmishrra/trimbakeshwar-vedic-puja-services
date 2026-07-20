@@ -155,9 +155,28 @@
     ]
   }
   </script>
+
+  <!-- FOUC (Flash of Unstyled Content) Guard -->
+  <style>
+    .fouc-guard {
+      visibility: hidden;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.remove("fouc-guard");
+    });
+  </script>
+  <noscript>
+    <style>
+      .fouc-guard {
+        visibility: visible !important;
+      }
+    </style>
+  </noscript>
 </head>
 
-<body>
+<body class="fouc-guard">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQW7R6N9" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
