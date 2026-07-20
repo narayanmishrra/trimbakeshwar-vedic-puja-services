@@ -104,27 +104,27 @@ export default function App() {
   useEffect(() => {
     let title = '';
     if (lang === 'en') {
-      if (activeTab === 'home') title = 'Trimbakeshwar Authentic Vedic Puja Services | Kalsarpa & Narayan Nagbali';
-      else if (activeTab === 'trimbakeshwar') title = 'About Trimbakeshwar - Holy Town History & Legend';
-      else if (activeTab === 'about') title = 'About Pandit Bineet Shastriji & Lineage | Trimbakeshwar Vedic Puja';
-      else if (activeTab === 'gallery') title = 'Sacred Puja Gallery - Visual Darshan | Trimbakeshwar';
-      else if (activeTab === 'services') title = 'Scriptural Vedic Rituals & Remedies | Trimbakeshwar';
+      if (activeTab === 'home') title = 'Trimbakeshwar Puja | Kalsarpa Shanti |  Narayan Nagbali';
+      else if (activeTab === 'trimbakeshwar') title = 'About Trimbakeshwar - Town History & Legend';
+      else if (activeTab === 'about') title = 'About Panditji | Trimbakeshwar Puja';
+      else if (activeTab === 'gallery') title = 'Puja Gallery | Trimbakeshwar';
+      else if (activeTab === 'services') title = 'Scriptural Vedic Rituals | Trimbakeshwar';
       else if (activeTab.startsWith('service-')) {
         const id = activeTab.replace('service-', '');
         const s = servicesData.find((serv) => serv.id === id);
-        title = `${s ? s.title.en : 'Ritual'} - Complete Vedic Guide | Trimbakeshwar`;
-      } else if (activeTab === 'blog') title = 'Vedic Wisdom, Puja Guides & Devotee Testimonials';
+        title = `${s ? s.title.en : 'Ritual'} - Complete Guide | Trimbakeshwar`;
+      } else if (activeTab === 'blog') title = 'Puja Guides & Devotee Testimonials';
       else if (activeTab.startsWith('blog-')) {
         const id = activeTab.replace('blog-', '');
         const p = blogPosts.find((post) => post.id === id);
-        title = `${p ? p.title.en : 'Spiritual Guide'} | Trimbakeshwar Blog`;
+        title = `${p ? p.title.en : 'Puja Guide'} | Trimbakeshwar Blog`;
       } else if (activeTab === 'faq') title = 'Frequently Answered Questions | Trimbakeshwar Puja';
     } else {
-      if (activeTab === 'home') title = 'त्र्यंबकेश्वर प्रामाणिक वैदिक पूजा सेवा | कालसर्प और नारायण नागबलि';
+      if (activeTab === 'home') title = 'त्र्यंबकेश्वर प्रामाणिक वैदिक पूजा सेवा | कालसर्प शांति | नारायण नागबलि';
       else if (activeTab === 'trimbakeshwar') title = 'त्र्यंबकेश्वर परिचय - पावन इतिहास और कथाएँ';
       else if (activeTab === 'about') title = 'पंडित बिनीत शास्त्रीजी एवं पीढ़ीगत परंपरा | त्र्यंबकेश्वर वैदिक पूजा';
       else if (activeTab === 'gallery') title = 'पावन पूजा गैलरी दर्शन | त्र्यंबकेश्वर';
-      else if (activeTab === 'services') title = 'शास्त्रोक्त वैदिक अनुष्ठान एवं उपाय | त्र्यंबकेश्वर';
+      else if (activeTab === 'services') title = 'शास्त्रोक्त वैदिक अनुष्ठान| त्र्यंबकेश्वर';
       else if (activeTab.startsWith('service-')) {
         const id = activeTab.replace('service-', '');
         const s = servicesData.find((serv) => serv.id === id);
