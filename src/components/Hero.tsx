@@ -24,7 +24,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
     { id: 5, size: 18, left: '45%', top: '85%', delay: 3, duration: 28 },
   ];
 
-  const prefilledMessage = lang === 'en' 
+  const prefilledMessage = lang === 'en'
     ? 'Namaste Panditji, I would like to consult regarding Vedic Puja services at Trimbakeshwar.'
     : 'नमस्ते पंडितजी, मैं त्र्यंबकेश्वर में वैदिक पूजा सेवाओं के बारे में परामर्श करना चाहता हूँ।';
 
@@ -51,11 +51,11 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
 
   return (
     <section className="relative min-h-screen pt-28 pb-16 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#FFFDF7] via-[#FAF8F2] to-[#F2E6CE]/20">
-      
+
       {/* Soft Sunrise/Sandstone Aura Light background elements */}
       <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[60%] rounded-full bg-[#E88921]/10 filter blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[45%] h-[50%] rounded-full bg-[#7A1E1E]/5 filter blur-[100px] pointer-events-none" />
-      
+
       {/* Floating Lotus Petals */}
       {petals.map((petal) => (
         <motion.div
@@ -89,10 +89,10 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Text copy & Actions */}
           <div className="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
-            
+
             {/* Lead intro tag */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -101,7 +101,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
               className="inline-block py-1.5 px-4 bg-[#F2E6CE] text-[#7A1E1E] text-[11px] font-bold tracking-[0.2em] mb-6 rounded-sm uppercase self-center lg:self-start"
             >
               <span className="font-sans">
-                {lang === 'en' ? '100% Authentic Dosh Nivaran' : '100% प्रामाणिक दोष निवारण'}
+                {lang === 'en' ? '100% Dosh Nivaran' : '100% प्रामाणिक दोष निवारण'}
               </span>
             </motion.div>
 
@@ -134,8 +134,8 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
               transition={{ duration: 0.8, delay: 0.15 }}
               className="block lg:hidden w-full h-56 sm:h-72 rounded-sm overflow-hidden border border-[#D4AF37]/30 shadow-lg mb-6 relative"
             >
-              <img 
-                src="/images/main photo.png" 
+              <img
+                src="/images/main photo.png"
                 alt="Shri Trimbakeshwar Temple"
                 referrerPolicy="no-referrer"
                 loading="eager"
@@ -172,12 +172,12 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
             >
               <a
                 href={`tel:${businessConfig.phone}`}
-          onClick={(e) => {
-            if (typeof (window as any).gtag_report_conversion === 'function') {
-              e.preventDefault();
-              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
-            }
-          }}
+                onClick={(e) => {
+                  if (typeof (window as any).gtag_report_conversion === 'function') {
+                    e.preventDefault();
+                    (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
+                  }
+                }}
                 className="flex items-center justify-center gap-3 bg-[#7A1E1E] hover:bg-[#5a1616] text-white font-serif text-base tracking-wide py-4 px-8 rounded-sm shadow-xl transition-all duration-300 w-full sm:w-auto hover:-translate-y-0.5 border border-[#D4AF37]/20"
               >
                 <Phone className="w-5 h-5 fill-current text-white" />
@@ -201,7 +201,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
               transition={{ delay: 0.5 }}
               className="text-xs text-[#7A1E1E]/70 italic mt-2 text-center lg:text-left font-sans font-medium"
             >
-              * {lang === 'en' 
+              * {lang === 'en'
                 ? 'Important: All rituals are held at private Puja Sthals; temple darshan and ritual venues are separate.'
                 : 'महत्वपूर्ण सूचना: सभी अनुष्ठान निजी पूजा स्थलों पर आयोजित होते हैं; मुख्य मंदिर दर्शन और अनुष्ठान स्थल अलग-अलग हैं।'}
             </motion.p>
@@ -216,15 +216,15 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
             className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[480px] rounded-sm overflow-hidden border border-[#D4AF37]/40 shadow-xl bg-gradient-to-tr from-[#7A1E1E] to-[#2B0A0A] flex flex-col justify-between p-6 sm:p-8"
           >
             {/* Real Background Dummy Image (easily replaceable by user) */}
-            <img 
-              src="/images/main photo.png" 
-              alt="Trimbakeshwar Temple Brahmagiri" 
+            <img
+              src="/images/main photo.png"
+              alt="Trimbakeshwar Temple Brahmagiri"
               referrerPolicy="no-referrer"
               loading="eager"
               fetchPriority="high"
               className="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-overlay"
             />
-            
+
             {/* Visual background pattern simulation */}
             <div className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-10 bg-[radial-gradient(#E88921_1px,transparent_1px)] bg-[size:16px_16px]" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
@@ -258,7 +258,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
                 {lang === 'en' ? 'Sacred Trimbakeshwar Valley' : 'पवित्र त्र्यंबकेश्वर घाटी'}
               </h3>
               <p className="text-[11px] text-[#FAF8F2]/85 font-sans mt-2 max-w-sm font-medium leading-relaxed">
-                {lang === 'en' 
+                {lang === 'en'
                   ? 'Our primary ritual sanctuary is situated near Swami Samarth Kendra surrounded by Brahmagiri Hills.'
                   : 'हमारा मुख्य अनुष्ठान स्थल ब्रह्मगिरि पहाड़ियों से घिरे स्वामी समर्थ केंद्र के समीप स्थित है।'}
               </p>
@@ -274,7 +274,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
                   {businessConfig.workingHours[lang]}
                 </span>
               </div>
-              <button 
+              <button
                 onClick={() => setActiveTab('services')}
                 className="text-[10px] uppercase tracking-wider text-white bg-[#7A1E1E] hover:bg-[#E88921] border border-[#D4AF37]/30 px-3 py-1.5 rounded-sm font-bold transition-all cursor-pointer"
               >
