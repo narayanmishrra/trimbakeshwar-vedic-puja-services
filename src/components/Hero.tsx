@@ -101,7 +101,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
               className="inline-block py-1.5 px-4 bg-[#F2E6CE] text-[#7A1E1E] text-[11px] font-bold tracking-[0.2em] mb-6 rounded-sm uppercase self-center lg:self-start"
             >
               <span className="font-sans">
-                {lang === 'en' ? 'Authentic Vedic Tradition' : 'प्रामाणिक वैदिक परंपरा'}
+                {lang === 'en' ? '100% Authentic Dosh Nivaran' : '100% प्रामाणिक दोष निवारण'}
               </span>
             </motion.div>
 
@@ -114,15 +114,15 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
             >
               {lang === 'en' ? (
                 <>
-                  Experience <br />
-                  <span className="italic font-light text-[#E88921]">Sacred Rituals</span> <br />
-                  in Trimbakeshwar
+                  100% Dosh Nivaran <br />
+                  <span className="italic font-light text-[#E88921]">at Sacred</span> <br />
+                  Trimbakeshwar
                 </>
               ) : (
                 <>
                   त्र्यंबकेश्वर में <br />
-                  <span className="italic font-light text-[#E88921]">शास्त्रोक्त अनुष्ठान</span> <br />
-                  का दिव्य अनुभव
+                  <span className="italic font-light text-[#E88921]">100% दोष निवारण</span> <br />
+                  शास्त्रोक्त एवं प्रामाणिक अनुष्ठान
                 </>
               )}
             </motion.h1>
@@ -159,8 +159,8 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
               className="font-sans text-base sm:text-lg text-[#1a1a1a]/85 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed font-medium text-center lg:text-left"
             >
               {lang === 'en'
-                ? 'Traditional Vedic rituals conducted by Pandit Bineet Shastriji at his dedicated private Puja Sthal with complete guidance, devotion, and absolute authenticity.'
-                : 'पंडित बिनीत शास्त्रीजी द्वारा अपने समर्पित निजी पूजा स्थल पर पूर्ण मार्गदर्शन, विधि-विधान और शुद्धता के साथ संपन्न किए जाने वाले पारंपरिक शास्त्रीय अनुष्ठान।'}
+                ? 'Experience 100% authentic Dosh Nivaran at holy Trimbakeshwar Jyotirlinga—the sacred origin of River Godavari and supreme site for Kaal Sarp Dosh, Narayan Nagbali & Pitru Dosh Shanti. Conducted by experienced Guruji Pandit Bineet Shastriji with complete scriptural purity, individual resolution (Sankalp), and dedicated guidance.'
+                : 'पवित्र त्र्यंबकेश्वर ज्योतिर्लिंग धाम में 100% प्रामाणिक दोष निवारण कराएं। पवित्र गोदावरी तट पर स्थित यह धाम कालसर्प दोष, नारायण नागबलि एवं पितृ दोष निवारण हेतु सर्वश्रेष्ठ तीर्थ माना गया है। अधिकृत वैदिक पुरोहित पंडित बिनीत शास्त्रीजी द्वारा पूर्ण विधि-विधान, शुचिता और व्यक्तिगत संकल्प के साथ अनुष्ठान संपन्न कराएं।'}
             </motion.p>
 
             {/* Conversion CTA triggers */}
@@ -181,7 +181,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
                 className="flex items-center justify-center gap-3 bg-[#7A1E1E] hover:bg-[#5a1616] text-white font-serif text-base tracking-wide py-4 px-8 rounded-sm shadow-xl transition-all duration-300 w-full sm:w-auto hover:-translate-y-0.5 border border-[#D4AF37]/20"
               >
                 <Phone className="w-5 h-5 fill-current text-white" />
-                <span className="uppercase tracking-wider font-bold text-sm">{lang === 'en' ? 'Book Consultation' : 'परामर्श बुक करें'}</span>
+                <span className="uppercase tracking-wider font-bold text-sm">{lang === 'en' ? 'Contact Us' : 'संपर्क करें'}</span>
               </a>
               <a
                 href={whatsappUrl}
@@ -190,7 +190,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
                 className="flex items-center justify-center gap-3 border-2 border-[#E88921] hover:bg-[#E88921]/5 text-[#E88921] font-serif text-base tracking-wide py-4 px-8 rounded-sm transition-all duration-300 w-full sm:w-auto hover:-translate-y-0.5"
               >
                 <MessageSquare className="w-5 h-5 text-[#E88921] fill-current" />
-                <span className="uppercase tracking-wider font-bold text-sm">{lang === 'en' ? 'WhatsApp Chat' : 'व्हाट्सएप चैट'}</span>
+                <span className="uppercase tracking-wider font-bold text-sm">{lang === 'en' ? 'WhatsApp Chat' : 'व्हाट्सएप संपर्क'}</span>
               </a>
             </motion.div>
 

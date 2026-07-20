@@ -390,7 +390,7 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
           <div className="bg-[#FAF8F2] border border-[#D4AF37]/30 rounded-sm p-6 sm:p-8 text-center max-w-xl mx-auto mt-16 shadow-inner relative">
             <span className="text-4xl absolute -top-5 left-1/2 transform -translate-x-1/2">🏵️</span>
             <h3 className="font-serif text-lg sm:text-xl font-bold text-[#7A1E1E] mb-2 mt-2">
-              {lang === 'en' ? 'Book Your Ritual Consultation' : 'पंडितजी से निःशुल्क परामर्श लें'}
+              {lang === 'en' ? 'Contact Panditji For Puja Guidance' : 'पंडितजी से संपर्क करें'}
             </h3>
             <p className="font-sans text-xs sm:text-sm text-[#1a1a1a]/80 mb-6 leading-relaxed font-semibold">
               {lang === 'en'

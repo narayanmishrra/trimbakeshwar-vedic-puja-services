@@ -364,7 +364,7 @@ export default function App() {
                   {/* Step 1 */}
                   <div className="text-center p-6 bg-[#FAF8F2] border border-[#F2E6CE]/40 rounded-2xl relative">
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#E88921] text-[#FFFDF7] font-serif text-base font-bold flex items-center justify-center border border-[#D4AF37]">1</span>
-                    <h4 className="font-serif text-base font-bold text-[#7A1E1E] mt-4 mb-2">{lang === 'en' ? 'Consult Pandit Bineet' : 'पंडित बिनीत जी से परामर्श'}</h4>
+                    <h4 className="font-serif text-base font-bold text-[#7A1E1E] mt-4 mb-2">{lang === 'en' ? 'Contact Pandit Bineet' : 'पंडित बिनीत जी से संपर्क करें'}</h4>
                     <p className="font-sans text-xs text-[#7A1E1E]/70 leading-relaxed font-medium">
                       {lang === 'en' 
                         ? 'Call or WhatsApp Panditji. Share your birth chart, planetary struggles, or name and gotra details.'

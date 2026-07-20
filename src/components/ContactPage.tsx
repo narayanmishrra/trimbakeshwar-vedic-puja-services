@@ -244,7 +244,7 @@ export default function ContactPage({ lang }: ContactPageProps) {
 
             <div className="text-center max-w-2xl mx-auto mb-8">
               <h3 className="font-serif text-2xl font-bold text-[#7A1E1E]">
-                {lang === 'en' ? 'Request Personal Consultation' : 'पंडितजी से निःशुल्क परामर्श लें'}
+                {lang === 'en' ? 'Contact Panditji For Guidance' : 'पंडितजी से संपर्क करें'}
               </h3>
               <p className="font-sans text-xs sm:text-sm text-[#7A1E1E]/70 mt-2 font-medium">
                 {lang === 'en'

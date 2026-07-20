@@ -68,11 +68,11 @@ export default function ContactSection({ lang }: ContactSectionProps) {
             {lang === 'en' ? 'Get Guidance' : 'मार्गदर्शन एवं संपर्क'}
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4 tracking-tight">
-            {lang === 'en' ? 'Request Free Puja Consultation' : 'निःशुल्क पूजा परामर्श प्राप्त करें'}
+            {lang === 'en' ? 'Contact Panditji For Puja Guidance' : 'पूजा हेतु सीधे संपर्क करें'}
           </h2>
           <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
             {lang === 'en'
-              ? 'Connect directly with our traditional Vedic scholars. Provide your birth details or queries to find the most auspicious Muhurat for your rituals.'
+              ? 'Connect directly with our traditional Vedic scholars. Provide your details or queries to find the most auspicious Muhurat for your rituals.'
               : 'हमारे विद्वान पुरोहितों से संपर्क करें। अपनी कुंडली, गोत्र या समस्या का विवरण साझा करके पूजा के लिए शुभ मुहूर्त और संपूर्ण विधि जानें।'}
           </p>
           <TempleDivider />
@@ -104,7 +104,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                   <Phone className="w-5 h-5 fill-current" />
                 </div>
                 <div className="text-left">
-                  <span className="block text-[10px] text-[#7A1E1E]/60 font-bold uppercase tracking-wider">{lang === 'en' ? 'Consultation Phone' : 'परामर्श हेल्पलाइन'}</span>
+                  <span className="block text-[10px] text-[#7A1E1E]/60 font-bold uppercase tracking-wider">{lang === 'en' ? 'Direct Helpline' : 'संपर्क हेल्पलाइन'}</span>
                   <span className="text-base font-bold text-[#7A1E1E]">{businessConfig.phoneDisplay}</span>
                 </div>
               </a>

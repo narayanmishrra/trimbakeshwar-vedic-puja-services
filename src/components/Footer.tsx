@@ -156,8 +156,86 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
 
         </div>
 
+        {/* Popular SEO Search Keywords */}
+        <div className="border-t border-[#FFFDF7]/15 pt-6 pb-4">
+          <h5 className="font-serif text-xs font-bold text-[#D4AF37] uppercase tracking-widest mb-3">
+            {lang === 'en' ? 'Popular Puja Search Terms' : 'लोकप्रिय खोज शब्द'}
+          </h5>
+          <div className="flex flex-wrap gap-x-2 gap-y-1 text-[10px] text-[#FFFDF7]/60 font-sans leading-relaxed">
+            {[
+              'narayan nagbali trimbakeshwar',
+              'Trambakeshwar Pandit',
+              'narayan nagbali puja dates',
+              'Nashik Guruji',
+              'kaal sarp dosh trimbakeshwar',
+              'Trimbakeshwar Puja Pandit',
+              'trimbakeshwar puja',
+              'kaal sarp pitra dosh',
+              'kaal sarp dosh puja in trimbakeshwar',
+              'trimbakeshwar kalsarp pooja booking',
+              'nashik pitra dosh puja',
+              'pandit ji for kaal sarp puja',
+              'kalsarp pooja pandut naashik',
+              'kaal sarp dosh puja cost in trimbakeshwar',
+              'Nashik Pandit',
+              'kalsarp puja trimbakeshwar',
+              'trimbakeshwar temple pooja cost',
+              'kalsarp puja',
+              'trimbakeshwar pitru pooja',
+              'kalsarp pooja Trimbakeshwar',
+              'trimbakeshwar temple kaal sarp puja',
+              'kaal sarp dosh puja pandit',
+              'trimbakeshwar rahu ketu pooja',
+              'kaal sarp puja nashik',
+              'kalsarp puja nashik',
+              'kaal sarp dosh ka',
+              'kaal sarp puja pandit',
+              'pooja at trimbakeshwar temple',
+              'kalsarp shanti puja',
+              'kala sarpa dosha puja trimbakeshwar',
+              'kaal sarp shanti trimbakeshwar',
+              'Pandit Akhilesh Guruji',
+              'Trambakeswar puja',
+              'trimbakeshwar kalsarp pooja cost',
+              'kaal sarp puja',
+              'kala sarpa dosha',
+              'nagbali pooja trimbakeshwar',
+              'pitra dosh puja in trimbakeshwar',
+              'narayan nagbali nashik',
+              'puja in trimbakeshwar pandit',
+              'pitru dosh puja trimbakeshwar',
+              'pitra dosh trimbakeshwar',
+              'narayan nagbali pitra dosh',
+              'kaal sarp pooja nashik trimbakeshwar',
+              'trimbakeshwar shanti',
+              'kaal sarp ki puja',
+              'pitra dosh puja in trimbakeshwar and cost',
+              'trimbakeshwar pooja cost',
+              'kaal sarp puja in trimbakeshwar cost',
+              'Nashik Puja',
+              'trimbakeshwar pooja',
+              'कालसर्प पूजा',
+              'narayan nagbali puja trimbakeshwar',
+              'puja at trimbakeshwar',
+              'narayan nagbali pooja cost',
+              'kalsarp shanti trimbakeshwar',
+              'best pandit for kaal sarp puja in trimbakeshwar',
+              'Best Pandit Trimbakeshwar',
+              'narayan nagbali puja Trimbakeswar',
+              'sarp dosh puja nashik trimbakeshwar',
+              'Trimbakeshwar Guruji',
+              'kaal sarp dosh pooja',
+              'kalsarpa shanti pandit nashik'
+            ].map((kw, idx, arr) => (
+              <span key={idx} className="hover:text-[#D4AF37] transition-colors cursor-default">
+                {kw}{idx < arr.length - 1 ? ' | ' : ''}
+              </span>
+            ))}
+          </div>
+        </div>
+
         {/* Legal Trust accuracy banner */}
-        <div className="border-t border-[#FFFDF7]/15 pt-8 pb-4">
+        <div className="border-t border-[#FFFDF7]/15 pt-6 pb-4">
           <div className="bg-black/15 rounded-sm p-4 flex gap-3 border border-[#FFFDF7]/10 max-w-4xl mx-auto">
             <ShieldAlert className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
             <p className="text-[11px] text-[#FFFDF7]/80 leading-relaxed text-justify font-sans">
