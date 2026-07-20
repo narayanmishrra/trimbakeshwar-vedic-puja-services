@@ -136,7 +136,7 @@ export default function App() {
         title = `${p ? p.title.hi : 'आध्यात्मिक लेख'} | त्र्यंबकेश्वर ब्लॉग`;
       } else if (activeTab === 'faq') title = 'अक्सर पूछे जाने वाले सवाल-जवाब | त्र्यंबकेश्वर';
     }
-    document.title = title || 'Trimbakeshwar Vedic Puja Services';
+    document.title = title || 'Trimbakeshwar Puja';
   }, [lang, activeTab]);
 
   // Handle hash router synchronization for external links
