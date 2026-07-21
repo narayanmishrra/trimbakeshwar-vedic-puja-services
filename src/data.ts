@@ -458,6 +458,10 @@ export const servicesData: Service[] = [
       en: 'Auspicious days during Shradh Paksha, Pitru Amavasya, or custom planetary transits.',
       hi: 'श्राद्ध पक्ष, पितृ अमावस्या या विशिष्ट ग्रहों के गोचर के दौरान अनुकूल तिथियां।'
     },
+    dakshina: {
+      en: '₹5,100/-',
+      hi: '₹5,100/-'
+    },
     faqs: [
       {
         question: {
