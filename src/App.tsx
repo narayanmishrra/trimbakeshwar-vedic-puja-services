@@ -377,13 +377,13 @@ export default function App() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                  
+
                   {/* Step 1 */}
                   <div className="text-center p-6 bg-[#FAF8F2] border border-[#F2E6CE]/40 rounded-2xl relative">
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#E88921] text-[#FFFDF7] font-serif text-base font-bold flex items-center justify-center border border-[#D4AF37]">1</span>
                     <h4 className="font-serif text-base font-bold text-[#7A1E1E] mt-4 mb-2">{lang === 'en' ? 'Contact Pandit Bineet' : 'पंडित बिनीत जी से संपर्क करें'}</h4>
                     <p className="font-sans text-xs text-[#7A1E1E]/70 leading-relaxed font-medium">
-                      {lang === 'en' 
+                      {lang === 'en'
                         ? 'Call or WhatsApp Panditji. Share your birth chart, planetary struggles, or name and gotra details.'
                         : 'कॉल या व्हाट्सएप के माध्यम से पंडितजी से बात करें। अपनी समस्या, गोत्र या कुंडली का विवरण साझा करें।'}
                     </p>
@@ -394,7 +394,7 @@ export default function App() {
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#E88921] text-[#FFFDF7] font-serif text-base font-bold flex items-center justify-center border border-[#D4AF37]">2</span>
                     <h4 className="font-serif text-base font-bold text-[#7A1E1E] mt-4 mb-2">{lang === 'en' ? 'Auspicious Muhurat' : 'शुभ मुहूर्त निर्धारण'}</h4>
                     <p className="font-sans text-xs text-[#7A1E1E]/70 leading-relaxed font-medium">
-                      {lang === 'en' 
+                      {lang === 'en'
                         ? 'Pandit Bineet Shastriji will personally analyze custom lunar calendars to suggest the most auspicious timing and date.'
                         : 'पंडित बिनीत शास्त्रीजी स्वयं पंचांग देखकर आपकी पूजा के लिए सबसे अनुकूल शुभ मुहूर्त और तारीख सुनिश्चित करेंगे।'}
                     </p>
@@ -405,7 +405,7 @@ export default function App() {
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#E88921] text-[#FFFDF7] font-serif text-base font-bold flex items-center justify-center border border-[#D4AF37]">3</span>
                     <h4 className="font-serif text-base font-bold text-[#7A1E1E] mt-4 mb-2">{lang === 'en' ? 'Perform & Receive Prasad' : 'अनुष्ठान एवं महाप्रसाद'}</h4>
                     <p className="font-sans text-xs text-[#7A1E1E]/70 leading-relaxed font-medium">
-                      {lang === 'en' 
+                      {lang === 'en'
                         ? 'Perform rituals physically at Panditji\'s private Puja Sthal, or attend remotely via live online stream. Consecrated Prasad is shipped to your door.'
                         : 'पंडितजी के पूजा स्थल पर आकर या वीडियो कॉल द्वारा घर बैठे संकल्प लें। पूजा के बाद सिद्ध प्रसाद आपके घर भेज दिया जाएगा।'}
                     </p>
@@ -457,7 +457,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#FFFDF7] selection:bg-[#E88921]/20 selection:text-[#7A1E1E] flex flex-col justify-between overflow-x-hidden">
-      
+
       {/* Sticky responsive bilingual Header navbar */}
       <Navbar
         lang={lang}

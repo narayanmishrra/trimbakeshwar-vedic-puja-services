@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { ArrowLeft, PhoneCall, Calendar, Clock, BookOpen, Flame, CheckCircle, HelpCircle, MessageSquare, Search, Sparkles } from 'lucide-react';
+import { ArrowLeft, PhoneCall, Calendar, Clock, BookOpen, Flame, CheckCircle, HelpCircle, MessageSquare, Search, Sparkles, Coins } from 'lucide-react';
 import { Service, Language } from '../types';
 import { businessConfig } from '../data';
 import TempleDivider from './TempleDivider';
@@ -170,7 +170,7 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
             </p>
 
             {/* Quick Stats Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-lg mt-4 border-t border-[#FFFDF7]/15 pt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl mt-4 border-t border-[#FFFDF7]/15 pt-6">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-[#FFFDF7]/10 rounded-sm border border-[#D4AF37]/20 text-[#D4AF37]">
                   <Clock className="w-5 h-5" />
@@ -190,6 +190,18 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
                   <span className="text-sm font-bold">{service.idealTiming[lang]}</span>
                 </div>
               </div>
+
+              {service.dakshina && (
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-[#FFFDF7]/10 rounded-sm border border-[#D4AF37]/20 text-[#D4AF37]">
+                    <Coins className="w-5 h-5" />
+                  </div>
+                  <div className="text-left">
+                    <span className="block text-[10px] text-[#FAF8F2]/60 uppercase tracking-widest font-semibold">{lang === 'en' ? 'Dakshina (Cost)' : 'दक्षिणा (शुल्क)'}</span>
+                    <span className="text-sm font-bold text-[#E88921]">{service.dakshina[lang]}</span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -110,6 +110,10 @@ export const servicesData: Service[] = [
       en: 'Performed on auspicious tithis (lunar days), particularly during Pitru Paksha, Amavasya, or custom nakshatra combinations.',
       hi: 'शुभ तिथियों पर किया जाता है, विशेष रूप से पितृ पक्ष, अमावस्या या विशिष्ट नक्षत्रों के दौरान।'
     },
+    dakshina: {
+      en: '₹8,100/- (Group Puja) | ₹15,000/- (Separate Puja)',
+      hi: '₹8,100/- (सामूहिक पूजा) | ₹15,000/- (स्वतंत्र/व्यक्तिगत पूजा)'
+    },
     faqs: [
       {
         question: {
@@ -192,6 +196,10 @@ export const servicesData: Service[] = [
     idealTiming: {
       en: 'Auspicious days include Amavasya, Panchami (especially Naag Panchami), eclipses, and Mondays.',
       hi: 'अमावस्या, पंचमी (विशेष रूप से नागपंचमी), ग्रहण और सोमवार इस पूजा के लिए सर्वोत्तम माने जाते हैं।'
+    },
+    dakshina: {
+      en: '₹2,100/- (Kaalsarp Puja) | ₹5,100/- (Maha Puja with Rahu-Ketu)',
+      hi: '₹2,100/- (कालसर्प पूजा) | ₹5,100/- (राहु-केतु महापूजा)'
     },
     faqs: [
       {
@@ -276,6 +284,10 @@ export const servicesData: Service[] = [
       en: 'Mondays, Pradosh days, Shivratri, and the entire holy month of Shravan are highly auspicious.',
       hi: 'सोमवार, प्रदोष व्रत, शिवरात्रि और सावन का पूरा पवित्र महीना इसके लिए अत्यधिक शुभ माना जाता है।'
     },
+    dakshina: {
+      en: '₹1,100/-',
+      hi: '₹1,100/-'
+    },
     faqs: [
       {
         question: {
@@ -358,6 +370,10 @@ export const servicesData: Service[] = [
     idealTiming: {
       en: 'Auspicious lunar days, Mondays, or immediately during critical medical phases.',
       hi: 'शुभ चंद्र तिथियां, सोमवार या गंभीर चिकित्सा चरणों के दौरान तुरंत कराया जाता है।'
+    },
+    dakshina: {
+      en: '₹35,000/-',
+      hi: '₹35,000/-'
     },
     faqs: [
       {
@@ -525,6 +541,10 @@ export const servicesData: Service[] = [
       en: 'Amavasya, Pitru Paksha, or specific transit dates.',
       hi: 'अमावस्या, पितृ पक्ष, या विशिष्ट गोचर तिथियां।'
     },
+    dakshina: {
+      en: '₹3,100/-',
+      hi: '₹3,100/-'
+    },
     faqs: [
       {
         question: {
@@ -608,6 +628,10 @@ export const servicesData: Service[] = [
       en: 'Tuesdays are highly auspicious for Mangal Dosh Puja.',
       hi: 'मंगलवार का दिन मंगल दोष पूजा के लिए अत्यधिक शुभ माना जाता है।'
     },
+    dakshina: {
+      en: '₹2,100/-',
+      hi: '₹2,100/-'
+    },
     faqs: [
       {
         question: {
@@ -690,6 +714,10 @@ export const servicesData: Service[] = [
     idealTiming: {
       en: 'Saturdays, Sundays, or any auspicious date calculated using the devotee\'s birth chart.',
       hi: 'शनिवार, रविवार, या भक्त की कुंडली के आधार पर निकाली गई कोई भी शुभ तिथि।'
+    },
+    dakshina: {
+      en: '₹5,100/-',
+      hi: '₹5,100/-'
     },
     faqs: [
       {

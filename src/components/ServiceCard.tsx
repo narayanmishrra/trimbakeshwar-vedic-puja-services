@@ -77,9 +77,16 @@ export default function ServiceCard({ service, lang, onSelect }: ServiceCardProp
       <div className="p-6 flex-1 flex flex-col justify-between">
         <div>
           {/* Tagline / Subtitle */}
-          <span className="text-[10px] uppercase text-[#E88921] font-bold tracking-[0.15em] mb-1.5 block">
-            {lang === 'en' ? 'VEDIC REMEDY' : 'वैदिक अनुष्ठान'}
-          </span>
+          <div className="flex items-center justify-between gap-2 mb-1.5 flex-wrap">
+            <span className="text-[10px] uppercase text-[#E88921] font-bold tracking-[0.15em] block">
+              {lang === 'en' ? 'VEDIC REMEDY' : 'वैदिक अनुष्ठान'}
+            </span>
+            {service.dakshina && (
+              <span className="bg-[#7A1E1E]/10 border border-[#7A1E1E]/20 text-[#7A1E1E] text-[10px] font-bold px-2 py-0.5 rounded-sm">
+                {lang === 'en' ? 'Dakshina: ' : 'दक्षिणा: '}{service.dakshina[lang]}
+              </span>
+            )}
+          </div>
 
           {/* Title */}
           <h3 className="font-serif text-lg sm:text-xl font-bold text-[#7A1E1E] group-hover:text-[#E88921] transition-colors duration-200 mb-2 leading-snug">

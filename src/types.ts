@@ -23,6 +23,7 @@ export interface Service {
   itemsRequired: LocalizedString[];
   duration: LocalizedString;
   idealTiming: LocalizedString;
+  dakshina?: LocalizedString;
   faqs: { question: LocalizedString; answer: LocalizedString }[];
 }
 

@@ -235,7 +235,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                     <option value="">{lang === 'en' ? 'Select a Service' : 'चयन करें'}</option>
                     {servicesData.map((service) => (
                       <option key={service.id} value={service.id}>
-                        {service.title[lang]}
+                        {service.title[lang]} {service.dakshina ? `(${service.dakshina[lang]})` : ''}
                       </option>
                     ))}
                   </select>
