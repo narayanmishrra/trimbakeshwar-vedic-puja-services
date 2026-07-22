@@ -42,6 +42,49 @@ export default function BlogDetail({ post, lang, onBack, onSelectPost }: BlogDet
   // Parse lines to create safe HTML mock headers
   const renderParagraphs = (text: string) => {
     return text.split('\n\n').map((para, idx) => {
+      if (para.startsWith('|')) {
+        const lines = para.split('\n').filter(line => line.trim() !== '');
+        if (lines.length >= 2) {
+          const parseRow = (line: string) => {
+            const cells = line.split('|').map(c => c.trim());
+            if (line.startsWith('|')) cells.shift();
+            if (line.endsWith('|')) cells.pop();
+            return cells;
+          };
+
+          const headers = parseRow(lines[0]);
+          const hasDivider = lines[1].includes('---') || lines[1].includes('-:-') || lines[1].includes('--');
+          const startIdx = hasDivider ? 2 : 1;
+          const rows = lines.slice(startIdx).map(parseRow);
+
+          return (
+            <div key={idx} className="overflow-x-auto my-6 border border-[#F2E6CE] rounded-sm shadow-sm">
+              <table className="min-w-full divide-y divide-[#F2E6CE] bg-white font-sans text-xs sm:text-sm">
+                <thead className="bg-[#7A1E1E]/5">
+                  <tr>
+                    {headers.map((header, hIdx) => (
+                      <th key={hIdx} className="px-4 py-3 text-left font-serif text-xs sm:text-sm font-bold text-[#7A1E1E] uppercase tracking-wider">
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#F2E6CE]/40">
+                  {rows.map((row, rIdx) => (
+                    <tr key={rIdx} className={rIdx % 2 === 0 ? 'bg-white' : 'bg-[#FAF8F2]/30'}>
+                      {row.map((cell, cIdx) => (
+                        <td key={cIdx} className="px-4 py-2.5 font-semibold text-[#7A1E1E]/95">
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+      }
       if (para.startsWith('###')) {
         return (
           <h3 key={idx} className="font-serif text-xl font-bold text-[#7A1E1E] mt-8 mb-4">
