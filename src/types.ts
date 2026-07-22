@@ -25,6 +25,10 @@ export interface Service {
   idealTiming: LocalizedString;
   dakshina?: LocalizedString;
   faqs: { question: LocalizedString; answer: LocalizedString }[];
+  auspiciousDates?: {
+    month: LocalizedString;
+    dates: string;
+  }[];
 }
 
 export interface Testimonial {

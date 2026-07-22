@@ -243,6 +243,35 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
             </div>
           </div>
 
+          {/* Auspicious Dates Section (if present) */}
+          {service.auspiciousDates && (
+            <div>
+              <h2 className="font-serif text-2xl font-bold text-[#7A1E1E] mb-4 flex items-center gap-2">
+                <Calendar className="w-6 h-6 text-[#E88921]" />
+                <span>{lang === 'en' ? 'Auspicious Muhurat Dates (2026)' : 'शुभ मुहूर्त तिथियां (२०२६)'}</span>
+              </h2>
+              <div className="bg-white border border-[#F2E6CE] p-6 rounded-sm shadow-sm">
+                <p className="font-sans text-sm text-[#1a1a1a]/70 leading-relaxed mb-6 font-medium">
+                  {lang === 'en' 
+                    ? 'Choosing the correct muhurat is critical for the ritual\'s success. Below are the auspicious dates calculated for this puja in 2026 based on the lunar calendar.' 
+                    : 'अनुष्ठान की पूर्ण सफलता के लिए सही मुहूर्त का चयन अत्यंत महत्वपूर्ण है। पंचांग के अनुसार २०२६ के लिए निर्धारित शुभ तिथियां नीचे दी गई हैं।'}
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {service.auspiciousDates.map((item, idx) => (
+                    <div key={idx} className="border border-[#F2E6CE]/60 bg-[#FAF8F2]/40 rounded-sm p-4 hover:border-[#E88921]/40 transition-colors">
+                      <span className="block text-xs font-bold text-[#7A1E1E] uppercase tracking-wider mb-1.5 border-b border-[#F2E6CE]/40 pb-1">
+                        {item.month[lang]}
+                      </span>
+                      <span className="block text-sm font-sans text-[#1a1a1a]/85 font-semibold leading-relaxed">
+                        {item.dates}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* 12 Types of Kaalsarp Dosh (Only for Kaalsarp Shanti) */}
           {service.id === 'kalsarpa-shanti' && (
             <div>

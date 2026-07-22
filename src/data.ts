@@ -114,6 +114,20 @@ export const servicesData: Service[] = [
       en: '₹8,100/- (Group Puja) | ₹15,000/- (Separate Puja)',
       hi: '₹8,100/- (सामूहिक पूजा) | ₹15,000/- (स्वतंत्र/व्यक्तिगत पूजा)'
     },
+    auspiciousDates: [
+      { month: { en: 'January 2026', hi: 'जनवरी २०२६' }, dates: '2, 5, 8, 11, 16, 20, 26, 29' },
+      { month: { en: 'February 2026', hi: 'फरवरी २०२६' }, dates: '1, 4, 7, 10, 13, 16' },
+      { month: { en: 'March 2026', hi: 'मार्च २०२६' }, dates: '1, 5, 8, 11, 15, 21, 25, 28, 31' },
+      { month: { en: 'April 2026', hi: 'अप्रैल २०२६' }, dates: '3, 6, 9, 12, 16, 20, 24, 27, 30' },
+      { month: { en: 'May 2026', hi: 'मई २०२६' }, dates: '3, 6, 9, 15 (No muhurat after 15 May due to Adhik Maas)' },
+      { month: { en: 'June 2026', hi: 'जून २०२६' }, dates: '(No muhurat during Adhik Maas), 15, 18, 22, 25, 28' },
+      { month: { en: 'July 2026', hi: 'जुलाई २०२६' }, dates: '2, 9, 12, 15, 18, 21, 24, 27, 30' },
+      { month: { en: 'August 2026', hi: 'अगस्त २०२६' }, dates: '5, 8, 11, 14, 18, 21, 26' },
+      { month: { en: 'September 2026', hi: 'सितंबर २०२६' }, dates: '1, 4, 8, 17, 20, 22, 28' },
+      { month: { en: 'October 2026', hi: 'अक्टूबर २०२६' }, dates: '1, 5, 8, 26, 29' },
+      { month: { en: 'November 2026', hi: 'नवंबर २०२६' }, dates: '1, 4, 13, 16, 22, 26, 29' },
+      { month: { en: 'December 2026', hi: 'दिसंबर २०२६' }, dates: '3, 6, 10, 13, 20, 23, 26, 29' }
+    ],
     faqs: [
       {
         question: {
@@ -201,6 +215,20 @@ export const servicesData: Service[] = [
       en: '₹2,100/- (Kaalsarp Puja) | ₹5,100/- (Maha Puja with Rahu-Ketu)',
       hi: '₹2,100/- (कालसर्प पूजा) | ₹5,100/- (राहु-केतु महापूजा)'
     },
+    auspiciousDates: [
+      { month: { en: 'January 2026', hi: 'जनवरी २०२६' }, dates: '4, 7, 10, 18, 19, 23, 28' },
+      { month: { en: 'February 2026', hi: 'फरवरी २०२६' }, dates: '3, 6, 9, 12, 15, 19' },
+      { month: { en: 'March 2026', hi: 'मार्च २०२६' }, dates: '3, 7, 10, 13, 17, 19, 23, 27, 30' },
+      { month: { en: 'April 2026', hi: 'अप्रैल २०२६' }, dates: '2, 5, 8, 11, 14, 16, 19, 22, 26, 29' },
+      { month: { en: 'May 2026', hi: 'मई २०२६' }, dates: '2, 5, 6, 11, 13, 17, 19, 21, 23, 24, 26, 28' },
+      { month: { en: 'June 2026', hi: 'जून २०२६' }, dates: '1, 3, 4, 7, 9, 11, 13, 14, 17, 20, 24, 27, 30' },
+      { month: { en: 'July 2026', hi: 'जुलाई २०२६' }, dates: '4, 6, 8, 11, 14, 17, 20, 23, 26, 29' },
+      { month: { en: 'August 2026', hi: 'अगस्त २०२६' }, dates: '3, 7, 10, 13, 17 (Nag Panchami), 20, 22, 25, 29, 30' },
+      { month: { en: 'September 2026', hi: 'सितंबर २०२६' }, dates: '3, 6, 10, 13, 22, 24, 26' },
+      { month: { en: 'October 2026', hi: 'अक्टूबर २०२६' }, dates: '23, 28, 31' },
+      { month: { en: 'November 2026', hi: 'नवंबर २०२६' }, dates: '3, 7, 15, 19, 22, 24, 28' },
+      { month: { en: 'December 2026', hi: 'दिसंबर २०२६' }, dates: '1, 5, 8, 12, 16, 18, 22, 25, 28, 31' }
+    ],
     faqs: [
       {
         question: {
@@ -462,6 +490,20 @@ export const servicesData: Service[] = [
       en: '₹5,100/-',
       hi: '₹5,100/-'
     },
+    auspiciousDates: [
+      { month: { en: 'January 2026', hi: 'जनवरी २०२६' }, dates: '2, 5, 8, 11, 16, 20, 26, 29' },
+      { month: { en: 'February 2026', hi: 'फरवरी २०२६' }, dates: '1, 4, 7, 10, 13, 16' },
+      { month: { en: 'March 2026', hi: 'मार्च २०२६' }, dates: '1, 5, 8, 11, 15, 21, 25, 28, 31' },
+      { month: { en: 'April 2026', hi: 'अप्रैल २०२६' }, dates: '3, 6, 9, 12, 16, 20, 24, 27, 30' },
+      { month: { en: 'May 2026', hi: 'मई २०२६' }, dates: '3, 6, 9, 15 (No muhurat after 15 May due to Adhik Maas)' },
+      { month: { en: 'June 2026', hi: 'जून २०२६' }, dates: '(No muhurat during Adhik Maas), 15, 18, 22, 25, 28' },
+      { month: { en: 'July 2026', hi: 'जुलाई २०२६' }, dates: '2, 9, 12, 15, 18, 21, 24, 27, 30' },
+      { month: { en: 'August 2026', hi: 'अगस्त २०२६' }, dates: '5, 8, 11, 14, 18, 21, 26' },
+      { month: { en: 'September 2026', hi: 'सितंबर २०२६' }, dates: '1, 4, 8, 17, 20, 22, 28' },
+      { month: { en: 'October 2026', hi: 'अक्टूबर २०२६' }, dates: '1, 5, 8, 26, 29' },
+      { month: { en: 'November 2026', hi: 'नवंबर २०२६' }, dates: '1, 4, 13, 16, 22, 26, 29' },
+      { month: { en: 'December 2026', hi: 'दिसंबर २०२६' }, dates: '3, 6, 10, 13, 20, 23, 26, 29' }
+    ],
     faqs: [
       {
         question: {
@@ -549,6 +591,20 @@ export const servicesData: Service[] = [
       en: '₹3,100/-',
       hi: '₹3,100/-'
     },
+    auspiciousDates: [
+      { month: { en: 'January 2026', hi: 'जनवरी २०२६' }, dates: '2, 5, 8, 11, 16, 20, 26, 29' },
+      { month: { en: 'February 2026', hi: 'फरवरी २०२६' }, dates: '1, 4, 7, 10, 13, 16' },
+      { month: { en: 'March 2026', hi: 'मार्च २०२६' }, dates: '1, 5, 8, 11, 15, 21, 25, 28, 31' },
+      { month: { en: 'April 2026', hi: 'अप्रैल २०२६' }, dates: '3, 6, 9, 12, 16, 20, 24, 27, 30' },
+      { month: { en: 'May 2026', hi: 'मई २०२६' }, dates: '3, 6, 9, 15 (No muhurat after 15 May due to Adhik Maas)' },
+      { month: { en: 'June 2026', hi: 'जून २०२६' }, dates: '(No muhurat during Adhik Maas), 15, 18, 22, 25, 28' },
+      { month: { en: 'July 2026', hi: 'जुलाई २०२६' }, dates: '2, 9, 12, 15, 18, 21, 24, 27, 30' },
+      { month: { en: 'August 2026', hi: 'अगस्त २०२६' }, dates: '5, 8, 11, 14, 18, 21, 26' },
+      { month: { en: 'September 2026', hi: 'सितंबर २०२६' }, dates: '1, 4, 8, 17, 20, 22, 28' },
+      { month: { en: 'October 2026', hi: 'अक्टूबर २०२६' }, dates: '1, 5, 8, 26, 29' },
+      { month: { en: 'November 2026', hi: 'नवंबर २०२६' }, dates: '1, 4, 13, 16, 22, 26, 29' },
+      { month: { en: 'December 2026', hi: 'दिसंबर २०२६' }, dates: '3, 6, 10, 13, 20, 23, 26, 29' }
+    ],
     faqs: [
       {
         question: {
@@ -955,6 +1011,152 @@ Conducted at his dedicated private Puja Sthal, Pandit Bineet Shastriji chants th
       hi: '5 मिनट पठन'
     },
     date: '2026-06-18',
+    author: {
+      en: 'Pandit Bineet Shastriji',
+      hi: 'पंडित बिनीत शास्त्रीजी'
+    }
+  },
+  {
+    id: 'narayan-nagbali-muhurat',
+    title: {
+      en: 'Auspicious Narayan Nagbali Puja Muhurats & Dates 2026',
+      hi: 'नारायण नागबलि पूजा शुभ मुहूर्त एवं तिथियां २०२६'
+    },
+    slug: 'narayan-nagbali-muhurat',
+    excerpt: {
+      en: 'Plan your 3-day Pitru Dosh Shanti ritual. Explore the complete 2026 Auspicious Muhurats for Narayan Nagbali Puja in Trimbakeshwar.',
+      hi: 'त्र्यंबकेश्वर में अपनी ३-दिवसीय नारायण नागबलि पूजा की योजना बनाएं। २०२६ के सभी शुभ मुहूर्त एवं तिथियों का पूरा विवरण यहां देखें।'
+    },
+    content: {
+      en: `Narayan Nagbali Puja is a sacred 3-day ceremony performed at Trimbakeshwar. Choosing the correct lunar days (tithis) and constellations (nakshatras) is vital for Ancestor Peace (Pitru Dosh Shanti).
+
+### 2026 Auspicious Narayan Nagbali Dates
+Here are the carefully calculated auspicious dates for the 3-day Pitru Dosh rituals (including Narayan Nagbali, Nagbali, and Tripindi Shraddha) in 2026:
+* **January 2026**: 2, 5, 8, 11, 16, 20, 26, 29
+* **February 2026**: 1, 4, 7, 10, 13, 16
+* **March 2026**: 1, 5, 8, 11, 15, 21, 25, 28, 31
+* **April 2026**: 3, 6, 9, 12, 16, 20, 24, 27, 30
+* **May 2026**: 3, 6, 9, 15 (Note: No auspicious muhurats after 15 May due to Adhik Maas)
+* **June 2026**: 15, 18, 22, 25, 28 (Note: No auspicious muhurats before 15 June due to Adhik Maas)
+* **July 2026**: 2, 9, 12, 15, 18, 21, 24, 27, 30
+* **August 2026**: 5, 8, 11, 14, 18, 21, 26
+* **September 2026**: 1, 4, 8, 17, 20, 22, 28
+* **October 2026**: 1, 5, 8, 26, 29
+* **November 2026**: 1, 4, 13, 16, 22, 26, 29
+* **December 2026**: 3, 6, 10, 13, 20, 23, 26, 29
+
+### Important Note on Adhik Maas (Extra Lunar Month)
+Due to the occurrence of Adhik Maas in 2026, there are no auspicious muhurats for Narayan Nagbali Puja starting from May 16th to June 14th. Plan your visit accordingly.
+
+### 3-Day Vidhi Breakdown
+* **Day 1**: Formal Sankalp at Kushavarta Kund and beginning of Narayan Bali rituals with wheat flour pind daan.
+* **Day 2**: Specialized Nagbali rituals to seek forgiveness from Snake Deities.
+* **Day 3**: Concluding Tarpan, Brahmin Bhojan, and charities for peace.
+
+For customized dates based on your horoscope or to book the puja, contact Pandit Bineet Shastriji directly.`,
+      hi: `नारायण नागबलि पूजा त्र्यंबकेश्वर में की जाने वाली ३ दिवसीय अत्यंत फलदायी पवित्र पूजा है। पितृ शांति (पितृ दोष निवारण) के लिए सही तिथि और नक्षत्र का चयन बहुत आवश्यक है।
+
+### २०२६ नारायण नागबलि पूजा शुभ मुहूर्त तिथियां
+वर्ष २०२६ के लिए ३ दिवसीय पैतृक शांति अनुष्ठान (नारायण नागबलि, नागबलि और त्रिपिंडी श्राद्ध) की शुभ तिथियां इस प्रकार हैं:
+* **जनवरी २०२६**: 2, 5, 8, 11, 16, 20, 26, 29
+* **फरवरी २०२६**: 1, 4, 7, 10, 13, 16
+* **मार्च २०२६**: 1, 5, 8, 11, 15, 21, 25, 28, 31
+* **अप्रैल २०२६**: 3, 6, 9, 12, 16, 20, 24, 27, 30
+* **मई २०२६**: 3, 6, 9, 15 (विशेष: अधिक मास के कारण १५ मई के बाद कोई मुहूर्त नहीं है)
+* **जून २०२६**: 15, 18, 22, 25, 28 (विशेष: अधिक मास के कारण १५ जून से पहले कोई मुहूर्त नहीं है)
+* **जुलाई २०२६**: 2, 9, 12, 15, 18, 21, 24, 27, 30
+* **अगस्त २०२६**: 5, 8, 11, 14, 18, 21, 26
+* **सितंबर २०२६**: 1, 4, 8, 17, 20, 22, 28
+* **अक्टूबर २०२६**: 1, 5, 8, 26, 29
+* **नवंबर २०२६**: 1, 4, 13, 16, 22, 26, 29
+* **दिसंबर २०२६**: 3, 6, 10, 13, 20, 23, 26, 29
+
+### अधिक मास (अतिरिक्त चंद्र मास) विशेष सूचना
+वर्ष २०२६ में अधिक मास लगने के कारण, १६ मई से १४ जून तक नारायण नागबलि पूजा के लिए कोई भी शुभ मुहूर्त उपलब्ध नहीं है। अतः इस अवधि को छोड़कर अपनी यात्रा की योजना बनाएं।
+
+### ३-दिवसीय पूजा विधि विवरण
+* **प्रथम दिन**: कुशावर्त कुंड पर पवित्र स्नान और संकल्प के साथ गरुड़ पुराण के अनुसार नारायण बलि अनुष्ठान का आरंभ।
+* **द्वितीय दिन**: नाग देवता से क्षमा याचना हेतु विशिष्ट नागबलि अनुष्ठान।
+* **तृतीय दिन**: कुशावर्त कुंड पर अंतिम तर्पण, ब्राह्मण भोजन और दान-दक्षिणा।
+
+अपनी कुंडली के अनुसार मुहूर्त सुनिश्चित करने या बुकिंग के लिए सीधे पंडित बिनीत शास्त्रीजी से संपर्क करें।`
+    },
+    category: 'Puja Guides',
+    readTime: {
+      en: '4 min read',
+      hi: '4 मिनट पठन'
+    },
+    date: '2026-07-22',
+    author: {
+      en: 'Pandit Bineet Shastriji',
+      hi: 'पंडित बिनीत शास्त्रीजी'
+    }
+  },
+  {
+    id: 'kaalsarp-puja-muhurat',
+    title: {
+      en: 'Auspicious Kaal Sarp Puja Muhurats & Dates 2026',
+      hi: 'कालसर्प शांति पूजा शुभ मुहूर्त एवं तिथियां २०२६'
+    },
+    slug: 'kaalsarp-puja-muhurat',
+    excerpt: {
+      en: 'Find the most auspicious dates for Kaal Sarp Dosh Nivaran Puja in 2026 at Trimbakeshwar to pacify Rahu & Ketu.',
+      hi: 'राहु और केतु की शांति के लिए त्र्यंबकेश्वर में वर्ष २०२६ में आयोजित होने वाली कालसर्प दोष निवारण पूजा के सभी शुभ मुहूर्त जानें।'
+    },
+    content: {
+      en: `Kaal Sarp Dosh Nivaran is a powerful 1-day ritual. Executing this shanti puja on auspicious days such as Panchami, Amavasya, Mondays, or specific Nakshatras brings rapid relief.
+
+### 2026 Auspicious Kaal Sarp Puja Dates
+Here are the auspicious dates for Kaal Sarp Shanti and other birth-related shanti rituals in 2026:
+* **January 2026**: 4, 7, 10, 18, 19, 23, 28
+* **February 2026**: 3, 6, 9, 12, 15, 19
+* **March 2026**: 3, 7, 10, 13, 17, 19, 23, 27, 30
+* **April 2026**: 2, 5, 8, 11, 14, 16, 19, 22, 26, 29
+* **May 2026**: 2, 5, 6, 11, 13, 17, 19, 21, 23, 24, 26, 28
+* **June 2026**: 1, 3, 4, 7, 9, 11, 13, 14, 17, 20, 24, 27, 30
+* **July 2026**: 4, 6, 8, 11, 14, 17, 20, 23, 26, 29
+* **August 2026**: 3, 7, 10, 13, 17 (Nag Panchami - Highly Auspicious), 20, 22, 25, 29, 30
+* **September 2026**: 3, 6, 10, 13, 22, 24, 26
+* **October 2026**: 23, 28, 31
+* **November 2026**: 3, 7, 15, 19, 22, 24, 28
+* **December 2026**: 1, 5, 8, 12, 16, 18, 22, 25, 28, 31
+
+### Critical Days for Kaal Sarp Puja
+* **Nag Panchami (17 August 2026)**: Considered the most powerful day of the year for snake-related dosha pacification.
+* **Amavasya**: Lunar dark moon days are highly recommended for Rahu and Ketu rituals.
+* **Mondays**: The sacred day of Lord Shiva, the ultimate controller of Rahu-Ketu.
+
+For bookings or custom planetary analysis, connect with Pandit Bineet Shastriji.`,
+      hi: `कालसर्प दोष निवारण एक दिवसीय अत्यंत शक्तिशाली अनुष्ठान है। इस शांति पूजा को पंचमी, अमावस्या, सोमवार या विशिष्ट नक्षत्रों में करने से जातकों को तुरंत राहत मिलती है।
+
+### २०२६ कालसर्प शांति पूजा शुभ मुहूर्त तिथियां
+वर्ष २०२६ के लिए कालसर्प शांति और अन्य जन्म-संबंधी शांति अनुष्ठानों की शुभ तिथियां इस प्रकार हैं:
+* **जनवरी २०२६**: 4, 7, 10, 18, 19, 23, 28
+* **फरवरी २०२६**: 3, 6, 9, 12, 15, 19
+* **मार्च २०२६**: 3, 7, 10, 13, 17, 19, 23, 27, 30
+* **अप्रैल २०२६**: 2, 5, 8, 11, 14, 16, 19, 22, 26, 29
+* **मई २०२६**: 2, 5, 6, 11, 13, 17, 19, 21, 23, 24, 26, 28
+* **जून २०२६**: 1, 3, 4, 7, 9, 11, 13, 14, 17, 20, 24, 27, 30
+* **जुलाई २०२६**: 4, 6, 8, 11, 14, 17, 20, 23, 26, 29
+* **अगस्त २०२६**: 3, 7, 10, 13, 17 (नागपंचमी - अत्यंत शुभ मुहूर्त), 20, 22, 25, 29, 30
+* **सितंबर २०२६**: 3, 6, 10, 13, 22, 24, 26
+* **अक्टूबर २०२६**: 23, 28, 31
+* **नवंबर २०२६**: 3, 7, 15, 19, 22, 24, 28
+* **दिसंबर २०२६**: 1, 5, 8, 12, 16, 18, 22, 25, 28, 31
+
+### कालसर्प पूजा के लिए विशेष दिन
+* **नागपंचमी (१७ अगस्त २०२६)**: नाग देवताओं की विशेष कृपा प्राप्त करने और कालसर्प शांति के लिए वर्ष का सबसे पवित्र दिन।
+* **अमावस्या**: राहु-केतु पूजा के लिए अमावस्या तिथि को बहुत फलदायी माना जाता है।
+* **सोमवार**: भगवान शिव का दिन, जो कालसर्प योग के दुष्चक्र को काटने वाले एकमात्र देव हैं।
+
+मुहूर्त की जानकारी या बुकिंग के लिए सीधे पंडित बिनीत शास्त्रीजी से संपर्क करें।`
+    },
+    category: 'Puja Guides',
+    readTime: {
+      en: '3 min read',
+      hi: '3 मिनट पठन'
+    },
+    date: '2026-07-22',
     author: {
       en: 'Pandit Bineet Shastriji',
       hi: 'पंडित बिनीत शास्त्रीजी'
