@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
-import { Phone, MessageSquare, ShieldCheck, HeartHandshake, Users, Sparkles } from 'lucide-react';
-import { motion } from 'motion/react';
+import React, { useState, useEffect } from 'react';
+import { Phone, MessageSquare, ShieldCheck, HeartHandshake, Users, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Language } from '../types';
 import { businessConfig } from '../data';
 
@@ -48,6 +48,36 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
       text: { en: 'Personalized Sankalp Taken', hi: 'व्यक्तिगत गोत्र-नाम संकल्प' }
     }
   ];
+
+  // Scrolling Gallery - auto changes every 2 seconds
+  const heroGalleryImages = [
+    { src: '/images/gallery1.jpeg', alt: 'Puja Ritual at Trimbakeshwar' },
+    { src: '/images/gallery2.jpeg', alt: 'Sacred Trimbakeshwar Valley Rituals' },
+    { src: '/images/gallery3.jpeg', alt: 'Vedic Puja Samagri' },
+    { src: '/images/galllery4.jpeg', alt: 'Devotees at Puja Sthal' },
+    { src: '/images/gallery7.jpeg', alt: 'Kalsarpa Shanti Venue' },
+    { src: '/images/kalsarp puja.jpeg', alt: 'Kalsarp Puja Ceremony' },
+    { src: '/images/bramahagiri.webp', alt: 'Brahmagiri Hills Trimbakeshwar' },
+    { src: '/images/online.jpeg', alt: 'Online Puja Darshan' },
+    { src: '/images/main photo.png', alt: 'Shri Trimbakeshwar Jyotirlinga Temple' },
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroGalleryImages.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [heroGalleryImages.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroGalleryImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroGalleryImages.length) % heroGalleryImages.length);
+  };
 
   return (
     <section className="relative min-h-screen pt-28 pb-16 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#FFFDF7] via-[#FAF8F2] to-[#F2E6CE]/20">
@@ -127,27 +157,44 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
               )}
             </motion.h1>
 
-            {/* Mobile-Only Main Photo (Displays prominently on mobile when opened) */}
+            {/* Mobile-Only Scrolling Gallery (Displays on mobile as hero visual) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.15 }}
-              className="block lg:hidden w-full h-56 sm:h-72 rounded-sm overflow-hidden border border-[#D4AF37]/30 shadow-lg mb-6 relative"
+              className="block lg:hidden w-full h-64 sm:h-80 rounded-sm overflow-hidden border border-[#D4AF37]/40 shadow-lg mb-6 relative group bg-black"
             >
-              <img
-                src="/images/main photo.png"
-                alt="Shri Trimbakeshwar Temple"
-                referrerPolicy="no-referrer"
-                loading="eager"
-                fetchPriority="high"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[#FFFDF7]">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={`mobile-${currentSlide}`}
+                  src={heroGalleryImages[currentSlide].src}
+                  alt={heroGalleryImages[currentSlide].alt}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 0.6, ease: 'easeInOut' }}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </AnimatePresence>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none z-[1]" />
+              
+              {/* Mobile dots */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                {heroGalleryImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentSlide(idx)}
+                    className={`transition-all duration-300 rounded-full ${
+                      idx === currentSlide ? 'w-6 h-1.5 bg-[#D4AF37]' : 'w-1.5 h-1.5 bg-white/60'
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <div className="absolute bottom-3 left-4 right-12 flex items-center justify-between text-[#FFFDF7] z-10">
                 <span className="font-serif text-[10px] tracking-widest text-[#D4AF37] uppercase font-bold">
-                  {lang === 'en' ? 'Shri Trimbakeshwar Jyotirlinga' : 'श्री त्र्यंबकेश्वर ज्योतिर्लिंग'}
+                  {lang === 'en' ? 'Sacred Darshan Gallery' : 'पावन दर्शन गैलरी'}
                 </span>
-                <span className="text-xs font-serif font-bold">ॐ नमः शिवाय</span>
               </div>
             </motion.div>
 
@@ -208,80 +255,129 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
 
           </div>
 
-          {/* Right Column: Beautiful Temple-Inspired Visual Placeholder */}
+          {/* Right Column: Scrolling Gallery - replaces Dedicated Puja Sthal card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[480px] rounded-sm overflow-hidden border border-[#D4AF37]/40 shadow-xl bg-gradient-to-tr from-[#7A1E1E] to-[#2B0A0A] flex flex-col justify-between p-6 sm:p-8"
+            className="hidden lg:block lg:col-span-5 relative w-full h-[480px] lg:h-[560px] rounded-sm overflow-hidden border border-[#D4AF37]/40 shadow-2xl bg-black group"
           >
-            {/* Real Background Dummy Image (easily replaceable by user) */}
-            <img
-              src="/images/main photo.png"
-              alt="Trimbakeshwar Temple Brahmagiri"
-              referrerPolicy="no-referrer"
-              loading="eager"
-              fetchPriority="high"
-              className="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-overlay"
-            />
+            {/* Images */}
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentSlide}
+                src={heroGalleryImages[currentSlide].src}
+                alt={heroGalleryImages[currentSlide].alt}
+                initial={{ opacity: 0, x: 80 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -80 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                className="absolute inset-0 w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
+            </AnimatePresence>
 
-            {/* Visual background pattern simulation */}
-            <div className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-10 bg-[radial-gradient(#E88921_1px,transparent_1px)] bg-[size:16px_16px]" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
+            {/* Soft overlay gradients */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#7A1E1E]/20 to-transparent pointer-events-none" />
 
-            {/* Sacred Lotus Watermark in center of mockup */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
-              <span className="text-[120px] sm:text-[180px]">ॐ</span>
-            </div>
+            {/* Top accent line */}
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#D4AF37] via-[#E88921] to-[#D4AF37] z-10" />
 
-            {/* Card top border header */}
-            <div className="relative z-10 flex items-center justify-between border-b border-[#D4AF37]/20 pb-4">
-              <span className="font-serif text-xs tracking-widest text-[#D4AF37] uppercase font-bold">
-                {lang === 'en' ? 'DEDICATED PUJA STHAL' : 'समर्पित पूजा स्थल'}
-              </span>
-              <div className="flex gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E88921]" />
-                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FAF8F2]" />
+            {/* Navigation Arrows - visible on hover */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 z-20 cursor-pointer"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 z-20 cursor-pointer"
+              aria-label="Next image"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+
+            {/* Bottom content - dots + label */}
+            <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
+              <div className="flex items-center justify-between mb-3">
+                <span className="font-serif text-[11px] tracking-[0.2em] text-[#D4AF37] uppercase font-bold">
+                  {lang === 'en' ? 'Sacred Darshan Gallery' : 'पावन दर्शन गैलरी'}
+                </span>
+                <span className="text-[10px] text-white/70 font-sans font-medium">
+                  {currentSlide + 1} / {heroGalleryImages.length}
+                </span>
               </div>
-            </div>
-
-            {/* Placeholder center illustration */}
-            <div className="relative z-10 flex flex-col items-center justify-center my-auto text-center px-4">
-              <div className="w-14 h-14 rounded-full bg-[#FFFDF7]/10 flex items-center justify-center border border-[#D4AF37]/40 mb-4 shadow-lg backdrop-blur-sm">
-                <svg className="w-8 h-8 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M12 2L2 22h20L12 2z" />
-                  <circle cx="12" cy="14" r="3" />
-                </svg>
+              
+              {/* Progress / Dots */}
+              <div className="flex items-center gap-2">
+                {heroGalleryImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentSlide(idx)}
+                    className={`relative h-1.5 rounded-full transition-all duration-500 cursor-pointer overflow-hidden ${
+                      idx === currentSlide ? 'w-8 bg-[#D4AF37]' : 'w-1.5 bg-white/50 hover:bg-white/80'
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  >
+                    {idx === currentSlide && (
+                      <motion.div
+                        layoutId="progress"
+                        className="absolute inset-0 bg-[#D4AF37] origin-left"
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        transition={{ duration: 2, ease: 'linear' }}
+                        key={currentSlide}
+                      />
+                    )}
+                  </button>
+                ))}
               </div>
-              <h3 className="font-serif text-lg sm:text-xl text-[#FFFDF7] font-semibold tracking-wide">
-                {lang === 'en' ? 'Sacred Trimbakeshwar Valley' : 'पवित्र त्र्यंबकेश्वर घाटी'}
-              </h3>
-              <p className="text-[11px] text-[#FAF8F2]/85 font-sans mt-2 max-w-sm font-medium leading-relaxed">
-                {lang === 'en'
-                  ? 'Our primary ritual sanctuary is situated near Swami Samarth Kendra surrounded by Brahmagiri Hills.'
-                  : 'हमारा मुख्य अनुष्ठान स्थल ब्रह्मगिरि पहाड़ियों से घिरे स्वामी समर्थ केंद्र के समीप स्थित है।'}
+
+              {/* Caption */}
+              <p className="mt-3 text-[12px] text-white/90 font-sans font-medium leading-snug line-clamp-1">
+                {heroGalleryImages[currentSlide].alt}
               </p>
             </div>
 
-            {/* Card Bottom status indicators */}
-            <div className="relative z-10 flex items-center justify-between bg-[#FFFDF7]/5 border border-[#FFFDF7]/10 rounded-sm p-4 backdrop-blur-sm">
-              <div className="flex flex-col">
-                <span className="text-[9px] text-[#D4AF37] uppercase tracking-wider font-bold font-sans">
-                  {lang === 'en' ? 'Rituals Performed Daily' : 'दैनिक अनुष्ठान समय'}
-                </span>
-                <span className="text-[11px] text-[#FFFDF7] font-bold mt-0.5">
-                  {businessConfig.workingHours[lang]}
-                </span>
-              </div>
-              <button
-                onClick={() => setActiveTab('services')}
-                className="text-[10px] uppercase tracking-wider text-white bg-[#7A1E1E] hover:bg-[#E88921] border border-[#D4AF37]/30 px-3 py-1.5 rounded-sm font-bold transition-all cursor-pointer"
-              >
-                {lang === 'en' ? 'View Rituals' : 'अनुष्ठान सूची'}
-              </button>
+            {/* Decorative Om watermark */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.03] select-none">
+              <span className="text-[200px] font-serif text-white">ॐ</span>
             </div>
+          </motion.div>
 
+          {/* Tablet/Mobile duplicate gallery that scrolls every 2 sec - Alternative for larger mobile screens if right col hidden, already handled above but also include distinct component for md */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
+            className="hidden md:block lg:hidden col-span-1 relative w-full h-[420px] rounded-sm overflow-hidden border border-[#D4AF37]/40 shadow-xl bg-black group mt-4"
+          >
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={`md-${currentSlide}`}
+                src={heroGalleryImages[currentSlide].src}
+                alt={heroGalleryImages[currentSlide].alt}
+                initial={{ opacity: 0, x: 60 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -60 }}
+                transition={{ duration: 0.5 }}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </AnimatePresence>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
+              <div className="flex gap-1.5">
+                {heroGalleryImages.map((_, idx) => (
+                  <div
+                    key={idx}
+                    className={`h-1 rounded-full transition-all ${idx === currentSlide ? 'w-6 bg-[#D4AF37]' : 'w-1.5 bg-white/50'}`}
+                  />
+                ))}
+              </div>
+            </div>
           </motion.div>
 
         </div>
