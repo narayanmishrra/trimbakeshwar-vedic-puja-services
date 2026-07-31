@@ -67,7 +67,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroGalleryImages.length);
-    }, 2000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [heroGalleryImages.length]);
 
@@ -177,16 +177,15 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
                 />
               </AnimatePresence>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none z-[1]" />
-              
+
               {/* Mobile dots */}
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
                 {heroGalleryImages.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrentSlide(idx)}
-                    className={`transition-all duration-300 rounded-full ${
-                      idx === currentSlide ? 'w-6 h-1.5 bg-[#D4AF37]' : 'w-1.5 h-1.5 bg-white/60'
-                    }`}
+                    className={`transition-all duration-300 rounded-full ${idx === currentSlide ? 'w-6 h-1.5 bg-[#D4AF37]' : 'w-1.5 h-1.5 bg-white/60'
+                      }`}
                   />
                 ))}
               </div>
@@ -310,16 +309,15 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
                   {currentSlide + 1} / {heroGalleryImages.length}
                 </span>
               </div>
-              
+
               {/* Progress / Dots */}
               <div className="flex items-center gap-2">
                 {heroGalleryImages.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrentSlide(idx)}
-                    className={`relative h-1.5 rounded-full transition-all duration-500 cursor-pointer overflow-hidden ${
-                      idx === currentSlide ? 'w-8 bg-[#D4AF37]' : 'w-1.5 bg-white/50 hover:bg-white/80'
-                    }`}
+                    className={`relative h-1.5 rounded-full transition-all duration-500 cursor-pointer overflow-hidden ${idx === currentSlide ? 'w-8 bg-[#D4AF37]' : 'w-1.5 bg-white/50 hover:bg-white/80'
+                      }`}
                     aria-label={`Go to slide ${idx + 1}`}
                   >
                     {idx === currentSlide && (
