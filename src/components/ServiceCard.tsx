@@ -88,10 +88,15 @@ export default function ServiceCard({ service, lang, onSelect }: ServiceCardProp
             )}
           </div>
 
-          {/* Title */}
-          <h3 className="font-serif text-lg sm:text-xl font-bold text-[#7A1E1E] group-hover:text-[#E88921] transition-colors duration-200 mb-2 leading-snug">
+          {/* Title - Includes Hindi headline in English view */}
+          <h3 className="font-serif text-lg sm:text-xl font-bold text-[#7A1E1E] group-hover:text-[#E88921] transition-colors duration-200 mb-1 leading-snug">
             {service.title[lang]}
           </h3>
+          {lang === 'en' && (
+            <span className="block font-serif text-xs sm:text-sm font-bold text-[#E88921] mb-2">
+              {service.title.hi}
+            </span>
+          )}
 
           {/* Short Description */}
           <p className="font-sans text-xs sm:text-sm text-[#1a1a1a]/85 mb-6 leading-relaxed text-justify font-semibold line-clamp-3">
@@ -110,12 +115,12 @@ export default function ServiceCard({ service, lang, onSelect }: ServiceCardProp
 
           <a
             href={`tel:${businessConfig.phone}`}
-          onClick={(e) => {
-            if (typeof (window as any).gtag_report_conversion === 'function') {
-              e.preventDefault();
-              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
-            }
-          }}
+            onClick={(e) => {
+              if (typeof (window as any).gtag_report_conversion === 'function') {
+                e.preventDefault();
+                (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
+              }
+            }}
             className="text-[10px] uppercase tracking-wider font-serif font-bold bg-[#7A1E1E] hover:bg-[#E88921] text-[#FFFDF7] px-3.5 py-2 rounded-sm border border-[#D4AF37]/20 shadow-sm transition-colors"
           >
             {lang === 'en' ? 'Book Call' : 'बुक कॉल'}

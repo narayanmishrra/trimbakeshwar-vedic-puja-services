@@ -77,9 +77,14 @@ export default function BlogSection({ lang, onSelectPost }: BlogSectionProps) {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-serif text-lg font-bold text-[#7A1E1E] group-hover:text-[#E88921] transition-colors duration-200 mb-3 leading-snug">
+                    <h3 className="font-serif text-lg font-bold text-[#7A1E1E] group-hover:text-[#E88921] transition-colors duration-200 mb-1 leading-snug">
                       {post.title[lang]}
                     </h3>
+                    {lang === 'en' && (
+                      <span className="block font-serif text-xs font-bold text-[#E88921] mb-3">
+                        {post.title.hi}
+                      </span>
+                    )}
 
                     {/* Excerpt */}
                     <p className="font-sans text-xs sm:text-sm text-[#1a1a1a]/85 mb-6 leading-relaxed font-semibold">
@@ -134,6 +139,11 @@ export default function BlogSection({ lang, onSelectPost }: BlogSectionProps) {
                     <h5 className="font-serif text-sm font-bold text-[#7A1E1E] group-hover:text-[#E88921] transition-colors leading-snug line-clamp-2">
                       {post.title[lang]}
                     </h5>
+                    {lang === 'en' && (
+                      <span className="text-xs font-serif text-[#E88921] font-bold line-clamp-1">
+                        {post.title.hi}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
