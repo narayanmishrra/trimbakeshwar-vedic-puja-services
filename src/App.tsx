@@ -29,17 +29,19 @@ import TestimonialsCarousel from './components/TestimonialsCarousel';
 import ContactSection from './components/ContactSection';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
+
 export default function App() {
+  // Default language set to English ('en') as requested by user
   const [lang, setLang] = useState<Language>(() => {
     const params = new URLSearchParams(window.location.search);
     const langParam = params.get('lang');
     if (langParam === 'en' || langParam === 'hi') {
       return langParam as Language;
     }
-    if (window.location.pathname.startsWith('/en')) {
-      return 'en';
+    if (window.location.pathname.startsWith('/hi')) {
+      return 'hi';
     }
-    return 'hi';
+    return 'en';
   });
   const [activeTab, setActiveTab] = useState<string>('home');
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
@@ -104,7 +106,7 @@ export default function App() {
   useEffect(() => {
     let title = '';
     if (lang === 'en') {
-      if (activeTab === 'home') title = 'Trimbakeshwar Puja | Kalsarpa Shanti |  Narayan Nagbali';
+      if (activeTab === 'home') title = 'Trimbakeshwar Puja | Kalsarpa Shanti | Narayan Nagbali';
       else if (activeTab === 'trimbakeshwar') title = 'About Trimbakeshwar - Town History & Legend';
       else if (activeTab === 'about') title = 'About Panditji | Trimbakeshwar Puja';
       else if (activeTab === 'gallery') title = 'Puja Gallery | Trimbakeshwar';
@@ -112,7 +114,7 @@ export default function App() {
       else if (activeTab.startsWith('service-')) {
         const id = activeTab.replace('service-', '');
         const s = servicesData.find((serv) => serv.id === id);
-        title = `${s ? s.title.en : 'Ritual'} - Complete Guide | Trimbakeshwar`;
+        title = `${s ? `${s.title.en} (${s.title.hi})` : 'Ritual'} - Complete Guide | Trimbakeshwar`;
       } else if (activeTab === 'blog') title = 'Puja Guides & Devotee Testimonials';
       else if (activeTab.startsWith('blog-')) {
         const id = activeTab.replace('blog-', '');
@@ -221,11 +223,16 @@ export default function App() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-3xl mx-auto mb-16">
                 <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
-                  {lang === 'en' ? 'Divine Remedial Services' : 'दैवीय पूजा अनुष्ठान'}
+                  {lang === 'en' ? 'Divine Remedial Services • दैवीय पूजा अनुष्ठान' : 'दैवीय पूजा अनुष्ठान'}
                 </span>
-                <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4">
+                <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-2">
                   {lang === 'en' ? 'Authentic Vedic Ritual Procedures' : 'प्रामाणिक वैदिक पूजा एवं दोष निवारण'}
                 </h1>
+                {lang === 'en' && (
+                  <p className="font-serif text-base sm:text-lg font-bold text-[#E88921] mb-4">
+                    (कालसर्प दोष शांति, नारायण नागबलि एवं पितृ दोष निवारण)
+                  </p>
+                )}
                 <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
                   {lang === 'en'
                     ? 'Explore complete preparation, durations, and scriptural procedures of sacred ceremonies conducted strictly in accordance with Sanskrit texts at our dedicated Puja Sthal.'
@@ -269,7 +276,6 @@ export default function App() {
         return (
           <section className="pt-16">
             <BlogSection lang={lang} onSelectPost={handleSelectPost} />
-            {/* User request: "blog section for all the blogs and testimonies" */}
             <div className="border-t border-[#F2E6CE]/30">
               <TestimonialsCarousel lang={lang} />
             </div>
@@ -327,11 +333,16 @@ export default function App() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                   <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
-                    {lang === 'en' ? 'Most Conducted' : 'अत्यंत आवश्यक'}
+                    {lang === 'en' ? 'Most Conducted • अत्यंत आवश्यक' : 'अत्यंत आवश्यक'}
                   </span>
-                  <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4">
+                  <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-2">
                     {lang === 'en' ? 'Featured Vedic Remedies' : 'मुख्य पावन पूजा अनुष्ठान'}
                   </h2>
+                  {lang === 'en' && (
+                    <p className="font-serif text-base sm:text-lg font-bold text-[#E88921] mb-3">
+                      कालसर्प शांति पूजा एवं नारायण नागबलि पूजा
+                    </p>
+                  )}
                   <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
                     {lang === 'en'
                       ? 'The three most critical Vedic ceremonies performed at Trimbakeshwar to pacify planets and relieve ancestor hardships.'
@@ -357,7 +368,11 @@ export default function App() {
                     onClick={() => handleTabChange('services')}
                     className="inline-flex items-center gap-2 bg-[#7A1E1E] hover:bg-[#E88921] text-[#FFFDF7] text-sm font-bold py-3 px-8 rounded-full border border-[#D4AF37]/20 shadow-md transition-all cursor-pointer transform hover:-translate-y-0.5"
                   >
-                    <span>{lang === 'en' ? 'View All 9 Vedic Rituals' : 'सभी 9 वैदिक पूजाओं की सूची देखें'}</span>
+                    <span>
+                      {lang === 'en'
+                        ? 'View All 9 Vedic Rituals • सभी 9 वैदिक पूजाएं देखें'
+                        : 'सभी 9 वैदिक पूजाओं की सूची देखें'}
+                    </span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -435,7 +450,10 @@ export default function App() {
                     >
                       <div>
                         <span className="text-[10px] text-[#E88921] uppercase tracking-wider font-sans font-bold">{post.category}</span>
-                        <h4 className="font-serif text-base sm:text-lg font-bold text-[#7A1E1E] group-hover:text-[#E88921] transition-colors mt-1 mb-2 leading-snug">{post.title[lang]}</h4>
+                        <h4 className="font-serif text-base sm:text-lg font-bold text-[#7A1E1E] group-hover:text-[#E88921] transition-colors mt-1 mb-1 leading-snug">{post.title[lang]}</h4>
+                        {lang === 'en' && (
+                          <span className="block font-serif text-xs font-bold text-[#E88921] mb-2">{post.title.hi}</span>
+                        )}
                         <p className="font-sans text-xs text-[#7A1E1E]/70 line-clamp-2">{post.excerpt[lang]}</p>
                       </div>
                       <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#E88921] mt-4">

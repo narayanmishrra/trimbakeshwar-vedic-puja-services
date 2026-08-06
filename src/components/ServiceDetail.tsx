@@ -137,6 +137,7 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
 
   const filteredDoshas = kalsarpaTypes.filter(d => 
     d.name[lang].toLowerCase().includes(searchTerm.toLowerCase()) ||
+    d.name.hi.toLowerCase().includes(searchTerm.toLowerCase()) ||
     d.alignment[lang].toLowerCase().includes(searchTerm.toLowerCase()) ||
     d.impact[lang].toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -160,11 +161,16 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
           
           <div className="relative z-10 flex flex-col items-center sm:items-start text-center sm:text-left">
             <span className="bg-[#E88921] text-[#FFFDF7] text-[10px] font-sans font-bold px-3.5 py-1.5 rounded-sm uppercase tracking-wider mb-4 shadow-sm">
-              {lang === 'en' ? 'Sacred Vedic Ritual' : 'पवित्र वैदिक विधान'}
+              {lang === 'en' ? 'Sacred Vedic Ritual • पवित्र वैदिक विधान' : 'पवित्र वैदिक विधान'}
             </span>
-            <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+            <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-2">
               {service.title[lang]}
             </h1>
+            {lang === 'en' && (
+              <p className="font-serif text-xl sm:text-2xl font-bold text-[#D4AF37] mb-4">
+                {service.title.hi}
+              </p>
+            )}
             <p className="font-sans text-sm sm:text-base text-[#FAF8F2]/90 max-w-2xl leading-relaxed mb-6 font-medium">
               {service.shortDesc[lang]}
             </p>
@@ -277,7 +283,7 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
             <div>
               <h2 className="font-serif text-2xl font-bold text-[#7A1E1E] mb-4 flex items-center gap-2">
                 <Sparkles className="w-6 h-6 text-[#E88921]" />
-                <span>{lang === 'en' ? 'The 12 Types of Kalsarpa Dosha' : 'कालसर्प दोष के १२ मुख्य प्रकार'}</span>
+                <span>{lang === 'en' ? 'The 12 Types of Kalsarpa Dosha (कालसर्प दोष के १२ मुख्य प्रकार)' : 'कालसर्प दोष के १२ मुख्य प्रकार'}</span>
               </h2>
               <div className="bg-[#FAF8F2] border border-[#F2E6CE] p-6 rounded-sm shadow-sm mb-6">
                 <p className="font-sans text-sm text-[#1a1a1a]/85 leading-relaxed mb-6 font-medium">
@@ -311,8 +317,11 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
                         {dosha.num}
                       </div>
                       
-                      <h4 className="font-serif text-base font-bold text-[#7A1E1E] mb-1 group-hover:text-[#E88921] transition-colors flex items-center gap-1.5">
+                      <h4 className="font-serif text-base font-bold text-[#7A1E1E] mb-1 group-hover:text-[#E88921] transition-colors flex flex-wrap items-center justify-between gap-1">
                         <span>{dosha.name[lang]}</span>
+                        {lang === 'en' && (
+                          <span className="text-xs font-bold text-[#E88921] font-serif">({dosha.name.hi})</span>
+                        )}
                       </h4>
                       
                       <span className="inline-block bg-[#E88921]/10 text-[#7A1E1E] font-sans text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wider mb-3">
@@ -441,12 +450,12 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <a
                 href={`tel:${businessConfig.phone}`}
-          onClick={(e) => {
-            if (typeof (window as any).gtag_report_conversion === 'function') {
-              e.preventDefault();
-              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
-            }
-          }}
+                onClick={(e) => {
+                  if (typeof (window as any).gtag_report_conversion === 'function') {
+                    e.preventDefault();
+                    (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
+                  }
+                }}
                 className="flex items-center gap-2 bg-[#7A1E1E] hover:bg-[#E88921] text-white text-xs uppercase tracking-widest font-serif py-3.5 px-6 rounded-sm border border-[#D4AF37]/20 shadow-md transition-colors w-full sm:w-auto justify-center"
               >
                 <PhoneCall className="w-4 h-4 fill-white" />

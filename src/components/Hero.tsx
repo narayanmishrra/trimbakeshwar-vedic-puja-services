@@ -49,7 +49,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
     }
   ];
 
-  // Scrolling Gallery - auto changes every 2 seconds
+  // Scrolling Gallery - auto changes every 4 seconds
   const heroGalleryImages = [
     { src: '/images/gallery1.jpeg', alt: 'Puja Ritual at Trimbakeshwar' },
     { src: '/images/gallery2.jpeg', alt: 'Sacred Trimbakeshwar Valley Rituals' },
@@ -59,7 +59,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
     { src: '/images/kalsarp puja.jpeg', alt: 'Kalsarp Puja Ceremony' },
     { src: '/images/bramahagiri.webp', alt: 'Brahmagiri Hills Trimbakeshwar' },
     { src: '/images/online.jpeg', alt: 'Online Puja Darshan' },
-    { src: '/images/main photo.png', alt: 'Shri Trimbakeshwar Jyotirlinga Temple' },
+    { src: '/images/main-photo.png', alt: 'Shri Trimbakeshwar Jyotirlinga Temple' },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -128,12 +128,41 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="inline-block py-1.5 px-4 bg-[#F2E6CE] text-[#7A1E1E] text-[11px] font-bold tracking-[0.2em] mb-6 rounded-sm uppercase self-center lg:self-start"
+              className="inline-block py-1.5 px-4 bg-[#F2E6CE] text-[#7A1E1E] text-[11px] font-bold tracking-[0.2em] mb-4 rounded-sm uppercase self-center lg:self-start"
             >
               <span className="font-sans">
-                {lang === 'en' ? '100% Dosh Nivaran' : '100% प्रामाणिक दोष निवारण'}
+                {lang === 'en' ? '100% Dosh Nivaran • 100% प्रामाणिक दोष निवारण' : '100% प्रामाणिक दोष निवारण'}
               </span>
             </motion.div>
+
+            {/* Puja Badges in English view featuring Hindi headlines */}
+            {lang === 'en' && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.05 }}
+                className="flex flex-wrap justify-center lg:justify-start gap-2 mb-4"
+              >
+                <button
+                  onClick={() => setActiveTab('kalsarpa-shanti')}
+                  className="bg-[#7A1E1E]/10 hover:bg-[#7A1E1E]/20 border border-[#7A1E1E]/20 text-[#7A1E1E] px-3 py-1 rounded-full text-xs font-bold font-serif transition-colors cursor-pointer"
+                >
+                  Kaalsarp Puja • कालसर्प शांति पूजा
+                </button>
+                <button
+                  onClick={() => setActiveTab('narayan-nagbali')}
+                  className="bg-[#7A1E1E]/10 hover:bg-[#7A1E1E]/20 border border-[#7A1E1E]/20 text-[#7A1E1E] px-3 py-1 rounded-full text-xs font-bold font-serif transition-colors cursor-pointer"
+                >
+                  Narayan Naagbali • नारायण नागबलि पूजा
+                </button>
+                <button
+                  onClick={() => setActiveTab('pitru-dosh')}
+                  className="bg-[#7A1E1E]/10 hover:bg-[#7A1E1E]/20 border border-[#7A1E1E]/20 text-[#7A1E1E] px-3 py-1 rounded-full text-xs font-bold font-serif transition-colors cursor-pointer"
+                >
+                  Pitru Dosh • पितृ दोष निवारण
+                </button>
+              </motion.div>
+            )}
 
             {/* Headline */}
             <motion.h1
@@ -205,7 +234,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
               className="font-sans text-base sm:text-lg text-[#1a1a1a]/85 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed font-medium text-center lg:text-left"
             >
               {lang === 'en'
-                ? 'Experience 100% authentic Dosh Nivaran at holy Trimbakeshwar Jyotirlinga—the sacred origin of River Godavari and supreme site for Kaal Sarp Dosh, Narayan Nagbali & Pitru Dosh Shanti. Conducted by experienced Guruji Pandit Bineet Shastriji with complete scriptural purity, individual resolution (Sankalp), and dedicated guidance.'
+                ? 'Experience 100% authentic Dosh Nivaran at holy Trimbakeshwar Jyotirlinga—the sacred origin of River Godavari and supreme site for Kaal Sarp Dosh (कालसर्प दोष शांति पूजा), Narayan Nagbali (नारायण नागबलि पूजा) & Pitru Dosh Shanti (पितृ दोष निवारण). Conducted by experienced Guruji Pandit Bineet Shastriji with complete scriptural purity, individual resolution (Sankalp), and dedicated guidance.'
                 : 'पवित्र त्र्यंबकेश्वर ज्योतिर्लिंग धाम में 100% प्रामाणिक दोष निवारण कराएं। पवित्र गोदावरी तट पर स्थित यह धाम कालसर्प दोष, नारायण नागबलि एवं पितृ दोष निवारण हेतु सर्वश्रेष्ठ तीर्थ माना गया है। अधिकृत वैदिक पुरोहित पंडित बिनीत शास्त्रीजी द्वारा पूर्ण विधि-विधान, शुचिता और व्यक्तिगत संकल्प के साथ अनुष्ठान संपन्न कराएं।'}
             </motion.p>
 
@@ -254,7 +283,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
 
           </div>
 
-          {/* Right Column: Scrolling Gallery - replaces Dedicated Puja Sthal card */}
+          {/* Right Column: Scrolling Gallery */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -346,7 +375,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
             </div>
           </motion.div>
 
-          {/* Tablet/Mobile duplicate gallery that scrolls every 2 sec - Alternative for larger mobile screens if right col hidden, already handled above but also include distinct component for md */}
+          {/* Tablet/Mobile duplicate gallery that scrolls every 2 sec */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
