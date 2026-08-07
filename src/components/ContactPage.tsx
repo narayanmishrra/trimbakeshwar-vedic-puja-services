@@ -59,9 +59,7 @@ export default function ContactPage({ lang }: ContactPageProps) {
   };
 
   const whatsappUrl = `https://wa.me/${businessConfig.whatsapp}?text=${encodeURIComponent(
-    lang === 'en'
-      ? 'Pranam Pandit Bineet Shastriji, I would like to consult with you about scheduling a Vedic Puja at Trimbakeshwar.'
-      : 'प्रणाम पंडित बिनीत शास्त्रीजी, मैं त्र्यंबकेश्वर में वैदिक पूजा आयोजित करने के संबंध में परामर्श करना चाहता हूँ।'
+    ' Om namah shivay panditji 🕉️'
   )}`;
 
   return (

@@ -129,9 +129,7 @@ interface ServiceDetailProps {
 export default function ServiceDetail({ service, lang, onBack }: ServiceDetailProps) {
   const [searchTerm, setSearchTerm] = React.useState('');
   
-  const prefilledMessage = lang === 'en' 
-    ? `Namaste Panditji, I would like to consult about ${service.title.en} Puja services at Trimbakeshwar.`
-    : `नमस्ते पंडितजी, मैं त्र्यंबकेश्वर में ${service.title.hi} के बारे में परामर्श करना चाहता हूँ।`;
+  const prefilledMessage = ' Om namah shivay panditji 🕉️';
 
   const whatsappUrl = `https://wa.me/${businessConfig.whatsapp}?text=${encodeURIComponent(prefilledMessage)}`;
 
@@ -456,10 +454,10 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
                     (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
                   }
                 }}
-                className="flex items-center gap-2 bg-[#7A1E1E] hover:bg-[#E88921] text-white text-xs uppercase tracking-widest font-serif py-3.5 px-6 rounded-sm border border-[#D4AF37]/20 shadow-md transition-colors w-full sm:w-auto justify-center"
+                className="flex items-center gap-2 bg-[#7A1E1E] hover:bg-[#E88921] text-white text-xs uppercase tracking-widest font-serif py-3.5 px-6 rounded-sm border border-[#D4AF37]/20 shadow-md transition-colors w-full sm:w-auto justify-center whitespace-nowrap"
               >
-                <PhoneCall className="w-4 h-4 fill-white" />
-                <span>{lang === 'en' ? 'Call Panditji Now' : 'कॉल करें'}</span>
+                <PhoneCall className="w-4 h-4 fill-white shrink-0" />
+                <span>{lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}</span>
               </a>
               <a
                 href={whatsappUrl}
