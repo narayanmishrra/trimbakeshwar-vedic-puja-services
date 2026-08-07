@@ -24,9 +24,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
     { id: 5, size: 18, left: '45%', top: '85%', delay: 3, duration: 28 },
   ];
 
-  const prefilledMessage = lang === 'en'
-    ? 'Namaste Panditji, I would like to consult regarding Vedic Puja services at Trimbakeshwar.'
-    : 'नमस्ते पंडितजी, मैं त्र्यंबकेश्वर में वैदिक पूजा सेवाओं के बारे में परामर्श करना चाहता हूँ।';
+  const prefilledMessage = ' Om namah shivay panditji 🕉️';
 
   const whatsappUrl = `https://wa.me/${businessConfig.whatsapp}?text=${encodeURIComponent(prefilledMessage)}`;
 
@@ -255,8 +253,8 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
                 }}
                 className="flex items-center justify-center gap-3 bg-[#7A1E1E] hover:bg-[#5a1616] text-white font-serif text-base tracking-wide py-4 px-8 rounded-sm shadow-xl transition-all duration-300 w-full sm:w-auto hover:-translate-y-0.5 border border-[#D4AF37]/20"
               >
-                <Phone className="w-5 h-5 fill-current text-white" />
-                <span className="uppercase tracking-wider font-bold text-sm">{lang === 'en' ? 'Contact Us' : 'संपर्क करें'}</span>
+                <Phone className="w-5 h-5 fill-current text-white shrink-0" />
+                <span className="uppercase tracking-wider font-bold text-sm whitespace-nowrap">{lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}</span>
               </a>
               <a
                 href={whatsappUrl}
