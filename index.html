@@ -156,27 +156,124 @@
   }
   </script>
 
-  <!-- FOUC (Flash of Unstyled Content) Guard -->
+  <!-- Loading Screen Styles (displayed before React loads) -->
   <style>
+    /* Loading Screen Overlay */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #FFFDF7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    }
+
+    #loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Logo styling */
+    #loading-screen .logo-container {
+      margin-bottom: 30px;
+      animation: logoPulse 2s ease-in-out infinite;
+    }
+
+    #loading-screen .logo-container img {
+      max-width: 120px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    @keyframes logoPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.9; }
+    }
+
+    /* Loading Bar Container */
+    #loading-bar-container {
+      width: 200px;
+      height: 4px;
+      background: #E8E0D5;
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Loading Bar Animation */
+    #loading-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #7A1E1E 0%, #E88921 50%, #7A1E1E 100%);
+      border-radius: 2px;
+      position: relative;
+      animation: loadingBar 2s ease-in-out infinite;
+    }
+
+    /* Shimmer effect on the bar */
+    #loading-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      animation: shimmer 1.5s infinite;
+    }
+
+    @keyframes loadingBar {
+      0% { width: 0%; }
+      50% { width: 70%; }
+      100% { width: 100%; }
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* Loading text */
+    #loading-text {
+      margin-top: 15px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #7A1E1E;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    /* FOUC Guard - hide content until loading screen is hidden */
     .fouc-guard {
       visibility: hidden;
     }
+
+    .fouc-guard #loading-screen {
+      visibility: visible;
+    }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.body.classList.remove("fouc-guard");
-    });
-  </script>
-  <noscript>
-    <style>
-      .fouc-guard {
-        visibility: visible !important;
-      }
-    </style>
-  </noscript>
 </head>
 
 <body class="fouc-guard">
+  <!-- Loading Screen (shown before React loads) -->
+  <div id="loading-screen">
+    <div class="logo-container">
+      <img src="/images/lord-shiva-face-silhouette-lord-shiva-logo-icon-illustration-silhouette-and-line-art-lord-shiva-face-silhouette-vector.jpg" alt="Trimbakeshwar Logo" />
+    </div>
+    <div id="loading-bar-container">
+      <div id="loading-bar"></div>
+    </div>
+    <p id="loading-text">Loading...</p>
+  </div>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQW7R6N9" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
