@@ -47,16 +47,16 @@ export const servicesData: Service[] = [
       hi: 'पितृ दोष के निवारण और पूर्वजों की आत्माओं की मुक्ति के लिए की जाने वाली एक अत्यंत महत्वपूर्ण पूजा।'
     },
     longDesc: {
-      en: 'Narayan Nagbali consists of two major rituals: Narayan Bali (to cure ancestral troubles and satisfy unfulfilled desires of souls) and Nagbali (to seek forgiveness for killing a snake, a sacred symbol of spiritual energy). This traditional ritual is performed strictly according to instructions in the ancient scripture "Garuḍa Purāṇa" at his dedicated private Puja Sthal under Pandit Bineet Shastriji.',
-      hi: 'नारायण नागबलि में दो मुख्य अनुष्ठान होते हैं: नारायण बलि (पितृ दोष के निवारण के लिए) और नागबलि (नाग हत्या के दोष से मुक्ति के लिए)। यह पारंपरिक अनुष्ठान पंडित बिनीत शास्त्रीजी के सान्निध्य में उनके समर्पित निजी पूजा स्थल पर प्राचीन ग्रंथ "गरुड़ पुराण" के अनुसार किया जाता है।'
+      en: 'Narayan Nagbali consists of two major rituals: Narayan Bali (to cure ancestral troubles and satisfy unfulfilled desires of souls) and Nagbali (to seek forgiveness for killing a snake, a sacred symbol of spiritual energy). This traditional ritual is performed strictly according to instructions in the ancient scripture "Garuḍa Purāṇa" in Trimbakeshwar under Pandit Bineet Shastriji.',
+      hi: 'नारायण नागबलि में दो मुख्य अनुष्ठान होते हैं: नारायण बलि (पितृ दोष के निवारण के लिए) और नागबलि (नाग हत्या के दोष से मुक्ति के लिए)। यह पारंपरिक अनुष्ठान पंडित बिनीत शास्त्रीजी के सान्निध्य में त्र्यंबकेश्वर में प्राचीन ग्रंथ "गरुड़ पुराण" के अनुसार किया जाता है।'
     },
     whoShouldPerform: {
       en: 'Devotees experiencing persistent blockages in career, child birth issues, chronic health ailments, or frequent bad dreams related to ancestors and snakes are advised to perform this ritual.',
       hi: 'करियर में लगातार बाधाओं, संतान प्राप्ति में कठिनाई, पुराने स्वास्थ्य रोगों, या पूर्वजों और सांपों से संबंधित बार-बार बुरे सपने देखने वाले भक्तों को यह अनुष्ठान करने की सलाह दी जाती है।'
     },
     importance: {
-      en: 'It is a special multi-day ritual performed only at holy places like Trimbakeshwar. It must be noted that this ritual is performed at Pandit Bineet Shastriji\'s private Puja Sthal outside the main temple, keeping the temple darshan separate.',
-      hi: 'यह एक विशेष बहु-दिवसीय अनुष्ठान है जो केवल त्र्यंबकेश्वर जैसे पवित्र स्थानों पर ही किया जाता है। यह ध्यान रखना महत्वपूर्ण है कि यह अनुष्ठान मुख्य मंदिर के बाहर पंडितजी के निजी पूजा स्थल पर किया जाता है, जिससे मंदिर दर्शन अलग रहता है।'
+      en: 'It is a special multi-day ritual performed only at holy places like Trimbakeshwar.',
+      hi: 'यह एक विशेष बहु-दिवसीय अनुष्ठान है जो केवल त्र्यंबकेश्वर जैसे पवित्र स्थानों पर ही किया जाता है।'
     },
     benefits: [
       {
@@ -135,8 +135,8 @@ export const servicesData: Service[] = [
           hi: 'क्या यह पूजा मुख्य त्र्यंबकेश्वर मंदिर के अंदर की जाती है?'
         },
         answer: {
-          en: 'No. Traditional Vedic rituals are performed by Pandit Bineet Shastriji at his dedicated private Puja Sthal nearby. Temple darshan and ritual venues are separate.',
-          hi: 'नहीं। पारंपरिक वैदिक अनुष्ठान पंडित बिनीत शास्त्रीजी द्वारा पास के उनके समर्पित निजी पूजा स्थल पर किए जाते हैं। मंदिर दर्शन और अनुष्ठान स्थल अलग-अलग हैं।'
+          en: 'Traditional Vedic rituals are performed by Pandit Bineet Shastriji in Trimbakeshwar with complete scriptural authenticity and devotion.',
+          hi: 'पारंपरिक वैदिक अनुष्ठान पंडित बिनीत शास्त्रीजी द्वारा त्र्यंबकेश्वर में पूर्ण शास्त्रीय प्रामाणिकता और श्रद्धा के साथ किए जाते हैं।'
         }
       }
     ]
@@ -152,16 +152,16 @@ export const servicesData: Service[] = [
       hi: 'राहु और केतु के नकारात्मक प्रभावों को शांत करने के लिए एक अत्यंत शक्तिशाली वैदिक अनुष्ठान।'
     },
     longDesc: {
-      en: 'Kalsarpa Yog occurs when all seven planetary bodies are aligned between Rahu (the snake\'s head) and Ketu (the snake\'s tail). This alignment creates obstacles, instability, and delays. The Kalsarpa Shanti puja utilizes potent Vedic mantras, special offering rites to Snake deities (Nagas), and customized resolution formulas to restore balance and abundance. This is conducted by Pandit Bineet Shastriji at his specialized private Puja Sthal in Trimbakeshwar with pure Vedic integrity.',
-      hi: 'कालसर्प योग तब बनता है जब कुंडली में सभी सात ग्रह राहु और केतु के बीच आ जाते हैं। यह स्थिति जीवन में अस्थिरता, संघर्ष और देरी पैदा करती है। कालसर्प शांति पूजा पंडित बिनीत शास्त्रीजी द्वारा उनके समर्पित निजी पूजा स्थल पर शक्तिशाली वैदिक मंत्रों, नाग देवताओं की पूजा और अनुकूलित संकल्पों के माध्यम से संपन्न की जाती है।'
+      en: 'Kalsarpa Yog occurs when all seven planetary bodies are aligned between Rahu (the snake\'s head) and Ketu (the snake\'s tail). This alignment creates obstacles, instability, and delays. The Kalsarpa Shanti puja utilizes potent Vedic mantras, special offering rites to Snake deities (Nagas), and customized resolution formulas to restore balance and abundance. This is conducted by Pandit Bineet Shastriji in Trimbakeshwar with pure Vedic integrity.',
+      hi: 'कालसर्प योग तब बनता है जब कुंडली में सभी सात ग्रह राहु और केतु के बीच आ जाते हैं। यह स्थिति जीवन में अस्थिरता, संघर्ष और देरी पैदा करती है। कालसर्प शांति पूजा पंडित बिनीत शास्त्रीजी द्वारा त्र्यंबकेश्वर में शक्तिशाली वैदिक मंत्रों, नाग देवताओं की पूजा और अनुकूलित संकल्पों के माध्यम से संपन्न की जाती है।'
     },
     whoShouldPerform: {
       en: 'Anyone suffering from severe hurdles in education, career delays, constant health struggles, or whose astrological chart has been identified by an astrologer as containing Kalsarpa Dosha.',
       hi: 'शिक्षा में अत्यधिक रुकावटों, करियर में देरी, लगातार स्वास्थ्य समस्याओं से पीड़ित व्यक्ति, या जिनकी कुंडली में कालसर्प दोष पाया गया है, उन्हें यह पूजा करनी चाहिए।'
     },
     importance: {
-      en: 'Trimbakeshwar is highly revered for Kalsarpa Shanti because of the presence of the divine Jyotirlinga. The ritual is completed safely and transparently by Pandit Bineet Shastriji at his private Puja Sthal.',
-      hi: 'दिव्य ज्योतिर्लिंग की उपस्थिति के कारण कालसर्प शांति के लिए त्र्यंबकेश्वर को अत्यधिक पूजनीय माना जाता है। अनुष्ठान पंडित बिनीत शास्त्रीजी के सान्निध्य में उनके निजी पूजा स्थल पर सुरक्षित और पारदर्शी रूप से पूरा किया जाता है।'
+      en: 'Trimbakeshwar is highly revered for Kalsarpa Shanti because of the presence of the divine Jyotirlinga. The ritual is completed safely and transparently by Pandit Bineet Shastriji in Trimbakeshwar.',
+      hi: 'दिव्य ज्योतिर्लिंग की उपस्थिति के कारण कालसर्प शांति के लिए त्र्यंबकेश्वर को अत्यधिक पूजनीय माना जाता है। अनुष्ठान पंडित बिनीत शास्त्रीजी के सान्निध्य में त्र्यंबकेश्वर में सुरक्षित और पारदर्शी रूप से पूरा किया जाता है।'
     },
     benefits: [
       {
@@ -348,8 +348,8 @@ export const servicesData: Service[] = [
       hi: 'गंभीर या जानलेवा बीमारी से पीड़ित व्यक्ति, कुंडली में मारक दशा के प्रभाव वाले लोग, या मृत्यु के अत्यधिक भय से पीड़ित भक्तों के लिए यह अत्यंत लाभकारी है।'
     },
     importance: {
-      en: 'Conducted at our private, peaceful Puja Sthal in Trimbakeshwar under absolute spiritual discipline.',
-      hi: 'पूर्ण आध्यात्मिक अनुशासन के तहत त्र्यंबकेश्वर में हमारे निजी, शांत पूजा स्थल पर आयोजित किया जाता है।'
+      en: 'Conducted in Trimbakeshwar under absolute spiritual discipline.',
+      hi: 'पूर्ण आध्यात्मिक अनुशासन के तहत त्र्यंबकेश्वर में आयोजित किया जाता है।'
     },
     benefits: [
       {
@@ -435,8 +435,8 @@ export const servicesData: Service[] = [
       hi: 'पारिवारिक कलह, धन की अज्ञात हानि, विवाह में देरी का सामना करने वाले पुत्रों या परिवार के प्रतिनिधियों को यह श्राद्ध करना चाहिए।'
     },
     importance: {
-      en: 'Trimbakeshwar is highly revered globally for ancestral offerings. The ritual takes place at Pandit Bineet Shastriji\'s private Puja Sthal under standard vedic parameters.',
-      hi: 'पैतृक तर्पण के लिए त्र्यंबकेश्वर धाम विश्व स्तर पर पूजनीय है। यह अनुष्ठान मानक वैदिक मानदंडों के तहत पंडित बिनीत शास्त्रीजी के निजी पूजा स्थल पर संपन्न होता है।'
+      en: 'Trimbakeshwar is highly revered globally for ancestral offerings. The ritual takes place in Trimbakeshwar under standard Vedic parameters.',
+      hi: 'पैतृक तर्पण के लिए त्र्यंबकेश्वर धाम विश्व स्तर पर पूजनीय है। यह अनुष्ठान मानक वैदिक मानदंडों के तहत त्र्यंबकेश्वर में सम्पन्न होता है।'
     },
     benefits: [
       {
@@ -637,8 +637,8 @@ export const servicesData: Service[] = [
       hi: 'वे लोग जो "मांगलिक" हैं और जिन्हें मनपसंद जीवनसाथी खोजने में बाधाएं आ रही हैं या जिनके वैवाहिक जीवन में तनाव है।'
     },
     importance: {
-      en: 'Conducted at our private, peaceful Puja Sthal in Trimbakeshwar using traditional Vedic protocols.',
-      hi: 'पारंपरिक वैदिक नियमों का पालन करते हुए त्र्यंबकेश्वर में हमारे निजी, शांत पूजा स्थल पर आयोजित किया जाता है।'
+      en: 'Conducted in Trimbakeshwar using traditional Vedic protocols.',
+      hi: 'पारंपरिक वैदिक नियमों का पालन करते हुए त्र्यंबकेश्वर में आयोजित किया जाता है।'
     },
     benefits: [
       {
@@ -904,7 +904,7 @@ This unique aspect makes Trimbakeshwar an incredibly powerful point of cosmic en
 Ancient texts reveal that Sage Gautama lived on the Brahmagiri hills with his wife, Ahilya. To relieve a severe famine, he prayed to Lord Shiva, who commanded the holy river Ganga to descend on earth. River Ganga flowed here under the name Godavari (also known as Gautami). Lord Shiva agreed to reside here eternally as Tryambakeshwar (The Lord of Three Eyes).
 
 ### Ideal Destination for Remedies
-Due to the intense convergence of the Trinity and the sacred river Godavari, performing remedial prayers here releases extreme karmic burdens. It must be noted that while devotees visit the main temple for darshan, specialized Vedic rituals are conducted by authorized traditional priests like Pandit Bineet Shastriji at his dedicated private Puja Sthal outside the main temple.`,
+Due to the intense convergence of the Trinity and the sacred river Godavari, performing remedial prayers here releases extreme karmic burdens.`,
       hi: `त्र्यंबकेश्वर प्राचीन, शांत और अत्यंत रहस्यमयी है। महाराष्ट्र के नासिक के पास पवित्र गोदावरी नदी के उद्गम स्थल पर स्थित, यह बारह दिव्य ज्योतिर्लिंगों में से एक है।
 
 ### अद्वितीय तीन-मुखी लिंग
@@ -919,7 +919,7 @@ Due to the intense convergence of the Trinity and the sacred river Godavari, per
 प्राचीन ग्रंथों से पता चलता है कि ऋषि गौतम अपनी पत्नी अहिल्या के साथ ब्रह्मगिरि पहाड़ियों पर रहते थे। एक गंभीर अकाल को दूर करने के लिए, उन्होंने भगवान शिव से प्रार्थना की, जिन्होंने पवित्र गंगा को धरती पर उतरने का आदेश दिया। गंगा नदी यहाँ गोदावरी (गौतमी के रूप में भी जानी जाती है) के नाम से बही। भगवान शिव यहाँ त्र्यंबकेश्वर के रूप में शाश्वत निवास करने के लिए सहमत हुए।
 
 ### शांति अनुष्ठानों के लिए आदर्श स्थान
-त्रिदेवों के मिलन और पवित्र गोदावरी नदी के प्रवाह के कारण, यहाँ उपचारात्मक प्रार्थना करने से संचित कर्मों के बोझ से मुक्ति मिलती है। यह ध्यान दिया जाना चाहिए कि जहाँ भक्त दर्शन के लिए मुख्य मंदिर जाते हैं, वहीं विशिष्ट वैदिक अनुष्ठान मुख्य मंदिर के बाहर पंडित बिनीत शास्त्रीजी के अपने समर्पित निजी पूजा स्थल पर आयोजित किए जाते हैं।`
+त्रिदेवों के मिलन और पवित्र गोदावरी नदी के प्रवाह के कारण, यहाँ उपचारात्मक प्रार्थना करने से संचित कर्मों के बोझ से मुक्ति मिलती है।`
     },
     category: 'Temple History',
     readTime: {
@@ -973,7 +973,7 @@ Depending on the houses occupied by Rahu and Ketu, there are 12 distinct varieti
 ### The Vedic Remedy: Kalsarpa Shanti Puja
 The ultimate remedy described in Vedic astrology is the Kalsarpa Shanti Puja. Trimbakeshwar is highly revered for this because Rahu-Ketu are pacified powerfully in the proximity of the Jyotirlinga.
 
-Conducted at his dedicated private Puja Sthal, Pandit Bineet Shastriji chants the powerful Rahu and Ketu Beej mantras, consecrates silver Nag-Nagin replicas, and offers prayers for immediate planetary relief. If you are experiencing these symptoms, contacting Panditji can help arrange a custom consultation to determine the ideal planetary timing for your ritual.`,
+Pandit Bineet Shastriji chants the powerful Rahu and Ketu Beej mantras, consecrates silver Nag-Nagin replicas, and offers prayers for immediate planetary relief. If you are experiencing these symptoms, contacting Panditji can help arrange a custom consultation to determine the ideal planetary timing for your ritual.`,
       hi: `वैदिक ज्योतिष में कालसर्प दोष एक ऐसी कुंडली स्थिति है जिससे अक्सर लोग डरते हैं, फिर भी उचित आध्यात्मिक समझ के साथ इसे पूरी तरह से शांत किया जा सकता है।
 
 ### कालसर्प योग क्या है?
@@ -1003,7 +1003,7 @@ Conducted at his dedicated private Puja Sthal, Pandit Bineet Shastriji chants th
 ### वैदिक समाधान: कालसर्प शांति पूजा
 वैदिक ज्योतिष में वर्णित अंतिम समाधान कालसर्प शांति पूजा है। त्र्यंबकेश्वर इसके लिए अत्यधिक पूजनीय है क्योंकि ज्योतिर्लिंग के सानिध्य में राहु-केतु का प्रभाव शांत होता है।
 
-पंडित बिनीत शास्त्रीजी के अपने समर्पित पूजा स्थल पर आयोजित, वह शक्तिशाली राहु और केतु बीज मंत्रों का जाप करते हैं, चांदी के नाग-नागिन के जोड़ों को अभिमंत्रित करते हैं और तुरंत राहत के लिए प्रार्थना करते हैं। यदि आप इन लक्षणों का सामना कर रहे हैं, तो पंडितजी से संपर्क करके आप अपनी पूजा के लिए सही समय जान सकते हैं।`
+पंडित बिनीत शास्त्रीजी शक्तिशाली राहु और केतु बीज मंत्रों का जाप करते हैं, चांदी के नाग-नागिन के जोड़ों को अभिमंत्रित करते हैं और तुरंत राहत के लिए प्रार्थना करते हैं। यदि आप इन लक्षणों का सामना कर रहे हैं, तो पंडितजी से संपर्क करके आप अपनी पूजा के लिए सही समय जान सकते हैं।`
     },
     category: 'Puja Guides',
     readTime: {
@@ -1189,8 +1189,8 @@ export const testimonialsData: Testimonial[] = [
     },
     rating: 5,
     review: {
-      en: 'We had an incredibly authentic experience performing Kalsarpa Shanti. The panditji explained every mantra\'s meaning in detail. The entire arrangement at the private Puja Sthal was very clean and well-organized. High recommendations!',
-      hi: 'कालसर्प शांति पूजा करने का हमारा अनुभव बेहद प्रामाणिक था। पंडितजी ने हर मंत्र का अर्थ विस्तार से समझाया। हमारे निजी पूजा स्थल पर पूरी व्यवस्था बहुत साफ और व्यवस्थित थी। अत्यधिक अनुशंसित!'
+      en: 'We had an incredibly authentic experience performing Kalsarpa Shanti. The panditji explained every mantra\'s meaning in detail. The entire arrangement at the Puja Sthal was very clean and well-organized. High recommendations!',
+      hi: 'कालसर्प शांति पूजा करने का हमारा अनुभव बेहद प्रामाणिक था। पंडितजी ने हर मंत्र का अर्थ विस्तार से समझाया। पूजा स्थल पर पूरी व्यवस्था बहुत साफ और व्यवस्थित थी। अत्यधिक अनुशंसित!'
     },
     date: 'June 2026'
   },
@@ -1234,12 +1234,12 @@ export const faqsData: FAQItem[] = [
   {
     id: 'f1',
     question: {
-      en: 'Are these pujas performed inside the main Trimbakeshwar Temple premises?',
-      hi: 'क्या ये पूजा मुख्य त्र्यंबकेश्वर मंदिर परिसर के अंदर की जाती हैं?'
+      en: 'How can we ensure the authenticity of the rituals?',
+      hi: 'हम अनुष्ठानों की प्रामाणिकता कैसे सुनिश्चित कर सकते हैं?'
     },
     answer: {
-      en: 'No. Traditional Vedic rituals are performed by experienced priests like Pandit Bineet Shastriji at his dedicated private Puja Sthal nearby. The main temple is strictly reserved for standard darshan and simple offerings. The ritual venues and temple darshans are completely separate.',
-      hi: 'नहीं। पारंपरिक वैदिक अनुष्ठान पंडित बिनीत शास्त्रीजी जैसे अनुभवी पुरोहितों द्वारा पास के उनके समर्पित निजी पूजा स्थलों पर किए जाते हैं। मुख्य मंदिर केवल दर्शन और साधारण पूजा के लिए आरक्षित है। अनुष्ठान स्थल और मंदिर दर्शन पूरी तरह से अलग हैं।'
+      en: 'All rituals are performed by experienced priests like Pandit Bineet Shastriji in Trimbakeshwar with complete scriptural authenticity, pure Vedic mantras, and dedicated personal guidance.',
+      hi: 'सभी अनुष्ठान पंडित बिनीत शास्त्रीजी जैसे अनुभवी पुरोहितों द्वारा त्र्यंबकेश्वर में पूर्ण शास्त्रीय प्रामाणिकता, शुद्ध वैदिक मंत्रों और व्यक्तिगत मार्गदर्शन के साथ किए जाते हैं।'
     }
   },
   {
@@ -1293,8 +1293,8 @@ export const faqsData: FAQItem[] = [
       hi: 'त्र्यंबकेश्वर में नारायण नागबलि के लिए सबसे प्रामाणिक पंडित कैसे खोजें?'
     },
     answer: {
-      en: 'Always look for traditional Tamrapatradhari (copper-plate holding) lineage or certified Vedic scholars. Pandit Bineet Shastriji is recognized as one of the top-rated and highly trusted pandits in Trimbakeshwar, known for performing rituals with 100% scriptural authenticity at a private and peaceful Puja Sthal.',
-      hi: 'हमेशा पारंपरिक ताम्रपत्रधारी वंश या प्रमाणित वैदिक विद्वानों की तलाश करें। पंडित बिनीत शास्त्रीजी को त्र्यंबकेश्वर में सबसे उच्च श्रेणी के और अत्यधिक विश्वसनीय पंडितों में से एक माना जाता है, जिन्हें एक निजी और शांतिपूर्ण पूजा स्थल पर 100% शास्त्रोक्त प्रामाणिकता के साथ अनुष्ठान करने के लिए जाना जाता है।'
+      en: 'Always look for traditional Tamrapatradhari (copper-plate holding) lineage or certified Vedic scholars. Pandit Bineet Shastriji is recognized as one of the top-rated and highly trusted pandits in Trimbakeshwar, known for performing rituals with 100% scriptural authenticity in Trimbakeshwar.',
+      hi: 'हमेशा पारंपरिक ताम्रपत्रधारी वंश या प्रमाणित वैदिक विद्वानों की तलाश करें। पंडित बिनीत शास्त्रीजी को त्र्यंबकेश्वर में सबसे उच्च श्रेणी के और अत्यधिक विश्वसनीय पंडितों में से एक माना जाता है, जिन्हें त्र्यंबकेश्वर में 100% शास्त्रोक्त प्रामाणिकता के साथ अनुष्ठान करने के लिए जाना जाता है।'
     }
   }
 ];

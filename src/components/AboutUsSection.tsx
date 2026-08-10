@@ -80,13 +80,13 @@ export default function AboutUsSection({ lang }: AboutUsSectionProps) {
             </h3>
             <p className="font-sans text-sm sm:text-base text-[#1a1a1a]/85 leading-relaxed text-justify font-medium">
               {lang === 'en'
-                ? 'Pandit Bineet Shastriji believes that sacred rituals like Kalsarpa Shanti, Narayan Nagbali, and Tripindi Shraddha are not commercial events, but deep, sacred spiritual operations. Every ritual performed at his dedicated private Puja Sthal is carried out using authentic herbal offerings and exact syllable-by-syllable Sanskrit chanting. Over the last three decades, Shastriji has guided thousands of global families safely through these complex, life-changing procedures.'
-                : 'पंडित बिनीत शास्त्रीजी का मानना है कि कालसर्प शांति, नारायण नागबलि और त्रिपिंडी श्राद्ध जैसे अनुष्ठान केवल धार्मिक कृत्य नहीं हैं, बल्कि ये आत्मा की शुद्धि के गहन आध्यात्मिक विधान हैं। उनके समर्पित निजी पूजा स्थल पर की जाने वाली प्रत्येक पूजा में प्रामाणिक जड़ी-बूटियों और शुद्ध संस्कृत मंत्रोच्चार का प्रयोग किया जाता है। पिछले तीन दशकों में, शास्त्रीजी ने देश-विदेश के हजारों परिवारों को इन जटिल विधानों से सफलतापूर्वक मुक्ति दिलाई है।'}
+                ? 'Pandit Bineet Shastriji believes that sacred rituals like Kalsarpa Shanti, Narayan Nagbali, and Tripindi Shraddha are not commercial events, but deep, sacred spiritual operations. Every ritual is carried out using authentic herbal offerings and exact syllable-by-syllable Sanskrit chanting. Over the last three decades, Shastriji has guided thousands of global families safely through these complex, life-changing procedures.'
+                : 'पंडित बिनीत शास्त्रीजी का मानना है कि कालसर्प शांति, नारायण नागबलि और त्रिपिंडी श्राद्ध जैसे अनुष्ठान केवल धार्मिक कृत्य नहीं हैं, बल्कि ये आत्मा की शुद्धि के गहन आध्यात्मिक विधान हैं। उनके द्वारा की जाने वाली प्रत्येक पूजा में प्रामाणिक जड़ी-बूटियों और शुद्ध संस्कृत मंत्रोच्चार का प्रयोग किया जाता है। पिछले तीन दशकों में, शास्त्रीजी ने देश-विदेश के हजारों परिवारों को इन जटिल विधानों से सफलतापूर्वक मुक्ति दिलाई है।'}
             </p>
             <p className="font-sans text-sm sm:text-base text-[#1a1a1a]/85 leading-relaxed text-justify font-medium">
               {lang === 'en'
-                ? 'To maintain absolute peace and spiritual focus, Panditji hosts all rituals in his clean, custom-built halls away from the crowded general temple queues. Devotees take resolutions (Sankalp) individually with full concentration.'
-                : 'भीड़भाड़ से दूर, पूर्ण शांति और एकाग्रता के साथ पूजा संपन्न कराने के लिए, पंडितजी मुख्य मंदिर के निकट अपने स्वच्छ और सुव्यवस्थित निजी अनुष्ठान भवनों में पूजा आयोजित करते हैं। श्रद्धालु शांत मन से बैठकर पंडितजी के सान्निध्य में संकल्प लेते हैं।'}
+                ? 'To maintain absolute peace and spiritual focus, Panditji hosts all rituals in a clean and serene environment where devotees take resolutions (Sankalp) individually with full concentration.'
+                : 'पूर्ण शांति और एकाग्रता के साथ पूजा संपन्न कराने के लिए, पंडितजी स्वच्छ और शांत वातावरण में पूजा आयोजित करते हैं। श्रद्धालु शांत मन से बैठकर पंडितजी के सान्निध्य में संकल्प लेते हैं।'}
             </p>
           </div>
 

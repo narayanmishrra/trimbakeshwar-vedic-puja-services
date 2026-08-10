@@ -23,12 +23,12 @@ export default function WhyChooseUs({ lang }: WhyChooseUsProps) {
     {
       icon: <ShieldCheck className="w-8 h-8 text-[#E88921]" />,
       title: {
-        en: 'Private & Peaceful Puja Sthal',
-        hi: 'निजी और शांतिपूर्ण पूजा स्थल'
+        en: 'Peaceful Puja Sthal',
+        hi: 'शांतिपूर्ण पूजा स्थल'
       },
       desc: {
-        en: 'Rituals are conducted safely away from temple crowds in a dedicated, highly pure venue ensuring deep spiritual connection.',
-        hi: 'गहरे आध्यात्मिक जुड़ाव को सुनिश्चित करते हुए अनुष्ठान मंदिर की भीड़ से दूर एक समर्पित, अत्यंत शुद्ध स्थान पर सुरक्षित रूप से किए जाते हैं।'
+        en: 'Rituals are conducted in a dedicated, highly pure venue ensuring deep spiritual connection.',
+        hi: 'गहरे आध्यात्मिक जुड़ाव को सुनिश्चित करते हुए अनुष्ठान एक समर्पित, अत्यंत शुद्ध स्थान पर सुरक्षित रूप से किए जाते हैं।'
       }
     },
     {

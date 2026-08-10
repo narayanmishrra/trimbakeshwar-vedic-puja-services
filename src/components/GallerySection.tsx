@@ -80,8 +80,8 @@ export default function GallerySection({ lang }: GallerySectionProps) {
           </h2>
           <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
             {lang === 'en'
-              ? 'A curated glimpse into our dedicated private Puja Sthals, holy Kund baths, and traditional Vedic procedures conducted under experienced guidance.'
-              : 'हमारे समर्पित निजी पूजा स्थलों, पवित्र स्नान घाटों और हमारे विद्वान पंडितों के सानिध्य में आयोजित होने वाली वैदिक पूजाओं की कुछ झलकियाँ।'}
+              ? 'A curated glimpse into our dedicated Puja Sthals, holy Kund baths, and traditional Vedic procedures conducted under experienced guidance.'
+              : 'हमारे समर्पित पूजा स्थलों, पवित्र स्नान घाटों और हमारे विद्वान पंडितों के सानिध्य में आयोजित होने वाली वैदिक पूजाओं की कुछ झलकियाँ।'}
           </p>
         </div>
 

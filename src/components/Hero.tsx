@@ -267,17 +267,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
               </a>
             </motion.div>
 
-            {/* Trust disclaimer */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="text-xs text-[#7A1E1E]/70 italic mt-2 text-center lg:text-left font-sans font-medium"
-            >
-              * {lang === 'en'
-                ? 'Important: All rituals are held at private Puja Sthals; temple darshan and ritual venues are separate.'
-                : 'महत्वपूर्ण सूचना: सभी अनुष्ठान निजी पूजा स्थलों पर आयोजित होते हैं; मुख्य मंदिर दर्शन और अनुष्ठान स्थल अलग-अलग हैं।'}
-            </motion.p>
+
 
           </div>
 

@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageSquare, Compass, ArrowRight, Landmark, Clock, ShieldCheck, Sparkles, AlertTriangle } from 'lucide-react';
+import { Phone, MessageSquare, Compass, ArrowRight, Landmark, Clock, ShieldCheck, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 // Data & Types
@@ -235,8 +235,8 @@ export default function App() {
                 )}
                 <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
                   {lang === 'en'
-                    ? 'Explore complete preparation, durations, and scriptural procedures of sacred ceremonies conducted strictly in accordance with Sanskrit texts at our dedicated Puja Sthal.'
-                    : 'हमारे समर्पित पूजा स्थल पर वेदों और संस्कृत ग्रंथों के नियमों के अनुसार संपन्न की जाने वाली पावन पूजाओं के मुहूर्त, अवधि एवं विधि की जानकारी प्राप्त करें।'}
+                    ? 'Explore complete preparation, durations, and scriptural procedures of sacred ceremonies conducted strictly in accordance with Sanskrit texts in the holy town of Trimbakeshwar.'
+                    : 'वेदों और संस्कृत ग्रंथों के नियमों के अनुसार त्र्यंबकेश्वर में संपन्न की जाने वाली पावन पूजाओं के मुहूर्त, अवधि एवं विधि की जानकारी प्राप्त करें।'}
                 </p>
                 <TempleDivider />
               </div>
@@ -304,26 +304,6 @@ export default function App() {
           <>
             {/* Hero Main Gate Section */}
             <Hero lang={lang} setActiveTab={handleSelectService} />
-
-            {/* Quick Informational Section on Temple Darshan VS Puja Sthal */}
-            <section className="py-12 bg-[#FAF8F2] border-y border-[#F2E6CE]/50">
-              <div className="max-w-5xl mx-auto px-4 text-center">
-                <div className="inline-flex items-center gap-2 bg-[#7A1E1E]/5 border border-[#7A1E1E]/15 rounded-full px-4 py-1.5 mb-4 shadow-inner">
-                  <AlertTriangle className="w-4 h-4 text-[#E88921]" />
-                  <span className="text-xs font-bold text-[#7A1E1E] uppercase tracking-wider">
-                    {lang === 'en' ? 'Important Devotee Clarification' : 'श्रद्धालुओं के लिए महत्वपूर्ण सूचना'}
-                  </span>
-                </div>
-                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#7A1E1E] mb-3">
-                  {lang === 'en' ? 'Temple Darshan & Ritual Venue are Separate' : 'मंदिर दर्शन और अनुष्ठान स्थल पूरी तरह अलग-अलग हैं'}
-                </h3>
-                <p className="font-sans text-xs sm:text-sm text-[#7A1E1E]/75 max-w-3xl mx-auto leading-relaxed font-medium">
-                  {lang === 'en'
-                    ? 'In absolute alignment with the local administration rules and spiritual authenticity, all traditional Vedic pujas (like Kalsarpa Shanti & Narayan Nagbali) are performed exclusively at our dedicated private Puja Sthals inside the holy town. Standard temple entries are reserved strictly for simple darshan.'
-                    : 'स्थानीय नियमों और आध्यात्मिक मर्यादा के अनुसार, सभी वैदिक पूजाएं (जैसे कालसर्प शांति एवं नारायण नागबलि) हमारे नगर स्थित समर्पित निजी पूजा स्थलों पर की जाती हैं। मुख्य मंदिर केवल दर्शन हेतु आरक्षित है। दोनों स्थल अलग-अलग हैं।'}
-                </p>
-              </div>
-            </section>
 
             {/* Why Choose Us / USPs (E-E-A-T) */}
             <WhyChooseUs lang={lang} />
@@ -421,8 +401,8 @@ export default function App() {
                     <h4 className="font-serif text-base font-bold text-[#7A1E1E] mt-4 mb-2">{lang === 'en' ? 'Perform & Receive Prasad' : 'अनुष्ठान एवं महाप्रसाद'}</h4>
                     <p className="font-sans text-xs text-[#7A1E1E]/70 leading-relaxed font-medium">
                       {lang === 'en'
-                        ? 'Perform rituals physically at Panditji\'s private Puja Sthal, or attend remotely via live online stream. Consecrated Prasad is shipped to your door.'
-                        : 'पंडितजी के पूजा स्थल पर आकर या वीडियो कॉल द्वारा घर बैठे संकल्प लें। पूजा के बाद सिद्ध प्रसाद आपके घर भेज दिया जाएगा।'}
+                        ? 'Perform rituals physically in Trimbakeshwar, or attend remotely via live online stream. Consecrated Prasad is shipped to your door.'
+                        : 'त्र्यंबकेश्वर में आकर या वीडियो कॉल द्वारा घर बैठे संकल्प लें। पूजा के बाद सिद्ध प्रसाद आपके घर भेज दिया जाएगा।'}
                     </p>
                   </div>
 

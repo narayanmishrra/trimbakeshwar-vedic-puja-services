@@ -256,9 +256,7 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
                   <PhoneCall className="w-4 h-4 fill-[#FFFDF7] shrink-0" />
                   <span className="whitespace-nowrap">{lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}</span>
                 </a>
-                <p className="text-center text-[10px] text-[#7A1E1E]/60 font-medium">
-                  {lang === 'en' ? 'Temple Darshan & Ritual Venue are Separate' : 'मंदिर दर्शन और अनुष्ठान स्थल अलग हैं'}
-                </p>
+
               </div>
             </motion.div>
           </>
