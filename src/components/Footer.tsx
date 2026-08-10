@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Landmark, Phone, Mail, Clock, ShieldAlert, X, ShieldCheck } from 'lucide-react';
+import { Landmark, Phone, Mail, Clock, X, ShieldCheck } from 'lucide-react';
 import { businessConfig, servicesData } from '../data';
 import { Language } from '../types';
 import { motion, AnimatePresence } from 'motion/react';
@@ -234,18 +234,7 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
           </div>
         </div>
 
-        {/* Legal Trust accuracy banner */}
-        <div className="border-t border-[#FFFDF7]/15 pt-6 pb-4">
-          <div className="bg-black/15 rounded-sm p-4 flex gap-3 border border-[#FFFDF7]/10 max-w-4xl mx-auto">
-            <ShieldAlert className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
-            <p className="text-[11px] text-[#FFFDF7]/80 leading-relaxed text-justify font-sans">
-              <strong>{lang === 'en' ? 'Disclaimer: ' : 'महत्वपूर्ण सूचना: '}</strong>
-              {lang === 'en'
-                ? 'This website represents an independent spiritual service and Vedic priest organization. Traditional rituals are performed in strict accordance with the scriptures at our private Puja Sthals inside the holy town of Trimbakeshwar. These ceremonies are not organized by, nor do they take place inside, the public Trimbakeshwar Temple premises. Devotees perform temple darshans separately.'
-                : 'यह वेबसाइट एक स्वतंत्र आध्यात्मिक सेवा और वैदिक पुरोहित संस्थान का प्रतिनिधित्व करती है। पारंपरिक अनुष्ठान शास्त्रों के अनुसार त्र्यंबकेश्वर नगर में हमारे समर्पित निजी पूजा स्थलों पर आयोजित होते हैं। ये अनुष्ठान मुख्य सार्वजनिक मंदिर के अंदर नहीं कराए जाते। श्रद्धालु मंदिर दर्शन अलग से करते हैं।'}
-            </p>
-          </div>
-        </div>
+
 
         {/* Outer bottom copyright credits */}
         <div className="border-t border-[#FFFDF7]/10 pt-6 mt-6 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#FFFDF7]/60 font-semibold font-sans">
@@ -361,7 +350,7 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
                           <strong>1. Scope of Service:</strong> We provide spiritual advice, Vedic scripture interpretations, and coordinate traditional rituals such as Kalsarpa Shanti, Narayan Nagbali, and Tripindi Shraddha, performed under scriptural guidelines.
                         </p>
                         <p>
-                          <strong>2. Crucial Disclaimer:</strong> This platform represents an independent priest organization and spiritual scholars. We have <strong>no official association, affiliation, endorsement, or management relation</strong> with the government-managed public Trimbakeshwar Temple Trust. Traditional rituals are performed purely at our private dedicated Puja Sthals. Main temple visits are done separately.
+                          <strong>2. Crucial Disclaimer:</strong> This platform represents an independent priest organization and spiritual scholars. We have <strong>no official association, affiliation, endorsement, or management relation</strong> with the government-managed public Trimbakeshwar Temple Trust.
                         </p>
                         <p>
                           <strong>3. Voluntary Consultation:</strong> Devotees engage with our services and select ritual packages based entirely on their personal faith, planetary alignments, and astrological assessments.
@@ -379,7 +368,7 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
                           <strong>१. सेवाओं का क्षेत्र:</strong> हम श्रद्धालुओं को शास्त्रोक्त गोत्र पूजन, कालसर्प शांति, नारायण नागबलि, और त्रिपिंडी श्राद्ध जैसे पारंपरिक वैदिक निवारण अनुष्ठान आयोजित करने में मार्गदर्शन प्रदान करते हैं।
                         </p>
                         <p>
-                          <strong>२. महत्वपूर्ण अस्वीकरण (Disclaimer):</strong> यह वेबसाइट स्वतंत्र रूप से कार्य करने वाले पुरोहितों का प्रतिनिधित्व करती है। हमारा मुख्य सार्वजनिक सरकारी मंदिर (श्री त्र्यंबकेश्वर देवस्थान ट्रस्ट) के साथ <strong>कोई आधिकारिक या व्यावसायिक संबंध नहीं है</strong>। सभी निवारक अनुष्ठान हमारे निजी पूजा भवनों में सम्पन्न होते हैं।
+                          <strong>२. महत्वपूर्ण अस्वीकरण (Disclaimer):</strong> यह वेबसाइट स्वतंत्र रूप से कार्य करने वाले पुरोहितों का प्रतिनिधित्व करती है। हमारा मुख्य सार्वजनिक सरकारी मंदिर (श्री त्र्यंबकेश्वर देवस्थान ट्रस्ट) के साथ <strong>कोई आधिकारिक या व्यावसायिक संबंध नहीं है</strong>।
                         </p>
                         <p>
                           <strong>३. स्वैच्छिक आस्था:</strong> भक्त अपनी श्रद्धा, ग्रह दशा, और स्वेच्छा के आधार पर ही अनुष्ठान आयोजित कराने का निर्णय लेते हैं।
