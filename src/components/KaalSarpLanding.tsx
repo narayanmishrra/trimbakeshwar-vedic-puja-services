@@ -274,8 +274,98 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
 
   return (
     <div className="bg-[#FFFDF7] text-[#1a1a1a] overflow-x-hidden">
-      {/* HERO - Above the fold: H1 must match search intent */}
-      <section className="relative bg-gradient-to-b from-[#FFFDF7] via-[#FAF8F2] to-[#FAF8F2] pt-28 pb-8 lg:pb-14 overflow-hidden" aria-labelledby="kaal-sarp-h1">
+
+      {/* ============================================================
+          MOBILE HERO (< md) — full-bleed cinematic background image,
+          headline, short description and ONE primary CTA, all above
+          the fold on 360x800 / 375x812 / 390x844 / 412x915.
+          Desktop/tablet hero is untouched and rendered below.
+         ============================================================ */}
+      <section
+        className="md:hidden hero-mobile relative w-full flex flex-col justify-end overflow-hidden bg-[#2b1a12]"
+        aria-labelledby="kaal-sarp-h1-mobile"
+      >
+        {/* Background photograph — object-cover / center, prioritised for LCP */}
+        <picture>
+          <source srcSet="/images/hero-mobile.webp" type="image/webp" />
+          <img
+            src="/images/hero-mobile.jpg"
+            alt="Shri Trimbakeshwar Jyotirlinga Temple, Nashik — where Kaal Sarp Puja is performed"
+            width={900}
+            height={1200}
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover object-[center_28%] select-none pointer-events-none"
+          />
+        </picture>
+
+        {/* Dark cinematic gradient — keeps the photo visible, text readable */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(20,10,6,0.55) 0%, rgba(20,10,6,0.12) 26%, rgba(20,10,6,0.45) 58%, rgba(20,10,6,0.88) 86%, rgba(20,10,6,0.95) 100%)',
+          }}
+        />
+        {/* Warm temple glow at the base */}
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#7A1E1E]/35 to-transparent pointer-events-none" />
+
+        {/* Content — anchored to the bottom, clear of the floating buttons */}
+        {/* justify-end anchors this block to the bottom, so the distance from the
+            bottom edge (pb + content) is what guarantees the photo stays visible above it. */}
+        <div className="relative z-10 w-full px-5 pt-10 pb-[calc(72px+env(safe-area-inset-bottom))]">
+          {/* Eyebrow */}
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-black/30 backdrop-blur-[2px] px-3 py-1.5 mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#E88921]" aria-hidden />
+            <span className="text-[10px] font-bold tracking-[0.18em] text-[#F5E3C0] uppercase">
+              {lang === 'en' ? 'Trimbakeshwar • Nashik' : 'त्र्यंबकेश्वर • नाशिक'}
+            </span>
+          </div>
+
+          {/* Headline — responsive clamp, no forced line breaks */}
+          <h1
+            id="kaal-sarp-h1-mobile"
+            className="font-serif font-bold text-white text-[clamp(1.7rem,8.2vw,2.35rem)] leading-[1.12] tracking-tight max-w-[16ch]"
+            style={{ textShadow: '0 2px 18px rgba(0,0,0,0.55)' }}
+          >
+            {lang === 'en' ? (
+              <>Kaal Sarp Puja <span className="text-[#F0A94A]">in Trimbakeshwar</span></>
+            ) : (
+              <>त्र्यंबकेश्वर में <span className="text-[#F0A94A]">काल सर्प पूजा</span></>
+            )}
+          </h1>
+
+          {/* Short description */}
+          <p
+            className="mt-2.5 font-sans text-[clamp(0.82rem,3.7vw,0.95rem)] leading-relaxed text-white/85 font-medium max-w-[38ch]"
+            style={{ textShadow: '0 1px 12px rgba(0,0,0,0.5)' }}
+          >
+            {lang === 'en'
+              ? 'Authentic Vedic ritual at the Jyotirlinga with experienced Pandit Ji. Muhurat, samagri and booking arranged.'
+              : 'ज्योतिर्लिंग नगरी में अनुभवी पंडित जी द्वारा शास्त्रोक्त अनुष्ठान। मुहूर्त एवं बुकिंग की पूर्ण व्यवस्था।'}
+          </p>
+
+          {/* ONE primary CTA */}
+          <a
+            href={phoneHref}
+            onClick={handlePhoneClick}
+            className="mt-5 flex w-full items-center justify-center gap-2.5 rounded-sm bg-[#E88921] px-6 py-4 font-bold text-[15px] text-white shadow-[0_10px_30px_rgba(232,137,33,0.35)] border border-[#D4AF37]/40 active:scale-[0.985] transition-transform"
+          >
+            <Phone className="w-[18px] h-[18px] fill-current shrink-0" />
+            <span className="tracking-wide">{lang === 'en' ? 'Call Now' : 'अभी कॉल करें'}</span>
+            <span className="font-sans font-semibold text-white/85 text-[13px]">{businessConfig.phoneDisplay}</span>
+          </a>
+
+          {/* Micro reassurance — single quiet line, not a CTA */}
+          <p className="mt-3 text-[11px] font-semibold tracking-wide text-white/60 text-center">
+            {lang === 'en' ? 'Available 4:30 AM – 8:00 PM • Direct Pandit Ji contact' : 'उपलब्ध: सुबह 4:30 – रात 8:00 • सीधा पंडित संपर्क'}
+          </p>
+        </div>
+      </section>
+
+      {/* HERO - Above the fold: H1 must match search intent (tablet & desktop) */}
+      <section className="hidden md:block relative bg-gradient-to-b from-[#FFFDF7] via-[#FAF8F2] to-[#FAF8F2] pt-28 pb-8 lg:pb-14 overflow-hidden" aria-labelledby="kaal-sarp-h1">
         {/* subtle background */}
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#E88921]/10 blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] rounded-full bg-[#7A1E1E]/5 blur-[100px] pointer-events-none" />
@@ -368,16 +458,24 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
               <div className="relative rounded-sm overflow-hidden border border-[#D4AF37]/30 shadow-xl bg-white">
                 {/* Top gold line */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#D4AF37] via-[#E88921] to-[#D4AF37] z-10" />
-                <img
-                  src="/images/kalsarp puja.jpeg"
-                  alt="Kaal Sarp Puja in Trimbakeshwar - Pandit Ji performing ritual"
-                  width={640}
-                  height={480}
-                  fetchPriority="high"
-                  loading="eager"
-                  decoding="async"
-                  className="w-full h-[320px] sm:h-[380px] lg:h-[440px] object-cover"
-                />
+                {/* Desktop/tablet hero visual. The 1px source keeps phones from
+                    downloading this (hidden) image — mobile has its own hero. */}
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  />
+                  <img
+                    src="/images/kalsarp puja.jpeg"
+                    alt="Kaal Sarp Puja in Trimbakeshwar - Pandit Ji performing ritual"
+                    width={640}
+                    height={480}
+                    fetchPriority="high"
+                    loading="eager"
+                    decoding="async"
+                    className="w-full h-[320px] sm:h-[380px] lg:h-[440px] object-cover"
+                  />
+                </picture>
                 {/* overlay caption */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-4 pt-12">
                   <p className="text-white text-xs font-bold tracking-widest uppercase opacity-90">Trimbakeshwar • Nashik • Maharashtra</p>
@@ -896,20 +994,8 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
         </div>
       </section>
 
-      {/* STICKY MOBILE BOTTOM BAR */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-[#F2E6CE] shadow-[0_-4px_20px_rgba(0,0,0,0.08)] px-2 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] flex gap-2">
-        <a href={phoneHref} onClick={handlePhoneClick} className="flex-1 bg-white border border-[#7A1E1E] text-[#7A1E1E] font-bold text-[13px] py-3.5 rounded-sm flex items-center justify-center gap-1.5 active:scale-[0.98] transition-transform cursor-pointer">
-          <Phone className="w-4 h-4" /> CALL
-        </a>
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick} className="flex-1 bg-[#25D366] text-white font-bold text-[13px] py-3.5 rounded-sm flex items-center justify-center gap-1.5 active:scale-[0.98] transition-transform cursor-pointer">
-          <MessageSquare className="w-4 h-4 fill-white" /> WHATSAPP
-        </a>
-        <button onClick={() => handleBookingClick('sticky_book')} className="flex-[1.2] bg-[#7A1E1E] text-white font-bold text-[13px] py-3.5 rounded-sm flex items-center justify-center gap-1.5 active:scale-[0.98] transition-transform cursor-pointer border border-[#D4AF37]/20">
-          <Calendar className="w-4 h-4" /> BOOK PUJA
-        </button>
-      </div>
-      {/* spacer for sticky bar */}
-      <div className="lg:hidden h-[72px]" aria-hidden />
+      {/* Sticky mobile CTA bar intentionally removed — the hero carries the
+          single primary CTA and the floating Call/WhatsApp buttons remain. */}
 
     </div>
   );
