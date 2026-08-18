@@ -42,7 +42,9 @@ export default function App() {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
 
   useEffect(() => {
-    const criticalImages = ['/images/main-photo.png', '/images/bramahagiri.webp'];
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    // The mobile hero image is preloaded in index.html; avoid re-fetching heavy desktop art on phones.
+    const criticalImages = isMobile ? ['/images/hero-mobile.webp'] : ['/images/bramahagiri.webp'];
     const secondaryImages = [
       '/images/gallery1.jpeg','/images/gallery2.jpeg','/images/gallery3.jpeg','/images/kalsarp puja.jpeg','/images/galllery4.jpeg','/images/gallery7.jpeg','/images/online.jpeg',
       '/images/mahamrityunjay.jpg','/images/navgrah.jpg','/images/pitrudosh.jpg','/images/narayan naagbali.jpg','/images/tripindi.jpg','/images/rudrabhishek.jpg','/images/mangal dosh.png'

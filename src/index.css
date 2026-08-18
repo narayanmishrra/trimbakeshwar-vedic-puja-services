@@ -35,3 +35,32 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ------------------------------------------------------------------
+   Mobile hero height — image + headline + description + primary CTA
+   must all fit inside the first viewport on 360x800 / 375x812 /
+   390x844 / 412x915. Progressive enhancement: vh -> svh -> dvh.
+   ------------------------------------------------------------------ */
+.hero-mobile {
+  min-height: 88vh;
+}
+
+@supports (min-height: 100svh) {
+  .hero-mobile {
+    min-height: 88svh;
+  }
+}
+
+@supports (min-height: 100dvh) {
+  .hero-mobile {
+    min-height: 90dvh;
+  }
+}
+
+/* Landscape phones: let the content define the height instead of forcing
+   a tall hero into a very short viewport. Portrait keeps the full hero. */
+@media (max-height: 640px) and (orientation: landscape) {
+  .hero-mobile {
+    min-height: 0;
+  }
+}

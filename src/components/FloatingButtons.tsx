@@ -21,7 +21,10 @@ export default function FloatingButtons({ lang }: FloatingButtonsProps) {
   const whatsappUrl = `https://wa.me/${businessConfig.whatsapp}?text=${encodeURIComponent(customWhatsappText)}`;
 
   return (
-    <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 flex flex-col gap-4 items-end justify-end pointer-events-none select-none">
+    <div
+      className="fixed right-4 md:right-8 z-50 flex flex-row-reverse md:flex-col gap-3 md:gap-4 items-end justify-end pointer-events-none select-none"
+      style={{ bottom: 'calc(1rem + env(safe-area-inset-bottom))' }}
+    >
       {/* Floating WhatsApp Chat Button */}
       <div 
         className="pointer-events-auto relative group flex items-center justify-end"
@@ -34,7 +37,7 @@ export default function FloatingButtons({ lang }: FloatingButtonsProps) {
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 10 }}
-              className="absolute right-16 bg-[#25D366] text-white text-xs py-2 px-3 rounded-sm shadow-lg border border-white/20 whitespace-nowrap hidden sm:block font-sans font-bold"
+              className="absolute right-16 bg-[#25D366] text-white text-xs py-2 px-3 rounded-sm shadow-lg border border-white/20 whitespace-nowrap hidden md:block font-sans font-bold"
             >
               {lang === 'en' ? 'WhatsApp Chat' : 'व्हाट्सएप चैट'} • ॐ नमः शिवाय
             </motion.div>
@@ -52,7 +55,7 @@ export default function FloatingButtons({ lang }: FloatingButtonsProps) {
           }}
         >
           {/* Pulsing ring animation */}
-          <span className="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping pointer-events-none" />
+          <span className="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-40 animate-ping pointer-events-none" />
           <MessageSquare className="w-6 h-6 md:w-7 md:h-7 fill-current" />
         </a>
       </div>
@@ -69,7 +72,7 @@ export default function FloatingButtons({ lang }: FloatingButtonsProps) {
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 10 }}
-              className="absolute right-16 bg-[#7A1E1E] text-[#FFFDF7] text-xs py-2 px-3 rounded-sm shadow-lg border border-[#D4AF37]/30 whitespace-nowrap hidden sm:block font-sans font-bold"
+              className="absolute right-16 bg-[#7A1E1E] text-[#FFFDF7] text-xs py-2 px-3 rounded-sm shadow-lg border border-[#D4AF37]/30 whitespace-nowrap hidden md:block font-sans font-bold"
             >
               {lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}
             </motion.div>
@@ -91,7 +94,7 @@ export default function FloatingButtons({ lang }: FloatingButtonsProps) {
           }}
         >
           {/* Pulsing ring animation */}
-          <span className="absolute inline-flex h-full w-full rounded-full bg-[#E88921] opacity-75 animate-ping pointer-events-none" />
+          <span className="absolute inline-flex h-full w-full rounded-full bg-[#E88921] opacity-40 animate-ping pointer-events-none" />
           <Phone className="w-6 h-6 md:w-7 md:h-7 fill-current" />
         </a>
       </div>

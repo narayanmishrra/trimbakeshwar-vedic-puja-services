@@ -64,7 +64,9 @@
   <link rel="alternate" hreflang="x-default" href="https://trimbakeshwarpanditji.in/" />
 
   <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
-  <link rel="preload" as="image" href="/images/kalsarp%20puja.jpeg" fetchpriority="high" />
+  <!-- LCP hero: portrait cinematic temple image on mobile, ritual photo on desktop -->
+  <link rel="preload" as="image" href="/images/hero-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/images/kalsarp%20puja.jpeg" media="(min-width: 768px)" fetchpriority="high" />
   <title>Kaal Sarp Puja in Trimbakeshwar | Trimbakeshwar Vedic Puja Services</title>
 
   <!-- LocalBusiness Structured Data -->
