@@ -62,9 +62,22 @@ export default function WhyChooseUs({ lang }: WhyChooseUsProps) {
           <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
             {lang === 'en' ? 'Our Authority & Trust' : 'हमारा अधिकार और विश्वास'}
           </span>
+          <span className="block text-[10px] font-bold text-[#E88921]/60 mt-1">
+            {lang === 'en' ? 'हमारा अधिकार और विश्वास' : 'Our Authority & Trust'}
+          </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4">
             {lang === 'en' ? 'Why We Are The Best Choice For Your Rituals' : 'हम आपके अनुष्ठानों के लिए सबसे अच्छा विकल्प क्यों हैं?'}
           </h2>
+          {lang === 'en' && (
+            <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-2 mb-4">
+              आपके अनुष्ठानों के लिए हम सर्वोत्तम विकल्प क्यों?
+            </span>
+          )}
+          {lang === 'hi' && (
+            <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-2 mb-4">
+              Why We Are The Best Choice For Your Rituals
+            </span>
+          )}
           <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
             {lang === 'en'
               ? 'Recognized as the premier destination for Kalsarpa Shanti, Narayan Nagbali, and Pitru Dosh Nivaran in Trimbakeshwar.'

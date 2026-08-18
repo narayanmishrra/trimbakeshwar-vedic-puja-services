@@ -67,9 +67,22 @@ export default function ContactSection({ lang }: ContactSectionProps) {
           <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
             {lang === 'en' ? 'Get Guidance' : 'मार्गदर्शन एवं संपर्क'}
           </span>
+          <span className="block text-[10px] font-bold text-[#E88921]/60 mt-1">
+            {lang === 'en' ? 'मार्गदर्शन एवं संपर्क' : 'Get Guidance'}
+          </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4 tracking-tight">
             {lang === 'en' ? 'Contact Panditji For Puja Guidance' : 'पूजा हेतु सीधे संपर्क करें'}
           </h2>
+          {lang === 'en' && (
+            <span className="block font-serif text-sm sm:text-base font-bold text-[#E88921]/80 -mt-2 mb-4">
+              पूजा मार्गदर्शन हेतु संपर्क
+            </span>
+          )}
+          {lang === 'hi' && (
+            <span className="block font-serif text-sm sm:text-base font-bold text-[#E88921]/80 -mt-2 mb-4">
+              Contact Panditji For Puja Guidance
+            </span>
+          )}
           <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
             {lang === 'en'
               ? 'Connect directly with our traditional Vedic scholars. Provide your details or queries to find the most auspicious Muhurat for your rituals.'
@@ -88,6 +101,16 @@ export default function ContactSection({ lang }: ContactSectionProps) {
               <h3 className="font-serif text-2xl font-bold text-[#7A1E1E]">
                 {lang === 'en' ? 'Traditional Sanctuary Office' : 'कार्यालय संपर्क विवरण'}
               </h3>
+              {lang === 'en' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 mt-1">
+                  कार्यालय संपर्क विवरण
+                </span>
+              )}
+              {lang === 'hi' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 mt-1">
+                  Traditional Sanctuary Office
+                </span>
+              )}
               
               {/* Phone info card */}
               <a
@@ -156,6 +179,16 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                 <Compass className="w-5 h-5 text-[#E88921]" />
                 <span>{lang === 'en' ? 'How To Reach Trimbakeshwar' : 'त्र्यंबकेश्वर कैसे पहुँचें?'}</span>
               </h4>
+              {lang === 'en' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 mt-1 ml-7">
+                  त्र्यंबकेश्वर कैसे पहुँचें?
+                </span>
+              )}
+              {lang === 'hi' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 mt-1 ml-7">
+                  How To Reach Trimbakeshwar
+                </span>
+              )}
 
               <div className="space-y-3.5 text-xs text-[#1a1a1a]/80 leading-relaxed font-medium">
                 <div className="flex gap-2 bg-white p-3 rounded-sm border border-[#F2E6CE]">
@@ -186,6 +219,16 @@ export default function ContactSection({ lang }: ContactSectionProps) {
             <h3 className="font-serif text-2xl font-bold text-[#7A1E1E] mb-6">
               {lang === 'en' ? 'Send Your Details to Pandit Bineet Shastriji' : 'पंडित बिनीत शास्त्रीजी को विवरण भेजें'}
             </h3>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-4 mb-4">
+                पंडित बिनीत शास्त्रीजी को विवरण भेजें
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-4 mb-4">
+                Send Your Details to Pandit Bineet Shastriji
+              </span>
+            )}
 
             <form onSubmit={handleSubmit} className="space-y-5">
               

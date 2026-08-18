@@ -107,7 +107,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
           "email": businessConfig.email,
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Krushna Villa, Kailas raja Nagar, Near swami Samarth kendra, Trimbakeshwar ring road",
+            "streetAddress": "Trimbakeshwar, Nashik, Maharashtra",
             "addressLocality": "Trimbakeshwar",
             "addressRegion": "Maharashtra",
             "postalCode": "422212",
@@ -225,8 +225,8 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
       id: 'f-where',
       q: lang === 'en' ? 'Where is Kaal Sarp Puja performed in Trimbakeshwar?' : 'त्र्यंबकेश्वर में काल सर्प पूजा कहाँ की जाती है?',
       a: lang === 'en'
-        ? 'Kaal Sarp Puja is performed in Trimbakeshwar, Nashik, Maharashtra — home to the Trimbakeshwar Jyotirlinga and the origin of the Godavari. The town is traditionally regarded as highly suitable for such remedial rituals. We provide clear location guidance, address and Google Maps support after booking. Visit: Krushna Villa, Kailas raja Nagar, Near swami Samarth kendra, Trimbakeshwar ring road, 422212.'
-        : 'काल सर्प पूजा त्र्यंबकेश्वर, नाशिक, महाराष्ट्र में — त्र्यंबकेश्वर ज्योतिर्लिंग और गोदावरी के उद्गम स्थल पर — की जाती है। बुकिंग के बाद हम स्पष्ट स्थान मार्गदर्शन और गूगल मैप सहायता प्रदान करते हैं।'
+        ? 'Kaal Sarp Puja is performed in Trimbakeshwar, Nashik, Maharashtra — home to the Trimbakeshwar Jyotirlinga and the origin of the Godavari. The town is traditionally regarded as highly suitable for such remedial rituals. We provide clear location guidance, address and Google Maps support after booking. Location: Trimbakeshwar, Pin- 422212.'
+        : 'काल सर्प पूजा त्र्यंबकेश्वर, नाशिक, महाराष्ट्र में — त्र्यंबकेश्वर ज्योतिर्लिंग और गोदावरी के उद्गम स्थल पर — की जाती है। बुकिंग के बाद हम स्पष्ट स्थान मार्गदर्शन और गूगल मैप सहायता प्रदान करते हैं। स्थान: त्र्यंबकेश्वर, पिन- 422212।'
     },
     {
       id: 'f-book',
@@ -526,6 +526,16 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#7A1E1E] mt-2">
               {lang === 'en' ? 'Why Perform Kaal Sarp Puja at Trimbakeshwar?' : 'त्र्यंबकेश्वर में काल सर्प पूजा क्यों करें?'}
             </h2>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm sm:text-base font-bold text-[#E88921]/80 mt-1">
+                त्र्यंबकेश्वर में काल सर्प पूजा क्यों करें?
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm sm:text-base font-bold text-[#E88921]/80 mt-1">
+                Why Perform Kaal Sarp Puja at Trimbakeshwar?
+              </span>
+            )}
             <div className="w-12 h-0.5 bg-[#E88921] mx-auto mt-4" />
           </div>
 
@@ -601,6 +611,16 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
           <div className="text-center max-w-2xl mx-auto mb-10">
             <span className="text-xs font-bold tracking-widest text-[#E88921] uppercase">{lang === 'en' ? 'Simple Process' : 'सरल प्रक्रिया'}</span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#7A1E1E] mt-2">{lang === 'en' ? 'Kaal Sarp Puja Process' : 'काल सर्प पूजा प्रक्रिया'}</h2>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                काल सर्प पूजा प्रक्रिया
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                Kaal Sarp Puja Process
+              </span>
+            )}
             <p className="text-sm text-[#7A1E1E]/60 font-medium mt-2">{lang === 'en' ? 'Clear steps from booking to completion — designed for first-time devotees.' : 'बुकिंग से पूर्णता तक स्पष्ट चरण।'}</p>
           </div>
 
@@ -679,6 +699,16 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
           <div className="max-w-3xl mx-auto text-center mb-8">
             <span className="text-xs font-bold tracking-widest text-[#E88921] uppercase">{lang === 'en' ? 'Puja Details' : 'पूजा विवरण'}</span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#7A1E1E] mt-2">{lang === 'en' ? 'Kaal Sarp Puja Details' : 'काल सर्प पूजा विवरण'}</h2>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                काल सर्प पूजा विवरण
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                Kaal Sarp Puja Details
+              </span>
+            )}
           </div>
 
           <div className="max-w-4xl mx-auto bg-white border border-[#F2E6CE] rounded-sm shadow-sm overflow-hidden">
@@ -714,6 +744,16 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
           <div className="max-w-3xl mx-auto text-center mb-8">
             <span className="text-xs font-bold tracking-widest text-[#E88921] uppercase">{lang === 'en' ? 'Booking' : 'बुकिंग'}</span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#7A1E1E] mt-2">{lang === 'en' ? 'Kaal Sarp Puja Booking' : 'काल सर्प पूजा बुकिंग'}</h2>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                काल सर्प पूजा बुकिंग
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                Kaal Sarp Puja Booking
+              </span>
+            )}
             <p className="text-sm text-[#7A1E1E]/60 font-medium mt-2">{lang === 'en' ? 'Transparent pricing — no hidden charges' : 'पारदर्शी शुल्क — कोई छिपा खर्च नहीं'}</p>
           </div>
 
@@ -843,6 +883,16 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
           <div className="text-center max-w-2xl mx-auto mb-10">
             <span className="text-xs font-bold tracking-widest text-[#E88921] uppercase">{lang === 'en' ? 'FAQ' : 'सवाल-जवाब'}</span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#7A1E1E] mt-2">{lang === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}</h2>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                अक्सर पूछे जाने वाले प्रश्न
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                Frequently Asked Questions
+              </span>
+            )}
             <p className="text-sm text-[#7A1E1E]/60 font-medium mt-2">{lang === 'en' ? 'Clear answers to real booking concerns.' : 'बुकिंग से जुड़े स्पष्ट उत्तर।'}</p>
           </div>
 
@@ -976,6 +1026,16 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
             {lang === 'en' ? 'Planning Kaal Sarp Puja at Trimbakeshwar?' : 'त्र्यंबकेश्वर में काल सर्प पूजा की योजना?'}
           </h2>
+          {lang === 'en' && (
+            <span className="block font-serif text-base sm:text-lg font-bold text-[#D4AF37] mt-1">
+              त्र्यंबकेश्वर में काल सर्प पूजा की योजना बनाएं
+            </span>
+          )}
+          {lang === 'hi' && (
+            <span className="block font-serif text-base sm:text-lg font-bold text-[#D4AF37] mt-1">
+              Planning Kaal Sarp Puja at Trimbakeshwar?
+            </span>
+          )}
           <p className="text-sm sm:text-base text-white/80 font-medium mt-3 max-w-2xl mx-auto leading-relaxed">
             {lang === 'en' ? 'Speak with us about available dates, puja details and booking. Direct Pandit Ji contact — clear guidance, no confusion.' : 'उपलब्ध तिथियों, पूजा विवरण और बुकिंग के बारे में बात करें। सीधा पंडित संपर्क — स्पष्ट मार्गदर्शन।'}
           </p>

@@ -82,6 +82,9 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
                 <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-[#E88921] font-bold mt-0.5">
                   {lang === 'en' ? 'Vedic Puja Services' : 'वैदिक पूजा सेवा'}
                 </p>
+                <span className="text-[8px] sm:text-[9px] font-bold text-[#7A1E1E]/50 tracking-wider">
+                  {lang === 'en' ? 'त्र्यंबकेश्वर वैदिक पूजा सेवा' : 'Trimbakeshwar Vedic Puja Services'}
+                </span>
               </div>
             </div>
  
@@ -214,6 +217,7 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
                   <div className="flex flex-col">
                     <span className="text-xs uppercase tracking-widest text-[#E88921] font-semibold">Trimbakeshwar</span>
                     <span className="text-sm font-bold text-[#7A1E1E]">Vedic Pujas</span>
+                    <span className="text-[10px] font-bold text-[#E88921]/60">त्र्यंबकेश्वर वैदिक पूजा</span>
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}

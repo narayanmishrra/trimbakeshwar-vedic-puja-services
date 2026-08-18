@@ -35,9 +35,22 @@ export default function TestimonialsCarousel({ lang }: TestimonialsCarouselProps
           <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
             {lang === 'en' ? 'Devotee Experiences' : 'श्रद्धालु अनुभव'}
           </span>
+          <span className="block text-[10px] font-bold text-[#E88921]/60 mt-1">
+            {lang === 'en' ? 'श्रद्धालु अनुभव' : 'Devotee Experiences'}
+          </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4 tracking-tight">
             {lang === 'en' ? 'Trusted by Devotees Globally' : 'देश-विदेश के श्रद्धालुओं का विश्वास'}
           </h2>
+          {lang === 'en' && (
+            <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-2 mb-4">
+              देश-विदेश के श्रद्धालुओं का विश्वास
+            </span>
+          )}
+          {lang === 'hi' && (
+            <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-2 mb-4">
+              Trusted by Devotees Globally
+            </span>
+          )}
           <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
             {lang === 'en'
               ? 'Read peaceful words of gratitude from devotees who received complete guidance and experienced positive transformations in their life journeys.'

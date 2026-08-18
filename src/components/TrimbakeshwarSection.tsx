@@ -74,9 +74,22 @@ export default function TrimbakeshwarSection({ lang }: TrimbakeshwarSectionProps
           <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
             {lang === 'en' ? 'Sacred Land of Trimbak' : 'त्र्यंबकेश्वर धाम परिचय'}
           </span>
+          <span className="block text-[10px] font-bold text-[#E88921]/60 mt-1">
+            {lang === 'en' ? 'त्र्यंबकेश्वर धाम परिचय' : 'Sacred Land of Trimbak'}
+          </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4 tracking-tight">
             {lang === 'en' ? 'History & Significance of Trimbakeshwar' : 'त्र्यंबकेश्वर ज्योतिर्लिंग का इतिहास और महत्व'}
           </h2>
+          {lang === 'en' && (
+            <span className="block font-serif text-sm sm:text-base font-bold text-[#E88921]/80 -mt-2 mb-4">
+              त्र्यंबकेश्वर का इतिहास एवं महत्व
+            </span>
+          )}
+          {lang === 'hi' && (
+            <span className="block font-serif text-sm sm:text-base font-bold text-[#E88921]/80 -mt-2 mb-4">
+              History & Significance of Trimbakeshwar
+            </span>
+          )}
           <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium leading-relaxed">
             {lang === 'en'
               ? 'Nestled at the foothills of Brahmagiri mountain, Trimbakeshwar is home to one of the twelve divine Jyotirlingas, carrying unmatched spiritual weight for Vedic remedies.'
@@ -128,6 +141,16 @@ export default function TrimbakeshwarSection({ lang }: TrimbakeshwarSectionProps
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#7A1E1E] mb-6">
               {lang === 'en' ? 'The Source of Dakshin Ganga' : 'दक्षिण की पावन गंगा गोदावरी का उद्गम'}
             </h3>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-4 mb-4">
+                दक्षिण की पावन गंगा गोदावरी का उद्गम
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-4 mb-4">
+                The Source of Dakshin Ganga
+              </span>
+            )}
             <p className="font-sans text-sm sm:text-base text-[#1a1a1a]/85 mb-6 leading-relaxed text-justify font-medium">
               {lang === 'en'
                 ? 'Known as the "Dakshin Ganga" (Ganges of the South), the Godavari river begins its path right above Trimbakeshwar at Brahmagiri. Sage Gautama used a sacred ring of Kusha grass to pond the waters and create Kushavarta Kund. This pond retains divine purification parameters. It is said that taking a holy bath in Kushavarta clears all current-life and ancestral karmic debts, making it a sacred site of deep spiritual relevance in Trimbakeshwar.'
@@ -138,6 +161,16 @@ export default function TrimbakeshwarSection({ lang }: TrimbakeshwarSectionProps
               <h4 className="font-serif text-base font-bold text-[#7A1E1E] mb-4">
                 {lang === 'en' ? 'Sacred Geography of the Region' : 'क्षेत्र की पवित्र भौगोलिक संरचना'}
               </h4>
+              {lang === 'en' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 -mt-3 mb-4">
+                  क्षेत्र की पवित्र भौगोलिक संरचना
+                </span>
+              )}
+              {lang === 'hi' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 -mt-3 mb-4">
+                  Sacred Geography of the Region
+                </span>
+              )}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {holySpots.map((spot, i) => (
                   <div key={i} className="bg-white border border-[#F2E6CE] p-4 rounded-sm shadow-sm">
@@ -165,6 +198,16 @@ export default function TrimbakeshwarSection({ lang }: TrimbakeshwarSectionProps
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#7A1E1E] mt-1">
               {lang === 'en' ? 'Chronicles of Devotion & Time' : 'श्रद्धा और समय की पावन यात्रा'}
             </h3>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                श्रद्धा और समय की पावन यात्रा
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                Chronicles of Devotion & Time
+              </span>
+            )}
           </div>
 
           <div className="relative max-w-4xl mx-auto">

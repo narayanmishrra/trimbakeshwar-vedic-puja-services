@@ -219,6 +219,16 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
               <BookOpen className="w-6 h-6 text-[#E88921]" />
               <span>{lang === 'en' ? 'Ritual Significance' : 'अनुष्ठान का महत्व'}</span>
             </h2>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-3 mb-4">
+                अनुष्ठान का महत्व
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-3 mb-4">
+                Ritual Significance
+              </span>
+            )}
             <div className="bg-white border border-[#F2E6CE] p-6 rounded-sm shadow-sm space-y-4">
               <p className="font-sans text-sm sm:text-base text-[#1a1a1a]/85 leading-relaxed font-medium">
                 {service.longDesc[lang]}
@@ -240,6 +250,16 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
               <HelpCircle className="w-6 h-6 text-[#E88921]" />
               <span>{lang === 'en' ? 'Who Should Perform This?' : 'यह पूजा किसे करानी चाहिए?'}</span>
             </h2>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-3 mb-4">
+                यह पूजा किसे करानी चाहिए?
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-3 mb-4">
+                Who Should Perform This?
+              </span>
+            )}
             <div className="bg-white border border-[#F2E6CE] p-6 rounded-sm shadow-sm">
               <p className="font-sans text-sm sm:text-base text-[#1a1a1a]/85 leading-relaxed font-semibold">
                 {service.whoShouldPerform[lang]}
@@ -254,6 +274,16 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
                 <Calendar className="w-6 h-6 text-[#E88921]" />
                 <span>{lang === 'en' ? 'Auspicious Muhurat Dates (2026)' : 'शुभ मुहूर्त तिथियां (२०२६)'}</span>
               </h2>
+              {lang === 'en' && (
+                <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-3 mb-4">
+                  शुभ मुहूर्त तिथियां (२०२६)
+                </span>
+              )}
+              {lang === 'hi' && (
+                <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-3 mb-4">
+                  Auspicious Muhurat Dates (2026)
+                </span>
+              )}
               <div className="bg-white border border-[#F2E6CE] p-6 rounded-sm shadow-sm">
                 <p className="font-sans text-sm text-[#1a1a1a]/70 leading-relaxed mb-6 font-medium">
                   {lang === 'en' 
@@ -349,6 +379,16 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
               <CheckCircle className="w-6 h-6 text-[#E88921]" />
               <span>{lang === 'en' ? 'Spiritual Benefits' : 'पूजा के दैवीय लाभ'}</span>
             </h2>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-3 mb-4">
+                पूजा के दैवीय लाभ
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-3 mb-4">
+                Spiritual Benefits
+              </span>
+            )}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {service.benefits.map((benefit, idx) => (
                 <div key={idx} className="bg-white border border-[#F2E6CE] p-5 rounded-sm shadow-sm hover:shadow-md transition-shadow relative">
@@ -368,6 +408,16 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
               <Flame className="w-6 h-6 text-[#E88921]" />
               <span>{lang === 'en' ? 'Detailed Ritual Procedure' : 'विस्तृत पूजा विधि-विधान'}</span>
             </h2>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-3 mb-4">
+                विस्तृत पूजा विधि-विधान
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-3 mb-4">
+                Detailed Ritual Procedure
+              </span>
+            )}
             <div className="relative border-l-2 border-[#E88921]/20 pl-6 ml-4 space-y-8">
               {service.procedure.map((step, idx) => (
                 <div key={idx} className="relative">
@@ -389,6 +439,16 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
               <h3 className="font-serif text-xl font-bold text-[#7A1E1E] mb-4">
                 {lang === 'en' ? 'Devotee Preparation Guidelines' : 'श्रद्धालुओं के लिए तैयारी के नियम'}
               </h3>
+              {lang === 'en' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 -mt-2 mb-3">
+                  श्रद्धालुओं के लिए तैयारी के नियम
+                </span>
+              )}
+              {lang === 'hi' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 -mt-2 mb-3">
+                  Devotee Preparation Guidelines
+                </span>
+              )}
               <ul className="space-y-3">
                 {service.preparation.map((prep, idx) => (
                   <li key={idx} className="flex items-start gap-3 bg-white border border-[#F2E6CE] p-3 rounded-sm text-xs sm:text-sm text-[#1a1a1a]/80 leading-relaxed font-semibold">
@@ -403,6 +463,16 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
               <h3 className="font-serif text-xl font-bold text-[#7A1E1E] mb-4">
                 {lang === 'en' ? 'Required Items & Logistics' : 'आवश्यक सामग्री एवं व्यवस्था'}
               </h3>
+              {lang === 'en' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 -mt-2 mb-3">
+                  आवश्यक सामग्री एवं व्यवस्था
+                </span>
+              )}
+              {lang === 'hi' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 -mt-2 mb-3">
+                  Required Items & Logistics
+                </span>
+              )}
               <ul className="space-y-3">
                 {service.itemsRequired.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 bg-white border border-[#F2E6CE] p-3 rounded-sm text-xs sm:text-sm text-[#1a1a1a]/80 leading-relaxed font-semibold">
@@ -419,6 +489,16 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
             <h3 className="font-serif text-xl font-bold text-[#7A1E1E] mb-6">
               {lang === 'en' ? 'Frequently Asked Questions' : ' पूजा से संबंधित सवाल-जवाब'}
             </h3>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-4 mb-4">
+                पूजा से संबंधित सवाल-जवाब
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-4 mb-4">
+                Frequently Asked Questions
+              </span>
+            )}
             <div className="space-y-4">
               {service.faqs.map((faq, idx) => (
                 <div key={idx} className="bg-white border border-[#F2E6CE] p-5 rounded-sm shadow-sm">

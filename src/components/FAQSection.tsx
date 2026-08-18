@@ -62,9 +62,22 @@ export default function FAQSection({ lang }: FAQSectionProps) {
           <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
             {lang === 'en' ? 'Queries Resolved' : 'जिज्ञासा समाधान'}
           </span>
+          <span className="block text-[10px] font-bold text-[#E88921]/60 mt-1">
+            {lang === 'en' ? 'जिज्ञासा समाधान' : 'Queries Resolved'}
+          </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4 tracking-tight">
             {lang === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
           </h2>
+          {lang === 'en' && (
+            <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-2 mb-4">
+              अक्सर पूछे जाने वाले प्रश्न
+            </span>
+          )}
+          {lang === 'hi' && (
+            <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-2 mb-4">
+              Frequently Asked Questions
+            </span>
+          )}
           <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
             {lang === 'en'
               ? 'Find answers to standard queries regarding ritual locations, online remote options, dhotis/saree clothing codes, and lodging logistics.'
