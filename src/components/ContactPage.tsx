@@ -71,9 +71,22 @@ export default function ContactPage({ lang }: ContactPageProps) {
           <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
             {lang === 'en' ? 'Connect With Us' : 'पंडितजी से संपर्क करें'}
           </span>
+          <span className="block text-[10px] font-bold text-[#E88921]/60 mt-1">
+            {lang === 'en' ? 'पंडितजी से संपर्क करें' : 'Connect With Us'}
+          </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4 tracking-tight">
             {lang === 'en' ? 'Contacts, Location & Timing' : 'कार्यालय संपर्क, स्थान और पूजा का समय'}
           </h2>
+          {lang === 'en' && (
+            <span className="block font-serif text-sm sm:text-base font-bold text-[#E88921]/80 -mt-2 mb-4">
+              संपर्क, स्थान और समय
+            </span>
+          )}
+          {lang === 'hi' && (
+            <span className="block font-serif text-sm sm:text-base font-bold text-[#E88921]/80 -mt-2 mb-4">
+              Contact, Location & Timing
+            </span>
+          )}
           <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium leading-relaxed">
             {lang === 'en'
               ? 'Visit our sacred ritual office in Trimbakeshwar or reach out directly via call/WhatsApp to receive authentic guidance.'
@@ -91,6 +104,16 @@ export default function ContactPage({ lang }: ContactPageProps) {
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#7A1E1E] border-b border-[#F2E6CE] pb-3">
                 {lang === 'en' ? 'Direct Contact Information' : 'सीधा संपर्क विवरण'}
               </h3>
+              {lang === 'en' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 mt-1">
+                  सीधा संपर्क विवरण
+                </span>
+              )}
+              {lang === 'hi' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 mt-1">
+                  Direct Contact Information
+                </span>
+              )}
 
               {/* Phone Helpline */}
               <a
@@ -202,6 +225,16 @@ export default function ContactPage({ lang }: ContactPageProps) {
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#7A1E1E] border-b border-[#F2E6CE] pb-3 mb-6">
                 {lang === 'en' ? 'Our Location on Google Maps' : 'गूगल मैप्स पर हमारा स्थान'}
               </h3>
+              {lang === 'en' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 -mt-5 mb-6">
+                  गूगल मैप्स पर हमारा स्थान
+                </span>
+              )}
+              {lang === 'hi' && (
+                <span className="block font-serif text-xs font-bold text-[#E88921]/80 -mt-5 mb-6">
+                  Our Location on Google Maps
+                </span>
+              )}
               
               <div className="relative w-full flex-grow min-h-[350px] bg-gradient-to-br from-[#7A1E1E]/5 to-[#E88921]/5 border border-[#F2E6CE] rounded-sm shadow-sm overflow-hidden flex flex-col">
                 <iframe
@@ -244,6 +277,16 @@ export default function ContactPage({ lang }: ContactPageProps) {
               <h3 className="font-serif text-2xl font-bold text-[#7A1E1E]">
                 {lang === 'en' ? 'Contact Panditji For Guidance' : 'पंडितजी से संपर्क करें'}
               </h3>
+              {lang === 'en' && (
+                <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                  पंडितजी से संपर्क करें
+                </span>
+              )}
+              {lang === 'hi' && (
+                <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                  Contact Panditji For Guidance
+                </span>
+              )}
               <p className="font-sans text-xs sm:text-sm text-[#7A1E1E]/70 mt-2 font-medium">
                 {lang === 'en'
                   ? 'Send us your birth or lineage details, or select the Puja you wish to perform. Pandit Bineet Shastriji will respond with the most auspicious Muhurats.'

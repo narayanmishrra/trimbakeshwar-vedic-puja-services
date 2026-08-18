@@ -57,7 +57,7 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full overflow-hidden bg-white flex items-center justify-center border border-[#D4AF37]/40 shadow-md">
                 <img 
-                  src="/images/logo.jpg"
+                  src="/images/lord-shiva-face-silhouette-lord-shiva-logo-icon-illustration-silhouette-and-line-art-lord-shiva-face-silhouette-vector.jpg"
                   alt="Lord Shiva Logo"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
@@ -66,13 +66,16 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
               <div className="flex flex-col">
                 <span className="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Trimbakeshwar</span>
                 <span className="font-serif text-lg font-bold">Vedic Puja Services</span>
+                <span className="text-[10px] font-bold text-[#D4AF37]/80 tracking-wider block">
+                  त्र्यंबकेश्वर वैदिक पूजा सेवा
+                </span>
               </div>
             </div>
             
             <p className="font-sans text-xs sm:text-sm text-[#FFFDF7]/75 leading-relaxed">
               {lang === 'en'
-                ? 'Committed to conducting authentic Vedic remedies with pure scriptural protocols, ensuring direct guidance and spiritual alignment near the source of holy Godavari.'
-                : 'पवित्र गोदावरी और कुशावर्त कुंड के समीप, पूर्ण विधि-विधान और वैदिक शुचिता के साथ अनुष्ठान संपन्न करने के लिए सदैव तत्पर एवं संकल्पित।'}
+                ? 'Committed to conducting authentic Vedic remedies (वैदिक उपचार) with pure scriptural protocols, ensuring direct guidance and spiritual alignment near the source of holy Godavari.'
+                : 'पवित्र गोदावरी (Holy Godavari) और कुशावर्त कुंड के समीप, पूर्ण विधि-विधान और वैदिक शुचिता (Vedic Purity) के साथ अनुष्ठान संपन्न करने के लिए सदैव तत्पर एवं संकल्पित।'}
             </p>
 
             <div className="pt-2">
@@ -80,6 +83,9 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
                 <Clock className="w-4 h-4" />
                 <span>{lang === 'en' ? 'Temple Entry Timings' : 'मंदिर दर्शन समय'}</span>
               </div>
+              <span className="block text-[10px] text-[#D4AF37]/60 mt-0.5">
+                {lang === 'en' ? 'मंदिर दर्शन समय' : 'Temple Entry Timings'}
+              </span>
               <span className="block text-xs text-[#FFFDF7]/80 mt-1">
                 {lang === 'en' ? '6:00 AM - 9:00 PM (Daily)' : 'सुबह 6:00 बजे से रात 9:00 बजे तक (दैनिक)'}
               </span>
@@ -91,6 +97,9 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
             <h4 className="font-serif text-base font-bold text-[#D4AF37] mb-4 pb-2 border-b border-[#FFFDF7]/15">
               {lang === 'en' ? 'Quick Navigation' : 'त्वरित लिंक'}
             </h4>
+            <span className="block text-[10px] font-bold text-[#D4AF37]/60 tracking-wider">
+              {lang === 'en' ? 'त्वरित लिंक' : 'Quick Navigation'}
+            </span>
             <ul className="space-y-2 text-xs sm:text-sm text-[#FFFDF7]/80 font-medium">
               {quickLinks.map((link) => (
                 <li key={link.id}>
@@ -110,6 +119,9 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
             <h4 className="font-serif text-base font-bold text-[#D4AF37] mb-4 pb-2 border-b border-[#FFFDF7]/15">
               {lang === 'en' ? 'Top Vedic Rituals' : 'मुख्य अनुष्ठान'}
             </h4>
+            <span className="block text-[10px] font-bold text-[#D4AF37]/60 tracking-wider">
+              {lang === 'en' ? 'मुख्य अनुष्ठान' : 'Top Vedic Rituals'}
+            </span>
             <ul className="space-y-2 text-xs sm:text-sm text-[#FFFDF7]/80 font-medium">
               {topServices.map((service) => (
                 <li key={service.id}>
@@ -129,6 +141,9 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
             <h4 className="font-serif text-base font-bold text-[#D4AF37] mb-4 pb-2 border-b border-[#FFFDF7]/15">
               {lang === 'en' ? 'Connect With Us' : 'संपर्क केंद्र'}
             </h4>
+            <span className="block text-[10px] font-bold text-[#D4AF37]/60 tracking-wider">
+              {lang === 'en' ? 'संपर्क केंद्र' : 'Connect With Us'}
+            </span>
             
             <div className="space-y-2 text-xs sm:text-sm text-[#FFFDF7]/80 font-semibold">
               <a href={`tel:${businessConfig.phone}`}
@@ -238,7 +253,7 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
 
         {/* Outer bottom copyright credits */}
         <div className="border-t border-[#FFFDF7]/10 pt-6 mt-6 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#FFFDF7]/60 font-semibold font-sans">
-          <p>© {new Date().getFullYear()} Trimbakeshwar Vedic Puja Services. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Trimbakeshwar Vedic Puja Services (त्र्यंबकेश्वर वैदिक पूजा सेवा). All Rights Reserved.</p>
           <p>
             {lang === 'en' ? 'Website by ' : 'वेबसाइट निर्माण: '}
             <a href="tel:+917709753120" className="text-[#D4AF37] hover:underline">Viralmize</a>

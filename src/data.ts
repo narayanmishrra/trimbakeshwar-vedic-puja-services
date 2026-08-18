@@ -12,8 +12,8 @@ export const businessConfig: BusinessConfig = {
   whatsappDisplay: '+91 70206 82622',
   email: 'trimbakeshwarpanditji.in@gmail.com',
   address: {
-    en: 'Krushna Villa, Kailas raja Nagar, Near swami Samarth kendra, Trimbakeshwar ring road, Trimbakeshwar, Pin- 422212',
-    hi: 'कृष्णा विला, कैलाश राजा नगर, स्वामी समर्थ केंद्र के पास, त्र्यंबकेश्वर रिंग रोड, त्र्यंबकेश्वर, पिन- 422212'
+    en: 'Trimbakeshwar, Pin- 422212',
+    hi: 'त्र्यंबकेश्वर, पिन- 422212'
   },
   workingHours: {
     en: '4:30 AM - 8:00 PM (Everyday)',

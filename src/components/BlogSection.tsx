@@ -39,9 +39,22 @@ export default function BlogSection({ lang, onSelectPost }: BlogSectionProps) {
           <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
             {lang === 'en' ? 'Vedic Wisdom' : 'वैदिक ज्ञान गंगा'}
           </span>
+          <span className="block text-[10px] font-bold text-[#E88921]/60 mt-1">
+            {lang === 'en' ? 'वैदिक ज्ञान गंगा' : 'Vedic Wisdom'}
+          </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4 tracking-tight">
             {lang === 'en' ? 'Spiritual Guides & Authentic Wisdom' : 'पूजा मार्गदर्शिका एवं पौराणिक इतिहास'}
           </h2>
+          {lang === 'en' && (
+            <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-2 mb-4">
+              पूजा मार्गदर्शिका एवं पौराणिक इतिहास
+            </span>
+          )}
+          {lang === 'hi' && (
+            <span className="block font-serif text-sm font-bold text-[#E88921]/80 -mt-2 mb-4">
+              Spiritual Guides & Authentic Wisdom
+            </span>
+          )}
           <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
             {lang === 'en'
               ? 'Deepen your understanding of Vedic remedies, sacred history, and mythological origins of the Trimbakeshwar Jyotirlinga through our curated scholarly guides.'

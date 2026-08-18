@@ -129,7 +129,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
               className="inline-block py-1.5 px-4 bg-[#F2E6CE] text-[#7A1E1E] text-[11px] font-bold tracking-[0.2em] mb-4 rounded-sm uppercase self-center lg:self-start"
             >
               <span className="font-sans">
-                {lang === 'en' ? '100% Dosh Nivaran • 100% प्रामाणिक दोष निवारण' : '100% प्रामाणिक दोष निवारण'}
+                {lang === 'en' ? '100% Dosh Nivaran • 100% प्रामाणिक दोष निवारण' : '100% प्रामाणिक दोष निवारण • 100% Dosh Nivaran'}
               </span>
             </motion.div>
 
@@ -174,12 +174,18 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
                   100% Dosh Nivaran <br />
                   <span className="italic font-light text-[#E88921]">at Sacred</span> <br />
                   Trimbakeshwar
+                  <span className="block font-serif text-base sm:text-lg md:text-xl font-bold text-[#E88921]/80 mt-2">
+                    त्र्यंबकेश्वर में 100% दोष निवारण
+                  </span>
                 </>
               ) : (
                 <>
                   त्र्यंबकेश्वर में <br />
                   <span className="italic font-light text-[#E88921]">100% दोष निवारण</span> <br />
                   शास्त्रोक्त एवं प्रामाणिक अनुष्ठान
+                  <span className="block font-serif text-sm sm:text-base md:text-lg font-bold text-[#E88921]/80 mt-2">
+                    100% Dosh Nivaran at Sacred Trimbakeshwar
+                  </span>
                 </>
               )}
             </motion.h1>
@@ -233,7 +239,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
             >
               {lang === 'en'
                 ? 'Experience 100% authentic Dosh Nivaran at holy Trimbakeshwar Jyotirlinga—the sacred origin of River Godavari and supreme site for Kaal Sarp Dosh (कालसर्प दोष शांति पूजा), Narayan Nagbali (नारायण नागबलि पूजा) & Pitru Dosh Shanti (पितृ दोष निवारण). Conducted by experienced Guruji Pandit Bineet Shastriji with complete scriptural purity, individual resolution (Sankalp), and dedicated guidance.'
-                : 'पवित्र त्र्यंबकेश्वर ज्योतिर्लिंग धाम में 100% प्रामाणिक दोष निवारण कराएं। पवित्र गोदावरी तट पर स्थित यह धाम कालसर्प दोष, नारायण नागबलि एवं पितृ दोष निवारण हेतु सर्वश्रेष्ठ तीर्थ माना गया है। अधिकृत वैदिक पुरोहित पंडित बिनीत शास्त्रीजी द्वारा पूर्ण विधि-विधान, शुचिता और व्यक्तिगत संकल्प के साथ अनुष्ठान संपन्न कराएं।'}
+                : 'पवित्र त्र्यंबकेश्वर (Trimbakeshwar) ज्योतिर्लिंग धाम में 100% प्रामाणिक दोष निवारण (Dosh Nivaran) कराएं। पवित्र गोदावरी तट पर स्थित यह धाम कालसर्प दोष (Kaal Sarp Dosh), नारायण नागबलि (Narayan Nagbali) एवं पितृ दोष निवारण (Pitru Dosh Shanti) हेतु सर्वश्रेष्ठ तीर्थ माना गया है। अधिकृत वैदिक पुरोहित पंडित बिनीत शास्त्रीजी द्वारा पूर्ण विधि-विधान, शुचिता और व्यक्तिगत संकल्प (Sankalp) के साथ अनुष्ठान संपन्न कराएं।'}
             </motion.p>
 
             {/* Conversion CTA triggers */}

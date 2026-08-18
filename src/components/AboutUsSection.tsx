@@ -60,9 +60,22 @@ export default function AboutUsSection({ lang }: AboutUsSectionProps) {
           <span className="font-sans text-xs uppercase tracking-widest text-[#E88921] font-bold">
             {lang === 'en' ? 'Vedic Priest Profile' : 'विद्वान पुरोहित परिचय'}
           </span>
+          <span className="block text-[10px] font-bold text-[#E88921]/60 mt-1">
+            {lang === 'en' ? 'विद्वान पुरोहित परिचय' : 'Vedic Priest Profile'}
+          </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#7A1E1E] mt-2 mb-4 tracking-tight">
             {lang === 'en' ? 'Dedicated to Pure Vedic Ritual Integrity' : 'वैदिक मर्यादा और शुचिता के प्रति समर्पित'}
           </h2>
+          {lang === 'en' && (
+            <span className="block font-serif text-sm sm:text-base font-bold text-[#E88921]/80 -mt-2 mb-4">
+              वैदिक पूजा मर्यादा एवं शुद्धता को समर्पित
+            </span>
+          )}
+          {lang === 'hi' && (
+            <span className="block font-serif text-sm sm:text-base font-bold text-[#E88921]/80 -mt-2 mb-4">
+              Dedicated to Pure Vedic Ritual Integrity
+            </span>
+          )}
           <p className="font-sans text-sm sm:text-base text-[#7A1E1E]/70 font-medium">
             {lang === 'en'
               ? 'Pandit Bineet Shastriji is an authorized generational Vedic priest in Trimbakeshwar, helping devotees resolve karmic debts with pure mantra accuracy.'
@@ -78,6 +91,16 @@ export default function AboutUsSection({ lang }: AboutUsSectionProps) {
             <h3 className="font-serif text-2xl font-bold text-[#7A1E1E]">
               {lang === 'en' ? 'Authentic Ancestral & Planetary Remedies' : 'प्रामाणिक पैतृक और गृहदोष निवारण'}
             </h3>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                प्रामाणिक पैतृक और गृहदोष निवारण
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                Authentic Ancestral & Planetary Remedies
+              </span>
+            )}
             <p className="font-sans text-sm sm:text-base text-[#1a1a1a]/85 leading-relaxed text-justify font-medium">
               {lang === 'en'
                 ? 'Pandit Bineet Shastriji believes that sacred rituals like Kalsarpa Shanti, Narayan Nagbali, and Tripindi Shraddha are not commercial events, but deep, sacred spiritual operations. Every ritual is carried out using authentic herbal offerings and exact syllable-by-syllable Sanskrit chanting. Over the last three decades, Shastriji has guided thousands of global families safely through these complex, life-changing procedures.'
@@ -113,6 +136,16 @@ export default function AboutUsSection({ lang }: AboutUsSectionProps) {
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#7A1E1E]">
               {lang === 'en' ? 'Meet Pandit Bineet Shastriji' : 'पंडित बिनीत शास्त्रीजी का परिचय'}
             </h3>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                पंडित बिनीत शास्त्रीजी का परिचय
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                Meet Pandit Bineet Shastriji
+              </span>
+            )}
             <p className="font-sans text-xs sm:text-sm text-[#7A1E1E]/70 font-semibold uppercase tracking-wider mt-1">
               {lang === 'en' ? 'Trained in Ancient Gurukuls with Generational Authority' : 'प्राचीन गुरुकुलों से दीक्षित एवं अधिकृत पीढ़ीगत पुरोहित'}
             </p>
@@ -165,6 +198,16 @@ export default function AboutUsSection({ lang }: AboutUsSectionProps) {
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#7A1E1E]">
               {lang === 'en' ? 'Our Location & Travel Guide' : 'पूजा स्थल मार्गदर्शिका एवं यात्रा जानकारी'}
             </h3>
+            {lang === 'en' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                पूजा स्थल मार्गदर्शिका एवं यात्रा जानकारी
+              </span>
+            )}
+            {lang === 'hi' && (
+              <span className="block font-serif text-sm font-bold text-[#E88921]/80 mt-1">
+                Our Location & Travel Guide
+              </span>
+            )}
             <p className="font-sans text-xs sm:text-sm text-[#7A1E1E]/70 font-semibold uppercase tracking-wider mt-1">
               {lang === 'en' ? 'How to Reach our Sthal in Trimbakeshwar' : 'त्र्यंबकेश्वर अनुष्ठान स्थल कैसे पहुंचें'}
             </p>
