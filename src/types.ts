@@ -46,6 +46,17 @@ export interface FAQItem {
   answer: LocalizedString;
 }
 
+export interface BlogImage {
+  /** JPEG fallback path (also used as the <img> src) */
+  src: string;
+  /** WebP variant served via <source> for modern browsers */
+  webp: string;
+  alt: LocalizedString;
+  caption?: LocalizedString;
+  width: number;
+  height: number;
+}
+
 export interface BlogPost {
   id: string;
   title: LocalizedString;
@@ -56,6 +67,7 @@ export interface BlogPost {
   readTime: LocalizedString;
   date: string;
   author: LocalizedString;
+  heroImage?: BlogImage;
   faqs?: { question: LocalizedString; answer: LocalizedString }[];
 }
 

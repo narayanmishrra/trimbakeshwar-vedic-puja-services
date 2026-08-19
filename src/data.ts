@@ -939,6 +939,20 @@ Due to the intense convergence of the Trinity and the sacred river Godavari, per
       hi: 'कालसर्प दोष को समझना: लक्षण, प्रभाव और वैदिक उपचार'
     },
     slug: 'kalsarpa-dosha-symptoms-remedies',
+    heroImage: {
+      src: '/images/blog/kaal-sarp-puja-trimbakeshwar.jpg',
+      webp: '/images/blog/kaal-sarp-puja-trimbakeshwar.webp',
+      alt: {
+        en: 'Kaal Sarp Puja arrangement with silver Nag-Nagin pair and ritual offerings at Trimbakeshwar',
+        hi: 'त्र्यंबकेश्वर में चांदी के नाग-नागिन युग्म और पूजा सामग्री के साथ कालसर्प पूजा की तैयारी'
+      },
+      caption: {
+        en: 'Silver Nag-Nagin pair and puja samagri arranged for the Kaal Sarp Shanti ritual',
+        hi: 'कालसर्प शांति अनुष्ठान हेतु चांदी का नाग-नागिन युग्म एवं पूजा सामग्री'
+      },
+      width: 1200,
+      height: 675
+    },
     excerpt: {
       en: 'Is your progress stalled? Learn about the symptoms of Kalsarpa yog and how Vedic Shanti puja can help you.',
       hi: 'क्या आपकी प्रगति रुकी हुई है? कालसर्प योग के लक्षणों और वैदिक शांति पूजा से मिलने वाली सहायता के बारे में जानें।'
@@ -948,6 +962,8 @@ Due to the intense convergence of the Trinity and the sacred river Godavari, per
 
 ### What is Kalsarpa Yog?
 When all seven major planets (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) reside between the shadow planets Rahu and Ketu in a horoscope, Kalsarpa Yog is formed. 
+
+![Shivalinga adorned with a silver Nag hood, rudraksha garlands and fresh flowers](/images/blog/kaal-sarp-puja-nag-shivalaya-trimbakeshwar.jpg#900x1200 "Nag Devta worship at the Shivalinga — at the heart of every Kaal Sarp ritual")
 
 ### The 12 Types of Kalsarpa Dosha:
 Depending on the houses occupied by Rahu and Ketu, there are 12 distinct varieties of this Yog:
@@ -970,14 +986,20 @@ Depending on the houses occupied by Rahu and Ketu, there are 12 distinct varieti
 * **Disturbed Subconscious**: Frequent dreams of snakes, water bodies, or height falls.
 * **Sudden Hardships**: Unforeseen health emergencies or heavy financial losses.
 
+![Shri Trimbakeshwar Jyotirlinga Temple courtyard with the Brahmagiri hills behind](/images/blog/trimbakeshwar-jyotirlinga-temple.jpg#1000x749 "Shri Trimbakeshwar Jyotirlinga — the sacred kshetra for Kaal Sarp Shanti")
+
 ### The Vedic Remedy: Kalsarpa Shanti Puja
 The ultimate remedy described in Vedic astrology is the Kalsarpa Shanti Puja. Trimbakeshwar is highly revered for this because Rahu-Ketu are pacified powerfully in the proximity of the Jyotirlinga.
+
+![Pandit performing the Kaal Sarp Shanti vidhi with the devotee at the puja sthal](/images/blog/kaal-sarp-puja-vidhi-trimbakeshwar.jpg#1000x750 "Ganapati Pujan and Sankalp during the Kaal Sarp Shanti vidhi")
 
 Pandit Bineet Shastriji chants the powerful Rahu and Ketu Beej mantras, consecrates silver Nag-Nagin replicas, and offers prayers for immediate planetary relief. If you are experiencing these symptoms, contacting Panditji can help arrange a custom consultation to determine the ideal planetary timing for your ritual.`,
       hi: `वैदिक ज्योतिष में कालसर्प दोष एक ऐसी कुंडली स्थिति है जिससे अक्सर लोग डरते हैं, फिर भी उचित आध्यात्मिक समझ के साथ इसे पूरी तरह से शांत किया जा सकता है।
 
 ### कालसर्प योग क्या है?
 जब कुंडली में सभी सात मुख्य ग्रह (सूर्य, चंद्रमा, बुध, शुक्र, मंगल, गुरु, शनि) राहु और केतु के बीच आ जाते हैं, तो कालसर्प योग का निर्माण होता है।
+
+![रुद्राक्ष की मालाओं और ताजे फूलों से सुसज्जित चांदी के नाग मुकुट वाला शिवलिंग](/images/blog/kaal-sarp-puja-nag-shivalaya-trimbakeshwar.jpg#900x1200 "शिवलिंग पर नाग देवता का पूजन — प्रत्येक कालसर्प अनुष्ठान का केंद्र")
 
 ### कालसर्प दोष के १२ प्रकार:
 राहु और केतु के भाव स्थानों के आधार पर इसके १२ भेद होते हैं:
@@ -1000,8 +1022,12 @@ Pandit Bineet Shastriji chants the powerful Rahu and Ketu Beej mantras, consecra
 * **अशांत अवचेतन**: बार-बार सांप, पानी या ऊंचाई से गिरने के सपने आना।
 * **अचानक कठिनाइयां**: अनपेक्षित स्वास्थ्य समस्याएं या भारी वित्तीय नुकसान।
 
+![ब्रह्मगिरि पहाड़ियों के साथ श्री त्र्यंबकेश्वर ज्योतिर्लिंग मंदिर प्रांगण](/images/blog/trimbakeshwar-jyotirlinga-temple.jpg#1000x749 "श्री त्र्यंबकेश्वर ज्योतिर्लिंग — कालसर्प शांति का पावन क्षेत्र")
+
 ### वैदिक समाधान: कालसर्प शांति पूजा
 वैदिक ज्योतिष में वर्णित अंतिम समाधान कालसर्प शांति पूजा है। त्र्यंबकेश्वर इसके लिए अत्यधिक पूजनीय है क्योंकि ज्योतिर्लिंग के सानिध्य में राहु-केतु का प्रभाव शांत होता है।
+
+![पूजा स्थल पर भक्त के साथ कालसर्प शांति की विधि करते पंडित जी](/images/blog/kaal-sarp-puja-vidhi-trimbakeshwar.jpg#1000x750 "कालसर्प शांति विधि में गणपति पूजन और संकल्प")
 
 पंडित बिनीत शास्त्रीजी शक्तिशाली राहु और केतु बीज मंत्रों का जाप करते हैं, चांदी के नाग-नागिन के जोड़ों को अभिमंत्रित करते हैं और तुरंत राहत के लिए प्रार्थना करते हैं। यदि आप इन लक्षणों का सामना कर रहे हैं, तो पंडितजी से संपर्क करके आप अपनी पूजा के लिए सही समय जान सकते हैं।`
     },
@@ -1023,6 +1049,20 @@ Pandit Bineet Shastriji chants the powerful Rahu and Ketu Beej mantras, consecra
       hi: 'नारायण नागबलि पूजा शुभ मुहूर्त एवं तिथियां २०२६'
     },
     slug: 'narayan-nagbali-muhurat',
+    heroImage: {
+      src: '/images/blog/narayan-nagbali-puja-trimbakeshwar.jpg',
+      webp: '/images/blog/narayan-nagbali-puja-trimbakeshwar.webp',
+      alt: {
+        en: 'Devotees performing tarpan with pind offerings during the Narayan Nagbali Puja',
+        hi: 'नारायण नागबलि पूजा के दौरान पिंड दान और तर्पण करते श्रद्धालु'
+      },
+      caption: {
+        en: 'Tarpan and pind offerings during the Narayan Nagbali ritual',
+        hi: 'नारायण नागबलि अनुष्ठान में तर्पण एवं पिंड दान'
+      },
+      width: 860,
+      height: 484
+    },
     excerpt: {
       en: 'Plan your 3-day Pitru Dosh Shanti ritual. Explore the complete 2026 Auspicious Muhurats for Narayan Nagbali Puja in Trimbakeshwar.',
       hi: 'त्र्यंबकेश्वर में अपनी ३-दिवसीय नारायण नागबलि पूजा की योजना बनाएं। २०२६ के सभी शुभ मुहूर्त एवं तिथियों का पूरा विवरण यहां देखें।'
@@ -1051,10 +1091,14 @@ Here are the carefully calculated auspicious dates for the 3-day Pitru Dosh ritu
 ### Important Note on Adhik Maas (Extra Lunar Month)
 Due to the occurrence of Adhik Maas in 2026, there are no auspicious muhurats for Narayan Nagbali Puja starting from May 16th to June 14th. Plan your visit accordingly.
 
+![Puja sthal with kalash and deity arrangement prepared for the Narayan Nagbali Puja](/images/blog/narayan-nagbali-puja-vidhi-trimbakeshwar.jpg#1000x750 "The puja sthal arranged for the three-day Narayan Nagbali vidhi")
+
 ### 3-Day Vidhi Breakdown
 * **Day 1**: Formal Sankalp at Kushavarta Kund and beginning of Narayan Bali rituals with wheat flour pind daan.
 * **Day 2**: Specialized Nagbali rituals to seek forgiveness from Snake Deities.
 * **Day 3**: Concluding Tarpan, Brahmin Bhojan, and charities for peace.
+
+![Close-up of pind daan — rice and sesame pindas with flowers offered to the ancestors](/images/blog/narayan-bali-pind-daan-trimbakeshwar.jpg#800x600 "Pind daan offerings prepared for the Narayan Bali ritual")
 
 For customized dates based on your horoscope or to book the puja, contact Pandit Bineet Shastriji directly.`,
       hi: `नारायण नागबलि पूजा त्र्यंबकेश्वर में की जाने वाली ३ दिवसीय अत्यंत फलदायी पवित्र पूजा है। पितृ शांति (पितृ दोष निवारण) के लिए सही तिथि और नक्षत्र का चयन बहुत आवश्यक है।
@@ -1080,10 +1124,14 @@ For customized dates based on your horoscope or to book the puja, contact Pandit
 ### अधिक मास (अतिरिक्त चंद्र मास) विशेष सूचना
 वर्ष २०२६ में अधिक मास लगने के कारण, १६ मई से १४ जून तक नारायण नागबलि पूजा के लिए कोई भी शुभ मुहूर्त उपलब्ध नहीं है। अतः इस अवधि को छोड़कर अपनी यात्रा की योजना बनाएं।
 
+![नारायण नागबलि पूजा हेतु कलश और पूजा सामग्री से सुसज्जित पूजा स्थल](/images/blog/narayan-nagbali-puja-vidhi-trimbakeshwar.jpg#1000x750 "तीन-दिवसीय नारायण नागबलि विधि हेतु सज्जित पूजा स्थल")
+
 ### ३-दिवसीय पूजा विधि विवरण
 * **प्रथम दिन**: कुशावर्त कुंड पर पवित्र स्नान और संकल्प के साथ गरुड़ पुराण के अनुसार नारायण बलि अनुष्ठान का आरंभ।
 * **द्वितीय दिन**: नाग देवता से क्षमा याचना हेतु विशिष्ट नागबलि अनुष्ठान।
 * **तृतीय दिन**: कुशावर्त कुंड पर अंतिम तर्पण, ब्राह्मण भोजन और दान-दक्षिणा।
+
+![पूर्वजों को अर्पित चावल और तिल के पिंड एवं फूलों का निकट दृश्य](/images/blog/narayan-bali-pind-daan-trimbakeshwar.jpg#800x600 "नारायण बलि अनुष्ठान हेतु तैयार पिंड दान सामग्री")
 
 अपनी कुंडली के अनुसार मुहूर्त सुनिश्चित करने या बुकिंग के लिए सीधे पंडित बिनीत शास्त्रीजी से संपर्क करें।`
     },
@@ -1105,12 +1153,28 @@ For customized dates based on your horoscope or to book the puja, contact Pandit
       hi: 'कालसर्प शांति पूजा शुभ मुहूर्त एवं तिथियां २०२६'
     },
     slug: 'kaalsarp-puja-muhurat',
+    heroImage: {
+      src: '/images/blog/kaal-sarp-puja-trimbakeshwar.jpg',
+      webp: '/images/blog/kaal-sarp-puja-trimbakeshwar.webp',
+      alt: {
+        en: 'Kaal Sarp Puja arrangement with silver Nag-Nagin pair and ritual offerings at Trimbakeshwar',
+        hi: 'त्र्यंबकेश्वर में चांदी के नाग-नागिन युग्म और पूजा सामग्री के साथ कालसर्प पूजा की तैयारी'
+      },
+      caption: {
+        en: 'Silver Nag-Nagin pair and puja samagri arranged for the Kaal Sarp Shanti ritual',
+        hi: 'कालसर्प शांति अनुष्ठान हेतु चांदी का नाग-नागिन युग्म एवं पूजा सामग्री'
+      },
+      width: 1200,
+      height: 675
+    },
     excerpt: {
       en: 'Find the most auspicious dates for Kaal Sarp Dosh Nivaran Puja in 2026 at Trimbakeshwar to pacify Rahu & Ketu.',
       hi: 'राहु और केतु की शांति के लिए त्र्यंबकेश्वर में वर्ष २०२६ में आयोजित होने वाली कालसर्प दोष निवारण पूजा के सभी शुभ मुहूर्त जानें।'
     },
     content: {
       en: `Kaal Sarp Dosh Nivaran is a powerful 1-day ritual. Executing this shanti puja on auspicious days such as Panchami, Amavasya, Mondays, or specific Nakshatras brings rapid relief.
+
+![Illustrative depiction of a Vedic havan fire ceremony with ghee offerings](/images/blog/kaal-sarp-puja-havan-trimbakeshwar.jpg#1000x671 "Illustrative image: the havan concludes the Rahu-Ketu Shanti vidhi")
 
 ### 2026 Auspicious Kaal Sarp Puja Dates
 Here are the auspicious dates for Kaal Sarp Shanti and other birth-related shanti rituals in 2026:
@@ -1135,8 +1199,12 @@ Here are the auspicious dates for Kaal Sarp Shanti and other birth-related shant
 * **Amavasya**: Lunar dark moon days are highly recommended for Rahu and Ketu rituals.
 * **Mondays**: The sacred day of Lord Shiva, the ultimate controller of Rahu-Ketu.
 
+![Close-up of Kaal Sarp Puja samagri with a silver Nag pair, durva grass and fresh flowers on a thali](/images/blog/kaal-sarp-puja-samagri-trimbakeshwar.jpg#1000x750 "Silver Nag pair and puja samagri prepared for the Nag Panchami rituals")
+
 For bookings or custom planetary analysis, connect with Pandit Bineet Shastriji.`,
       hi: `कालसर्प दोष निवारण एक दिवसीय अत्यंत शक्तिशाली अनुष्ठान है। इस शांति पूजा को पंचमी, अमावस्या, सोमवार या विशिष्ट नक्षत्रों में करने से जातकों को तुरंत राहत मिलती है।
+
+![घी की आहुतियों के साथ वैदिक हवन अग्निकांड का सचित्र चित्रण](/images/blog/kaal-sarp-puja-havan-trimbakeshwar.jpg#1000x671 "सचित्र छवि: राहु-केतु शांति विधि का समापन हवन से होता है")
 
 ### २०२६ कालसर्प शांति पूजा शुभ मुहूर्त तिथियां
 वर्ष २०२६ के लिए कालसर्प शांति और अन्य जन्म-संबंधी शांति अनुष्ठानों की शुभ तिथियां इस प्रकार हैं:
@@ -1160,6 +1228,8 @@ For bookings or custom planetary analysis, connect with Pandit Bineet Shastriji.
 * **नागपंचमी (१७ अगस्त २०२६)**: नाग देवताओं की विशेष कृपा प्राप्त करने और कालसर्प शांति के लिए वर्ष का सबसे पवित्र दिन।
 * **अमावस्या**: राहु-केतु पूजा के लिए अमावस्या तिथि को बहुत फलदायी माना जाता है।
 * **सोमवार**: भगवान शिव का दिन, जो कालसर्प योग के दुष्चक्र को काटने वाले एकमात्र देव हैं।
+
+![थाली में चांदी के नाग युग्म, दूर्वा और ताजे फूलों सहित कालसर्प पूजा सामग्री का निकट दृश्य](/images/blog/kaal-sarp-puja-samagri-trimbakeshwar.jpg#1000x750 "नागपंचमी अनुष्ठान हेतु तैयार चांदी का नाग युग्म और पूजा सामग्री")
 
 मुहूर्त की जानकारी या बुकिंग के लिए सीधे पंडित बिनीत शास्त्रीजी से संपर्क करें।`
     },

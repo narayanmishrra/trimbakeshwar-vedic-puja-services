@@ -40,8 +40,43 @@ export default function BlogDetail({ post, lang, onBack, onSelectPost }: BlogDet
   const relatedPosts = blogPosts.filter(p => p.id !== post.id);
 
   // Parse lines to create safe HTML mock headers
+  // Additionally supports inline image blocks in the content:
+  //   ![alt text](/path/image.jpg#1000x750 "Optional caption")
+  // A matching .webp file next to the .jpg is served via <picture>.
   const renderParagraphs = (text: string) => {
     return text.split('\n\n').map((para, idx) => {
+      const imgMatch = para.trim().match(/^!\[([^\]]*)\]\(([^\s"#)]+?)(?:#(\d+)x(\d+))?(?:\s+"([^"]*)")?\)$/);
+      if (imgMatch) {
+        const [, imgAlt, imgSrc, imgW, imgH, imgCaption] = imgMatch;
+        const imgWidth = imgW ? parseInt(imgW, 10) : undefined;
+        const imgHeight = imgH ? parseInt(imgH, 10) : undefined;
+        // Portrait photos are centred at a narrower width so they never dominate the column
+        const isPortrait = Boolean(imgWidth && imgHeight && imgHeight > imgWidth);
+        return (
+          <figure key={idx} className="my-8">
+            <div className={`rounded-sm overflow-hidden border border-[#F2E6CE] shadow-sm bg-white ${isPortrait ? 'max-w-md mx-auto' : ''}`}>
+              <picture>
+                <source srcSet={imgSrc.replace(/\.jpe?g$/i, '.webp')} type="image/webp" />
+                <img
+                  src={imgSrc}
+                  alt={imgAlt}
+                  width={imgWidth}
+                  height={imgHeight}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto block"
+                  style={imgWidth && imgHeight ? { aspectRatio: `${imgWidth}/${imgHeight}` } : undefined}
+                />
+              </picture>
+            </div>
+            {imgCaption && (
+              <figcaption className="mt-2 text-center font-sans text-[11px] sm:text-xs text-[#7A1E1E]/60 font-semibold">
+                {imgCaption}
+              </figcaption>
+            )}
+          </figure>
+        );
+      }
       if (para.startsWith('|')) {
         const lines = para.split('\n').filter(line => line.trim() !== '');
         if (lines.length >= 2) {
@@ -219,22 +254,48 @@ export default function BlogDetail({ post, lang, onBack, onSelectPost }: BlogDet
 
           {/* Right: Main Reading Frame */}
           <div className="lg:col-span-9 prose prose-stone max-w-none">
-            {/* Elegant Placeholder for Hero Header Graphic */}
-            <div className="relative w-full h-[220px] sm:h-[280px] rounded-sm overflow-hidden border border-[#D4AF37]/20 shadow-md mb-8 bg-gradient-to-br from-[#7A1E1E]/20 to-[#E88921]/10 flex flex-col justify-between p-6">
-              <div className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-20 bg-[radial-gradient(#7A1E1E_1px,transparent_1px)] bg-[size:16px_16px]" />
-              <span className="font-serif text-sm text-[#E88921] font-bold uppercase tracking-widest">
-                {lang === 'en' ? 'VEDIC INSIGHTS' : 'वैदिक चिंतन'}
-              </span>
-              <div className="text-center my-auto">
-                <span className="text-5xl block select-none">🏵️</span>
-                <span className="text-xs text-[#7A1E1E]/50 uppercase tracking-wider font-sans font-bold mt-1 block">
-                  {post.category}
+            {/* Hero image for the article (eager + high priority for fast LCP);
+                falls back to the decorative banner for posts without one. */}
+            {post.heroImage ? (
+              <figure className="mb-8">
+                <div className="relative rounded-sm overflow-hidden border border-[#D4AF37]/20 shadow-md bg-[#FAF8F2]">
+                  <picture>
+                    <source srcSet={post.heroImage.webp} type="image/webp" />
+                    <img
+                      src={post.heroImage.src}
+                      alt={post.heroImage.alt[lang]}
+                      width={post.heroImage.width}
+                      height={post.heroImage.height}
+                      fetchPriority="high"
+                      loading="eager"
+                      decoding="async"
+                      className="w-full h-[220px] sm:h-[300px] object-cover block"
+                    />
+                  </picture>
+                  {post.heroImage.caption && (
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-4 pt-10 pointer-events-none">
+                      <p className="text-white text-xs font-bold tracking-widest uppercase opacity-90">{post.heroImage.caption[lang]}</p>
+                    </div>
+                  )}
+                </div>
+              </figure>
+            ) : (
+              <div className="relative w-full h-[220px] sm:h-[280px] rounded-sm overflow-hidden border border-[#D4AF37]/20 shadow-md mb-8 bg-gradient-to-br from-[#7A1E1E]/20 to-[#E88921]/10 flex flex-col justify-between p-6">
+                <div className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-20 bg-[radial-gradient(#7A1E1E_1px,transparent_1px)] bg-[size:16px_16px]" />
+                <span className="font-serif text-sm text-[#E88921] font-bold uppercase tracking-widest">
+                  {lang === 'en' ? 'VEDIC INSIGHTS' : 'वैदिक चिंतन'}
                 </span>
+                <div className="text-center my-auto">
+                  <span className="text-5xl block select-none">🏵️</span>
+                  <span className="text-xs text-[#7A1E1E]/50 uppercase tracking-wider font-sans font-bold mt-1 block">
+                    {post.category}
+                  </span>
+                </div>
+                <div className="text-right text-[10px] text-[#7A1E1E]/50 font-sans font-bold uppercase tracking-wide">
+                  * {lang === 'en' ? 'Official Sanctuary Library' : 'आधिकारिक पुस्तकालय संग्रह'}
+                </div>
               </div>
-              <div className="text-right text-[10px] text-[#7A1E1E]/50 font-sans font-bold uppercase tracking-wide">
-                * {lang === 'en' ? 'Official Sanctuary Library' : 'आधिकारिक पुस्तकालय संग्रह'}
-              </div>
-            </div>
+            )}
 
             {/* Content Display */}
             <div className="text-justify font-sans font-medium text-[#1a1a1a]/85 leading-relaxed text-sm sm:text-base">
