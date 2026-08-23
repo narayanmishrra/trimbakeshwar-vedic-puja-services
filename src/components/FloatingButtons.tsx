@@ -3,9 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
-import { Phone, MessageSquare } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import React from 'react';
+import { MessageCircle, Phone } from 'lucide-react';
 import { businessConfig } from '../data';
 import { Language } from '../types';
 
@@ -14,90 +13,39 @@ interface FloatingButtonsProps {
 }
 
 export default function FloatingButtons({ lang }: FloatingButtonsProps) {
-  const [showCallTooltip, setShowCallTooltip] = useState(false);
-  const [showWhatsappTooltip, setShowWhatsappTooltip] = useState(false);
+  const whatsappText = 'Namaste, I want to enquire about Kaalsarp Puja and Narayan Nagbali Puja at Trimbakeshwar.';
+  const whatsappUrl = `https://wa.me/${businessConfig.whatsapp}?text=${encodeURIComponent(whatsappText)}`;
 
-  const customWhatsappText = ' Om namah shivay panditji 🕉️';
-  const whatsappUrl = `https://wa.me/${businessConfig.whatsapp}?text=${encodeURIComponent(customWhatsappText)}`;
+  const handlePhoneClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (typeof (window as any).gtag_report_conversion === 'function') {
+      e.preventDefault();
+      (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
+    }
+  };
 
   return (
-    <div
-      className="fixed right-4 md:right-8 z-50 flex flex-row-reverse md:flex-col gap-3 md:gap-4 items-end justify-end pointer-events-none select-none"
-      style={{ bottom: 'calc(1rem + env(safe-area-inset-bottom))' }}
-    >
-      {/* Floating WhatsApp Chat Button */}
-      <div 
-        className="pointer-events-auto relative group flex items-center justify-end"
-        onMouseEnter={() => setShowWhatsappTooltip(true)}
-        onMouseLeave={() => setShowWhatsappTooltip(false)}
+    <>
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={lang === 'en' ? 'WhatsApp inquiry' : 'व्हाट्सएप पूछताछ'}
+        className="fixed left-4 md:left-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl hover:bg-[#1fb857] active:scale-95 transition-all focus:outline-none focus:ring-4 focus:ring-[#25D366]/30"
+        style={{ bottom: 'calc(1rem + env(safe-area-inset-bottom))' }}
       >
-        <AnimatePresence>
-          {showWhatsappTooltip && (
-            <motion.div
-              initial={{ opacity: 0, x: 10 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 10 }}
-              className="absolute right-16 bg-[#25D366] text-white text-xs py-2 px-3 rounded-sm shadow-lg border border-white/20 whitespace-nowrap hidden md:block font-sans font-bold"
-            >
-              {lang === 'en' ? 'WhatsApp Chat' : 'व्हाट्सएप चैट'} • ॐ नमः शिवाय
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <MessageCircle className="h-7 w-7 fill-current" />
+      </a>
 
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="WhatsApp Chat"
-          className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:bg-[#20bd5a] transition-all duration-300 hover:scale-110 active:scale-95"
-          style={{
-            boxShadow: '0 8px 30px rgba(37, 211, 102, 0.5)',
-          }}
-        >
-          {/* Pulsing ring animation */}
-          <span className="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-40 animate-ping pointer-events-none" />
-          <MessageSquare className="w-6 h-6 md:w-7 md:h-7 fill-current" />
-        </a>
-      </div>
-
-      {/* Floating Call Button (Right side of screen) */}
-      <div 
-        className="pointer-events-auto relative group flex items-center justify-end"
-        onMouseEnter={() => setShowCallTooltip(true)}
-        onMouseLeave={() => setShowCallTooltip(false)}
+      <a
+        href={`tel:${businessConfig.phone}`}
+        onClick={handlePhoneClick}
+        aria-label={`Call Now ${businessConfig.phoneDisplay}`}
+        className="fixed right-4 md:right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#E88921] text-white shadow-xl hover:bg-[#cf7618] active:scale-95 transition-all focus:outline-none focus:ring-4 focus:ring-[#E88921]/30"
+        style={{ bottom: 'calc(1rem + env(safe-area-inset-bottom))' }}
       >
-        <AnimatePresence>
-          {showCallTooltip && (
-            <motion.div
-              initial={{ opacity: 0, x: 10 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 10 }}
-              className="absolute right-16 bg-[#7A1E1E] text-[#FFFDF7] text-xs py-2 px-3 rounded-sm shadow-lg border border-[#D4AF37]/30 whitespace-nowrap hidden md:block font-sans font-bold"
-            >
-              {lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <a
-          href={`tel:${businessConfig.phone}`}
-          onClick={(e) => {
-            if (typeof (window as any).gtag_report_conversion === 'function') {
-              e.preventDefault();
-              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
-            }
-          }}
-          aria-label={`Call ${businessConfig.phoneDisplay}`}
-          className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#E88921] text-[#FFFDF7] shadow-xl hover:bg-[#d17415] transition-all duration-300 hover:scale-110 active:scale-95"
-          style={{
-            boxShadow: '0 8px 30px rgba(232, 137, 33, 0.5)',
-          }}
-        >
-          {/* Pulsing ring animation */}
-          <span className="absolute inline-flex h-full w-full rounded-full bg-[#E88921] opacity-40 animate-ping pointer-events-none" />
-          <Phone className="w-6 h-6 md:w-7 md:h-7 fill-current" />
-        </a>
-      </div>
-    </div>
+        <span className="floating-pulse absolute inset-0 rounded-full bg-[#E88921]/40" aria-hidden="true" />
+        <Phone className="relative h-7 w-7 fill-current" />
+      </a>
+    </>
   );
 }
