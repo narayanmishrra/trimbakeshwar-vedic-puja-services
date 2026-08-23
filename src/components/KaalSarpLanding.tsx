@@ -222,7 +222,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
                       onClick={handlePhoneClick}
                       className="inline-flex min-h-12 items-center justify-center gap-2 bg-[#7A1E1E] hover:bg-[#5a1616] text-white px-5 py-3 text-sm font-bold transition-colors"
                     >
-                      <Phone className="h-4 w-4 fill-current" /> Call Now
+                      <Phone className="h-4 w-4 fill-current" /> Call Now: {businessConfig.phoneDisplay}
                     </a>
                     <a href="#questions" onClick={smoothScroll('questions')} className="inline-flex min-h-12 items-center text-sm font-bold text-[#7A1E1E] hover:text-[#E88921]">
                       {service.link}

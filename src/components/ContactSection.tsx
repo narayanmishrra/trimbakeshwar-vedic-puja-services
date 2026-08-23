@@ -258,7 +258,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                     required
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    placeholder={lang === 'en' ? 'e.g. +91 98765 43210' : 'जैसे: +91 98765 43210'}
+                    placeholder={lang === 'en' ? 'e.g. +91 70206 82622' : 'जैसे: +91 70206 82622'}
                     className="bg-white border border-[#F2E6CE] rounded-sm px-4 py-2.5 text-sm font-sans font-semibold text-[#1a1a1a] focus:outline-none focus:border-[#D4AF37] transition-all"
                   />
                 </div>
