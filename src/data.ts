@@ -6,10 +6,10 @@
 import { BusinessConfig, Service, BlogPost, Testimonial, FAQItem, GalleryItem } from './types';
 
 export const businessConfig: BusinessConfig = {
-  phone: '+917020682622',
-  phoneDisplay: '+91 70206 82622',
-  whatsapp: '917020682622',
-  whatsappDisplay: '+91 70206 82622',
+  phone: '+919876543210',
+  phoneDisplay: '+91 98765 43210',
+  whatsapp: '919876543210',
+  whatsappDisplay: '+91 98765 43210',
   email: 'trimbakeshwarpanditji.in@gmail.com',
   address: {
     en: 'Trimbakeshwar, Pin- 422212',
