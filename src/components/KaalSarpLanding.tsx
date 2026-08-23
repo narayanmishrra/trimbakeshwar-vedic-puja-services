@@ -102,6 +102,12 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const goToServicesPage = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    window.location.hash = '#/services';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <article className="bg-[#FFFDF7] text-[#1f1b16] overflow-x-hidden">
       <section className="relative min-h-[92svh] pt-28 pb-12 flex items-end md:items-center overflow-hidden" aria-labelledby="landing-heading">
@@ -120,8 +126,9 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
               }`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/75" />
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#7A1E1E]/55 to-transparent" />
+          {/* Black-glass overlay: uniform ~45% dark keeps imagery visible while content pops */}
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#7A1E1E]/30 to-transparent" />
         </div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,7 +154,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
                 className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#E88921] hover:bg-[#cf7618] text-white px-6 py-4 font-bold text-base shadow-xl border border-[#D4AF37]/50 transition-colors"
                 aria-label={`Call Now ${businessConfig.phoneDisplay}`}
               >
-                <Phone className="h-5 w-5 fill-current" /> 📞 Call Now: {businessConfig.phoneDisplay}
+                <Phone className="h-5 w-5 fill-current" /> Call Now: {businessConfig.phoneDisplay}
               </a>
               <a
                 href="#services"
@@ -215,7 +222,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
                       onClick={handlePhoneClick}
                       className="inline-flex min-h-12 items-center justify-center gap-2 bg-[#7A1E1E] hover:bg-[#5a1616] text-white px-5 py-3 text-sm font-bold transition-colors"
                     >
-                      <Phone className="h-4 w-4 fill-current" /> 📞 Call Now
+                      <Phone className="h-4 w-4 fill-current" /> Call Now
                     </a>
                     <a href="#questions" onClick={smoothScroll('questions')} className="inline-flex min-h-12 items-center text-sm font-bold text-[#7A1E1E] hover:text-[#E88921]">
                       {service.link}
@@ -224,6 +231,16 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
                 </div>
               </section>
             ))}
+          </div>
+
+          <div className="mt-10 flex justify-center">
+            <a
+              href="#/services"
+              onClick={goToServicesPage}
+              className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#7A1E1E] hover:bg-[#5a1616] text-white px-8 py-4 font-bold text-base shadow-lg border border-[#D4AF37]/50 transition-colors"
+            >
+              View More Puja Services • सभी पूजा सेवाएं <ArrowRight className="h-5 w-5" />
+            </a>
           </div>
         </div>
       </section>
@@ -281,7 +298,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
           <p className="mt-3 text-white/78 leading-relaxed">Call now for direct inquiry about Kaalsarp Puja, Narayan Nagbali Puja, samagri and arrangements at Trimbakeshwar.</p>
           <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
             <a href={phoneHref} onClick={handlePhoneClick} className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#E88921] hover:bg-[#cf7618] text-white px-6 py-4 font-bold transition-colors">
-              <Phone className="h-5 w-5 fill-current" /> 📞 Call Now: {businessConfig.phoneDisplay}
+              <Phone className="h-5 w-5 fill-current" /> Call Now: {businessConfig.phoneDisplay}
             </a>
             <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1fb857] text-white px-6 py-4 font-bold transition-colors">
               <MessageCircle className="h-5 w-5 fill-current" /> WhatsApp Inquiry
