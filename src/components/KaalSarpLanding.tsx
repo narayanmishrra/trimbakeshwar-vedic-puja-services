@@ -138,7 +138,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
                 className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#E88921] hover:bg-[#cf7618] text-white px-6 py-4 font-bold text-base shadow-xl border border-[#D4AF37]/50 transition-colors"
                 aria-label={`Call Now ${businessConfig.phoneDisplay}`}
               >
-                <Phone className="h-5 w-5 fill-current" /> Call Now: {businessConfig.phoneDisplay}
+                <Phone className="pointer-events-none h-5 w-5 fill-current" /> Call Now: {businessConfig.phoneDisplay}
               </a>
               <a
                 href="#services"
@@ -205,7 +205,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
                       href="tel:+917020682622"
                       className="inline-flex min-h-12 items-center justify-center gap-2 bg-[#7A1E1E] hover:bg-[#5a1616] text-white px-5 py-3 text-sm font-bold transition-colors"
                     >
-                      <Phone className="h-4 w-4 fill-current" /> Call Now: {businessConfig.phoneDisplay}
+                      <Phone className="pointer-events-none h-4 w-4 fill-current" /> Call Now: {businessConfig.phoneDisplay}
                     </a>
                     <a href="#questions" onClick={smoothScroll('questions')} className="inline-flex min-h-12 items-center text-sm font-bold text-[#7A1E1E] hover:text-[#E88921]">
                       {service.link}
@@ -281,7 +281,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
           <p className="mt-3 text-white/78 leading-relaxed">Call now for direct inquiry about Kaalsarp Puja, Narayan Nagbali Puja, samagri and arrangements at Trimbakeshwar.</p>
           <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
             <a href="tel:+917020682622" className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#E88921] hover:bg-[#cf7618] text-white px-6 py-4 font-bold transition-colors">
-              <Phone className="h-5 w-5 fill-current" /> Call Now: {businessConfig.phoneDisplay}
+              <Phone className="pointer-events-none h-5 w-5 fill-current" /> Call Now: {businessConfig.phoneDisplay}
             </a>
             <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1fb857] text-white px-6 py-4 font-bold transition-colors">
               <MessageCircle className="h-5 w-5 fill-current" /> WhatsApp Inquiry

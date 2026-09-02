@@ -253,8 +253,8 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
                 href="tel:+917020682622"
                 className="flex items-center justify-center gap-3 bg-[#7A1E1E] hover:bg-[#5a1616] text-white font-serif text-base tracking-wide py-4 px-8 rounded-sm shadow-xl transition-all duration-300 w-full sm:w-auto hover:-translate-y-0.5 border border-[#D4AF37]/20"
               >
-                <Phone className="w-5 h-5 fill-current text-white shrink-0" />
-                <span className="uppercase tracking-wider font-bold text-sm whitespace-nowrap">{lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}</span>
+                <Phone className="pointer-events-none w-5 h-5 fill-current text-white shrink-0" />
+                <span className="pointer-events-none uppercase tracking-wider font-bold text-sm whitespace-nowrap">{lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}</span>
               </a>
               <a
                 href={whatsappUrl}

@@ -147,8 +147,8 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
             
             <div className="space-y-2 text-xs sm:text-sm text-[#FFFDF7]/80 font-semibold">
               <a href="tel:+917020682622" className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors">
-                <Phone className="w-4 h-4 text-[#D4AF37]" />
-                <span>{businessConfig.phoneDisplay}</span>
+                <Phone className="pointer-events-none w-4 h-4 text-[#D4AF37]" />
+                <span className="pointer-events-none">{businessConfig.phoneDisplay}</span>
               </a>
               <a href={`mailto:${businessConfig.email}`} className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors break-all">
                 <Mail className="w-4 h-4 text-[#D4AF37]" />

@@ -154,8 +154,8 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
                 href="tel:+917020682622"
                 className="bg-[#7A1E1E] text-white px-4.5 py-2 rounded-sm font-serif text-xs tracking-wider shadow-md hover:bg-[#5a1616] flex items-center gap-1.5 transition-all duration-300 transform hover:-translate-y-0.5"
               >
-                <PhoneCall className="w-3.5 h-3.5 fill-white text-white shrink-0" />
-                <span className="uppercase font-bold whitespace-nowrap">{lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}</span>
+                <PhoneCall className="pointer-events-none w-3.5 h-3.5 fill-white text-white shrink-0" />
+                <span className="pointer-events-none uppercase font-bold whitespace-nowrap">{lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}</span>
               </a>
             </div>
 
@@ -245,8 +245,8 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
                   href="tel:+917020682622"
                   className="flex items-center justify-center gap-2 bg-[#7A1E1E] hover:bg-[#E88921] text-[#FFFDF7] text-sm font-bold py-3 px-4 rounded-xl border border-[#D4AF37]/30 shadow-md"
                 >
-                  <PhoneCall className="w-4 h-4 fill-[#FFFDF7] shrink-0" />
-                  <span className="whitespace-nowrap">{lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}</span>
+                  <PhoneCall className="pointer-events-none w-4 h-4 fill-[#FFFDF7] shrink-0" />
+                  <span className="pointer-events-none whitespace-nowrap">{lang === 'en' ? `Call ${businessConfig.phoneDisplay}` : `कॉल ${businessConfig.phoneDisplay}`}</span>
                 </a>
 
               </div>
