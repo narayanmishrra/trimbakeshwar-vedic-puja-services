@@ -8,6 +8,7 @@ import { Sparkles, Calendar, Clock, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Service, Language } from '../types';
 import { businessConfig } from '../data';
+import NarayanNaagbaliNote from './NarayanNaagbaliNote';
 
 interface ServiceCardProps {
   key?: string;
@@ -102,6 +103,9 @@ export default function ServiceCard({ service, lang, onSelect }: ServiceCardProp
           <p className="font-sans text-xs sm:text-sm text-[#1a1a1a]/85 mb-6 leading-relaxed text-justify font-semibold line-clamp-3">
             {service.shortDesc[lang]}
           </p>
+          {service.id === 'narayan-nagbali' && (
+            <NarayanNaagbaliNote compact className="mb-5" />
+          )}
         </div>
 
         {/* Quick metadata attributes */}

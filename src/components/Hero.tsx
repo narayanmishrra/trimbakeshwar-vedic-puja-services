@@ -8,6 +8,7 @@ import { Phone, MessageSquare, ShieldCheck, HeartHandshake, Users, Sparkles, Che
 import { motion, AnimatePresence } from 'motion/react';
 import { Language } from '../types';
 import { businessConfig } from '../data';
+import NarayanNaagbaliNote from './NarayanNaagbaliNote';
 
 interface HeroProps {
   lang: Language;
@@ -241,6 +242,14 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
                 ? 'Experience 100% authentic Dosh Nivaran at holy Trimbakeshwar Jyotirlinga—the sacred origin of River Godavari and supreme site for Kaal Sarp Dosh (कालसर्प दोष शांति पूजा), Narayan Nagbali (नारायण नागबलि पूजा) & Pitru Dosh Shanti (पितृ दोष निवारण). Conducted by experienced Guruji Pandit Bineet Shastriji with complete scriptural purity, individual resolution (Sankalp), and dedicated guidance.'
                 : 'पवित्र त्र्यंबकेश्वर (Trimbakeshwar) ज्योतिर्लिंग धाम में 100% प्रामाणिक दोष निवारण (Dosh Nivaran) कराएं। पवित्र गोदावरी तट पर स्थित यह धाम कालसर्प दोष (Kaal Sarp Dosh), नारायण नागबलि (Narayan Nagbali) एवं पितृ दोष निवारण (Pitru Dosh Shanti) हेतु सर्वश्रेष्ठ तीर्थ माना गया है। अधिकृत वैदिक पुरोहित पंडित बिनीत शास्त्रीजी द्वारा पूर्ण विधि-विधान, शुचिता और व्यक्तिगत संकल्प (Sankalp) के साथ अनुष्ठान संपन्न कराएं।'}
             </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.25 }}
+              className="max-w-2xl mx-auto lg:mx-0 mb-8"
+            >
+              <NarayanNaagbaliNote compact />
+            </motion.div>
 
             {/* Conversion CTA triggers */}
             <motion.div
