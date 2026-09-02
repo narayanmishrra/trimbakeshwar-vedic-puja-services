@@ -8,6 +8,7 @@ import { ArrowLeft, Calendar, Clock, User, Share2, Check, BookOpen, Tag } from '
 import { BlogPost, Language } from '../types';
 import { blogPosts, businessConfig } from '../data';
 import TempleDivider from './TempleDivider';
+import NarayanNaagbaliNote from './NarayanNaagbaliNote';
 
 const seoTags = [
   { name: { en: "Kalsarpa Shanti Trimbakeshwar", hi: "कालसर्प शांति त्र्यंबकेश्वर" } },
@@ -38,6 +39,9 @@ export default function BlogDetail({ post, lang, onBack, onSelectPost }: BlogDet
   };
 
   const relatedPosts = blogPosts.filter(p => p.id !== post.id);
+  const isNarayanNaagbaliPost = /Narayan\s+Naa?gbali|नारायण नागबली|नारायण नागबलि/i.test(
+    `${post.title.en} ${post.title.hi} ${post.excerpt.en} ${post.excerpt.hi} ${post.content.en} ${post.content.hi}`
+  );
 
   // Parse lines to create safe HTML mock headers
   const renderParagraphs = (text: string) => {
@@ -169,6 +173,10 @@ export default function BlogDetail({ post, lang, onBack, onSelectPost }: BlogDet
             </button>
           </div>
         </div>
+
+        {isNarayanNaagbaliPost && (
+          <NarayanNaagbaliNote className="mb-8" />
+        )}
 
         {/* Layout: Sidebar and main text */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-10">

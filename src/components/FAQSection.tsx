@@ -8,6 +8,7 @@ import { ChevronDown, HelpCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { faqsData } from '../data';
 import { Language } from '../types';
+import NarayanNaagbaliNote from './NarayanNaagbaliNote';
 
 interface FAQSectionProps {
   lang: Language;
@@ -89,6 +90,9 @@ export default function FAQSection({ lang }: FAQSectionProps) {
         <div className="space-y-4">
           {faqsData.map((faq) => {
             const isOpen = openId === faq.id;
+            const discussesNarayanNaagbali = /Narayan\s+Naa?gbali|नारायण नागबली|नारायण नागबलि/i.test(
+              `${faq.question.en} ${faq.question.hi} ${faq.answer.en} ${faq.answer.hi}`
+            );
             return (
               <div
                 key={faq.id}
@@ -124,6 +128,9 @@ export default function FAQSection({ lang }: FAQSectionProps) {
                     >
                       <div className="px-5 pb-5 pt-1 border-t border-[#F2E6CE]/30 text-xs sm:text-sm text-[#1a1a1a]/80 leading-relaxed pl-13 font-medium">
                         {faq.answer[lang]}
+                        {discussesNarayanNaagbali && (
+                          <NarayanNaagbaliNote compact className="mt-4" />
+                        )}
                       </div>
                     </motion.div>
                   )}

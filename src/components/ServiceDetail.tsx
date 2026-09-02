@@ -8,6 +8,7 @@ import { ArrowLeft, PhoneCall, Calendar, Clock, BookOpen, Flame, CheckCircle, He
 import { Service, Language } from '../types';
 import { businessConfig } from '../data';
 import TempleDivider from './TempleDivider';
+import NarayanNaagbaliNote from './NarayanNaagbaliNote';
 
 const kalsarpaTypes = [
   {
@@ -233,6 +234,9 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
               <p className="font-sans text-sm sm:text-base text-[#1a1a1a]/85 leading-relaxed font-medium">
                 {service.longDesc[lang]}
               </p>
+              {service.id === 'narayan-nagbali' && (
+                <NarayanNaagbaliNote />
+              )}
               <div className="p-4 bg-[#7A1E1E]/5 rounded-sm border border-[#7A1E1E]/10 border-l-4 border-l-[#E88921]">
                 <h4 className="font-serif text-sm font-bold text-[#7A1E1E] mb-1">
                   {lang === 'en' ? 'Spiritual Importance' : 'आध्यात्मिक महत्व'}
@@ -509,6 +513,9 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
                   <p className="font-sans text-xs sm:text-sm text-[#1a1a1a]/80 leading-relaxed pl-6 font-semibold">
                     {faq.answer[lang]}
                   </p>
+                  {service.id === 'narayan-nagbali' && (
+                    <NarayanNaagbaliNote compact className="mt-4 ml-6" />
+                  )}
                 </div>
               ))}
             </div>

@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight, CheckCircle2, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { businessConfig } from '../data';
 import { Language } from '../types';
+import NarayanNaagbaliNote from './NarayanNaagbaliNote';
 
 interface KaalSarpLandingProps {
   lang: Language;
@@ -131,6 +132,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
             <p className="mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-white/86 font-medium">
               अनुभवी वैदिक पंडितों के मार्गदर्शन में त्र्यंबकेश्वर तीर्थ क्षेत्र में शास्त्रोक्त पूजा विधि। Get clear guidance for muhurat, samagri, ritual duration and direct booking support.
             </p>
+            <NarayanNaagbaliNote compact onDark className="mt-5 max-w-2xl" />
 
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
               <a
@@ -200,6 +202,9 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
                   <h3 className="font-serif text-2xl font-bold text-[#7A1E1E]">{service.titleHi}</h3>
                   <p className="mt-1 text-sm font-bold text-[#E88921]">{service.titleEn}</p>
                   <p className="mt-3 text-sm sm:text-base leading-relaxed text-[#1f1b16]/72">{service.description}</p>
+                  {service.id === 'narayan-nagbali' && (
+                    <NarayanNaagbaliNote compact className="mt-4" />
+                  )}
                   <div className="mt-5 flex flex-col xs:flex-row sm:flex-row gap-3 sm:items-center">
                     <a
                       href="tel:+917020682622"
@@ -245,6 +250,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
             <p className="mt-4 text-base leading-relaxed text-[#1f1b16]/75">
               Trimbakeshwar, Nashik is revered as a holy Teerth Kshetra associated with the Jyotirlinga and sacred Godavari origin. Devotees traditionally choose this place for Kaalsarp Shanti, Narayan Nagbali and ancestral remedial rituals under qualified Pandit guidance.
             </p>
+            <NarayanNaagbaliNote compact className="mt-4" />
             <a href="#questions" onClick={smoothScroll('questions')} className="mt-5 inline-flex min-h-12 items-center gap-2 text-[#7A1E1E] hover:text-[#E88921] font-bold">
               Explore Trimbakeshwar →
             </a>
