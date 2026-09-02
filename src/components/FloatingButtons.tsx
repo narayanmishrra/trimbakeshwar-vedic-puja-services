@@ -34,8 +34,12 @@ export default function FloatingButtons({ lang }: FloatingButtonsProps) {
         className="fixed right-4 md:right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#E88921] text-white shadow-xl hover:bg-[#cf7618] active:scale-95 transition-all focus:outline-none focus:ring-4 focus:ring-[#E88921]/30"
         style={{ bottom: 'calc(1rem + env(safe-area-inset-bottom))' }}
       >
-        <span className="floating-pulse absolute inset-0 rounded-full bg-[#E88921]/40" aria-hidden="true" />
-        <Phone className="relative h-7 w-7 fill-current" />
+        <span
+          className="floating-pulse absolute inset-0 rounded-full bg-[#E88921]/40"
+          aria-hidden="true"
+          style={{ pointerEvents: 'none' }}
+        />
+        <Phone className="relative h-7 w-7 fill-current" style={{ pointerEvents: 'none' }} />
       </a>
     </>
   );
