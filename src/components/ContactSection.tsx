@@ -117,10 +117,10 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                 href="tel:+917020682622"
                 className="flex items-center gap-4 bg-white hover:bg-[#F2E6CE]/30 border border-[#F2E6CE] p-4 rounded-sm shadow-sm transition-all group"
               >
-                <div className="p-3 rounded-sm bg-[#E88921]/15 text-[#E88921] group-hover:bg-[#7A1E1E] group-hover:text-white transition-colors">
+                <div className="pointer-events-none p-3 rounded-sm bg-[#E88921]/15 text-[#E88921] group-hover:bg-[#7A1E1E] group-hover:text-white transition-colors">
                   <Phone className="w-5 h-5 fill-current" />
                 </div>
-                <div className="text-left">
+                <div className="pointer-events-none text-left">
                   <span className="block text-[10px] text-[#7A1E1E]/60 font-bold uppercase tracking-wider">{lang === 'en' ? 'Direct Helpline' : 'संपर्क हेल्पलाइन'}</span>
                   <span className="text-base font-bold text-[#7A1E1E]">{businessConfig.phoneDisplay}</span>
                 </div>
