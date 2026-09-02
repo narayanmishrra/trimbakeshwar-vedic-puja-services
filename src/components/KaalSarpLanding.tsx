@@ -59,7 +59,6 @@ const questionCards = [
 
 export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
   const [activeSlide, setActiveSlide] = useState(0);
-  const phoneHref = `tel:${businessConfig.phone}`;
   const whatsappHref = `https://wa.me/${businessConfig.whatsapp}?text=${encodeURIComponent(
     'Namaste, I want to enquire about Kaalsarp Puja and Narayan Nagbali Puja at Trimbakeshwar.'
   )}`;
@@ -83,20 +82,6 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
     }, 3000);
     return () => window.clearInterval(interval);
   }, []);
-
-  const handlePhoneClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    if (typeof (window as any).gtag_report_conversion === 'function') {
-      event.preventDefault();
-      (window as any).gtag_report_conversion(phoneHref);
-    }
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'conversion',
-        event_label: 'landing_click_to_call',
-      });
-    }
-  };
-
   const smoothScroll = (id: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -149,8 +134,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
 
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
               <a
-                href={phoneHref}
-                onClick={handlePhoneClick}
+                href="tel:+917020682622"
                 className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#E88921] hover:bg-[#cf7618] text-white px-6 py-4 font-bold text-base shadow-xl border border-[#D4AF37]/50 transition-colors"
                 aria-label={`Call Now ${businessConfig.phoneDisplay}`}
               >
@@ -218,8 +202,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
                   <p className="mt-3 text-sm sm:text-base leading-relaxed text-[#1f1b16]/72">{service.description}</p>
                   <div className="mt-5 flex flex-col xs:flex-row sm:flex-row gap-3 sm:items-center">
                     <a
-                      href={phoneHref}
-                      onClick={handlePhoneClick}
+                      href="tel:+917020682622"
                       className="inline-flex min-h-12 items-center justify-center gap-2 bg-[#7A1E1E] hover:bg-[#5a1616] text-white px-5 py-3 text-sm font-bold transition-colors"
                     >
                       <Phone className="h-4 w-4 fill-current" /> Call Now: {businessConfig.phoneDisplay}
@@ -297,7 +280,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
           <h2 className="font-serif text-3xl sm:text-4xl font-bold">Need guidance for puja date or booking?</h2>
           <p className="mt-3 text-white/78 leading-relaxed">Call now for direct inquiry about Kaalsarp Puja, Narayan Nagbali Puja, samagri and arrangements at Trimbakeshwar.</p>
           <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
-            <a href={phoneHref} onClick={handlePhoneClick} className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#E88921] hover:bg-[#cf7618] text-white px-6 py-4 font-bold transition-colors">
+            <a href="tel:+917020682622" className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#E88921] hover:bg-[#cf7618] text-white px-6 py-4 font-bold transition-colors">
               <Phone className="h-5 w-5 fill-current" /> Call Now: {businessConfig.phoneDisplay}
             </a>
             <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1fb857] text-white px-6 py-4 font-bold transition-colors">

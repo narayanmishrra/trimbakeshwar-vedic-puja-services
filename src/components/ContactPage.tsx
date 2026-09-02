@@ -117,13 +117,7 @@ export default function ContactPage({ lang }: ContactPageProps) {
 
               {/* Phone Helpline */}
               <a
-                href={`tel:${businessConfig.phone}`}
-          onClick={(e) => {
-            if (typeof (window as any).gtag_report_conversion === 'function') {
-              e.preventDefault();
-              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
-            }
-          }}
+                href="tel:+917020682622"
                 className="flex items-center gap-4 bg-white hover:bg-[#F2E6CE]/20 border border-[#F2E6CE] p-4 rounded-sm shadow-sm transition-all group cursor-pointer"
               >
                 <div className="p-3 rounded-sm bg-[#E88921]/10 text-[#E88921] group-hover:bg-[#7A1E1E] group-hover:text-white transition-colors">

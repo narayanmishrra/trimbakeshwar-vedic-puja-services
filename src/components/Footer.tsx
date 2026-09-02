@@ -146,13 +146,7 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
             </span>
             
             <div className="space-y-2 text-xs sm:text-sm text-[#FFFDF7]/80 font-semibold">
-              <a href={`tel:${businessConfig.phone}`}
-          onClick={(e) => {
-            if (typeof (window as any).gtag_report_conversion === 'function') {
-              e.preventDefault();
-              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
-            }
-          }} className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors">
+              <a href="tel:+917020682622" className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors">
                 <Phone className="w-4 h-4 text-[#D4AF37]" />
                 <span>{businessConfig.phoneDisplay}</span>
               </a>
@@ -256,7 +250,7 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
           <p>© {new Date().getFullYear()} Trimbakeshwar Vedic Puja Services (त्र्यंबकेश्वर वैदिक पूजा सेवा). All Rights Reserved.</p>
           <p>
             {lang === 'en' ? 'Website by ' : 'वेबसाइट निर्माण: '}
-            <a href="tel:+917709753120" className="text-[#D4AF37] hover:underline">Viralmize</a>
+            <a href="tel:+917020682622" className="text-[#D4AF37] hover:underline">Viralmize</a>
           </p>
           <div className="flex gap-4">
             <button onClick={() => setLegalModal('terms')} className="hover:text-[#D4AF37] transition-colors cursor-pointer">{lang === 'en' ? 'Terms of Devotion' : 'नियम व शर्तें'}</button>

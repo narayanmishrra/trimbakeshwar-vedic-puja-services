@@ -151,13 +151,7 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
               </a>
 
               <a
-                href={`tel:${businessConfig.phone}`}
-          onClick={(e) => {
-            if (typeof (window as any).gtag_report_conversion === 'function') {
-              e.preventDefault();
-              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
-            }
-          }}
+                href="tel:+917020682622"
                 className="bg-[#7A1E1E] text-white px-4.5 py-2 rounded-sm font-serif text-xs tracking-wider shadow-md hover:bg-[#5a1616] flex items-center gap-1.5 transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 <PhoneCall className="w-3.5 h-3.5 fill-white text-white shrink-0" />
@@ -248,13 +242,7 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
               {/* Bottom Quick Contact within Mobile Menu */}
               <div className="flex flex-col gap-3 pt-6 border-t border-[#F2E6CE]">
                 <a
-                  href={`tel:${businessConfig.phone}`}
-          onClick={(e) => {
-            if (typeof (window as any).gtag_report_conversion === 'function') {
-              e.preventDefault();
-              (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
-            }
-          }}
+                  href="tel:+917020682622"
                   className="flex items-center justify-center gap-2 bg-[#7A1E1E] hover:bg-[#E88921] text-[#FFFDF7] text-sm font-bold py-3 px-4 rounded-xl border border-[#D4AF37]/30 shadow-md"
                 >
                   <PhoneCall className="w-4 h-4 fill-[#FFFDF7] shrink-0" />

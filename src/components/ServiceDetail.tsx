@@ -527,13 +527,7 @@ export default function ServiceDetail({ service, lang, onBack }: ServiceDetailPr
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <a
-                href={`tel:${businessConfig.phone}`}
-                onClick={(e) => {
-                  if (typeof (window as any).gtag_report_conversion === 'function') {
-                    e.preventDefault();
-                    (window as any).gtag_report_conversion(`tel:${businessConfig.phone}`);
-                  }
-                }}
+                href="tel:+917020682622"
                 className="flex items-center gap-2 bg-[#7A1E1E] hover:bg-[#E88921] text-white text-xs uppercase tracking-widest font-serif py-3.5 px-6 rounded-sm border border-[#D4AF37]/20 shadow-md transition-colors w-full sm:w-auto justify-center whitespace-nowrap"
               >
                 <PhoneCall className="w-4 h-4 fill-white shrink-0" />
