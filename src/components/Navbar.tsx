@@ -5,9 +5,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe, PhoneCall, MessageSquare } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
 import { Language } from '../types';
-import { businessConfig } from '../data';
+import { businessConfig } from '../business';
 
 interface NavbarProps {
   lang: Language;
@@ -33,7 +32,8 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
   }, []);
 
   const navItems = [
-    { id: 'home', label: { en: 'Home', hi: 'मुख्य' } },
+    { id: 'home', label: { en: 'Kaalsarp Puja', hi: 'कालसर्प पूजा' } },
+    { id: 'narayan-nagbali-home', label: { en: 'Narayan Nagbali', hi: 'नारायण नागबली' } },
     { id: 'trimbakeshwar', label: { en: 'About Trimbakeshwar', hi: 'त्र्यंबकेश्वर परिचय' } },
     { id: 'services', label: { en: 'Our Puja Services', hi: 'पूजा सेवाएं' } },
     { id: 'about', label: { en: 'About Us', hi: 'हमारे बारे में' } },
@@ -102,10 +102,7 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
                 >
                   {item.label[lang]}
                   {(activeTab === item.id || (item.id === 'services' && activeTab.startsWith('service-'))) && (
-                    <motion.div
-                      layoutId="activeUnderline"
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#E88921]"
-                    />
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#E88921]" />
                   )}
                 </button>
               ))}
@@ -185,26 +182,11 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
       </header>
 
       {/* Mobile Drawer Navigation with overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black z-45"
-            />
-
-            {/* Drawer Body */}
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed right-0 top-0 bottom-0 w-[280px] max-w-full bg-[#FFFDF7] border-l border-[#F2E6CE] z-50 p-6 flex flex-col justify-between shadow-2xl"
-            >
+      {/* CSS-only drawer keeps the animation library out of the critical bundle */}
+      <div className={`fixed inset-0 z-45 bg-black transition-opacity duration-300 ${isOpen ? 'opacity-50' : 'pointer-events-none opacity-0'}`} onClick={() => setIsOpen(false)} aria-hidden="true" />
+      <div
+        className={`fixed right-0 top-0 bottom-0 w-[280px] max-w-full bg-[#FFFDF7] border-l border-[#F2E6CE] z-50 p-6 flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+      >
               <div>
                 {/* Header inside drawer */}
                 <div className="flex items-center justify-between pb-6 border-b border-[#F2E6CE]">
@@ -250,10 +232,7 @@ export default function Navbar({ lang, setLang, activeTab, setActiveTab }: Navba
                 </a>
 
               </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+      </div>
     </>
   );
 }

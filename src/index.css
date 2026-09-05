@@ -90,3 +90,14 @@ html {
     min-height: 0;
   }
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Very short viewports (landscape phones): compress the landing hero so the
+   Call / View Puja Services buttons still land above the fold. */
+@media (max-height: 700px) and (orientation: landscape) {
+  #landing-heading { font-size: 1.6rem; line-height: 1.15; }
+}

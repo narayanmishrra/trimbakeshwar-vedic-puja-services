@@ -6,7 +6,8 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Plane, Train, Car, Compass } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { businessConfig, servicesData } from '../data';
+import { servicesData } from '../data';
+import { businessConfig } from '../business';
 import { Language } from '../types';
 import TempleDivider from './TempleDivider';
 

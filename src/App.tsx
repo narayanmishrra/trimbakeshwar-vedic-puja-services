@@ -3,28 +3,30 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Data & Types
 import { Language, BlogPost } from './types';
-import { servicesData, blogPosts } from './data';
+import { serviceIndex } from './service-index';
 
 // Custom Reusable Components
 import Navbar from './components/Navbar';
 import FloatingButtons from './components/FloatingButtons';
 import TempleDivider from './components/TempleDivider';
-import TrimbakeshwarSection from './components/TrimbakeshwarSection';
-import AboutUsSection from './components/AboutUsSection';
-import ServiceCard from './components/ServiceCard';
-import ServiceDetail from './components/ServiceDetail';
-import GallerySection from './components/GallerySection';
-import BlogSection from './components/BlogSection';
-import BlogDetail from './components/BlogDetail';
-import FAQSection from './components/FAQSection';
-import ContactSection from './components/ContactSection';
-import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import KaalSarpLanding from './components/KaalSarpLanding';
+
+// Route-level code splitting: the landing hero ships in the initial bundle, everything else loads on demand.
+const TrimbakeshwarSection = lazy(() => import('./components/TrimbakeshwarSection'));
+const AboutUsSection = lazy(() => import('./components/AboutUsSection'));
+const ServicesGrid = lazy(() => import('./components/ServicesGrid'));
+const ServiceDetailRoute = lazy(() => import('./components/ServiceDetailRoute'));
+const GallerySection = lazy(() => import('./components/GallerySection'));
+const BlogSection = lazy(() => import('./components/BlogSection'));
+const BlogDetailRoute = lazy(() => import('./components/BlogDetailRoute'));
+const FAQSection = lazy(() => import('./components/FAQSection'));
+const ContactSection = lazy(() => import('./components/ContactSection'));
+const ContactPage = lazy(() => import('./components/ContactPage'));
 
 export default function App() {
   const [lang, setLang] = useState<Language>(() => {
@@ -38,28 +40,29 @@ export default function App() {
     }
     return 'en';
   });
-  const [activeTab, setActiveTab] = useState<string>('home');
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const NARAYAN_ROUTES = ['narayan-nagbali-puja-trimbakeshwar', 'narayan-nagbali-puja', 'narayan-nagbali', 'narayan-naagbali'];
+  const KAALSARP_ROUTES = ['kaal-sarp-puja-trimbakeshwar', 'kaal-sarp-puja', 'kaalsarp-puja', 'kaalsarp-puja-trimbakeshwar', 'kaal-sarp'];
+
+  const [activeTab, setActiveTab] = useState<string>(() => {
+    const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+    const hash = window.location.hash.replace('#/', '');
+    if (NARAYAN_ROUTES.includes(hash) || NARAYAN_ROUTES.includes(path)) return 'narayan-nagbali-home';
+    return 'home';
+  });
 
   useEffect(() => {
-    const isMobile = window.matchMedia('(max-width: 767px)').matches;
-    // The mobile hero image is preloaded in index.html; avoid re-fetching heavy desktop art on phones.
-    const criticalImages = isMobile ? ['/images/hero-mobile.webp'] : ['/images/bramahagiri.webp'];
+    // Warm only the images the visitor is likely to see next, and only when the browser is idle.
     const secondaryImages = [
-      '/images/gallery1.jpeg','/images/gallery2.jpeg','/images/gallery3.jpeg','/images/kalsarp puja.jpeg','/images/galllery4.jpeg','/images/gallery7.jpeg','/images/online.jpeg',
-      '/images/mahamrityunjay.jpg','/images/navgrah.jpg','/images/pitrudosh.jpg','/images/narayan naagbali.jpg','/images/tripindi.jpg','/images/rudrabhishek.jpg','/images/mangal dosh.png'
+      '/images/gallery2.jpeg', '/images/gallery3.jpeg', '/images/kalsarp puja.jpeg', '/images/narayan naagbali.jpg', '/images/bramahagiri.webp',
     ];
-    const loadImages = (urls: string[]) => Promise.all(urls.map(src => new Promise<void>(resolve => { const img = new Image(); img.src = src; img.onload = () => resolve(); img.onerror = () => resolve(); })));
-    loadImages(criticalImages).then(() => {
-      setTimeout(() => {
-        if ('requestIdleCallback' in window) (window as any).requestIdleCallback(() => { loadImages(secondaryImages); });
-        else loadImages(secondaryImages);
-      }, 1500);
-    });
+    const prefetch = () => secondaryImages.forEach((src) => { const img = new Image(); img.src = src; });
+    const idle = (window as any).requestIdleCallback;
+    if (idle) idle(prefetch, { timeout: 3000 });
+    else setTimeout(prefetch, 2000);
   }, []);
 
   useEffect(() => {
-    if (activeTab === 'home' || activeTab === 'kaal-sarp-puja' || activeTab === 'kaal-sarp-puja-trimbakeshwar' || activeTab === 'kaalsarp-puja') return;
+    if (activeTab === 'home' || activeTab === 'narayan-nagbali-home' || activeTab === 'kaal-sarp-puja' || activeTab === 'kaal-sarp-puja-trimbakeshwar' || activeTab === 'kaalsarp-puja') return;
     let title = '';
     if (lang === 'en') {
       if (activeTab === 'trimbakeshwar') title = 'About Trimbakeshwar - Town History & Legend';
@@ -68,13 +71,11 @@ export default function App() {
       else if (activeTab === 'services') title = 'Scriptural Vedic Rituals | Trimbakeshwar';
       else if (activeTab.startsWith('service-')) {
         const id = activeTab.replace('service-', '');
-        const s = servicesData.find(serv => serv.id === id);
+        const s = serviceIndex.find(serv => serv.id === id);
         title = `${s ? `${s.title.en} (${s.title.hi})` : 'Ritual'} - Complete Guide | Trimbakeshwar`;
       } else if (activeTab === 'blog') title = 'Puja Guides & Devotee Testimonials';
       else if (activeTab.startsWith('blog-')) {
-        const id = activeTab.replace('blog-', '');
-        const p = blogPosts.find(post => post.id === id);
-        title = `${p ? p.title.en : 'Puja Guide'} | Trimbakeshwar Blog`;
+        title = 'Puja Guide | Trimbakeshwar Blog';
       } else if (activeTab === 'faq') title = 'Frequently Answered Questions | Trimbakeshwar Puja';
     } else {
       if (activeTab === 'trimbakeshwar') title = 'त्र्यंबकेश्वर परिचय - पावन इतिहास और कथाएँ';
@@ -83,13 +84,11 @@ export default function App() {
       else if (activeTab === 'services') title = 'शास्त्रोक्त वैदिक अनुष्ठान| त्र्यंबकेश्वर';
       else if (activeTab.startsWith('service-')) {
         const id = activeTab.replace('service-', '');
-        const s = servicesData.find(serv => serv.id === id);
+        const s = serviceIndex.find(serv => serv.id === id);
         title = `${s ? s.title.hi : 'अनुष्ठान'} - संपूर्ण पूजा विधि | त्र्यंबकेश्वर`;
       } else if (activeTab === 'blog') title = 'वैदिक लेख एवं श्रद्धालु समीक्षाएं | त्र्यंबकेश्वर ब्लॉग';
       else if (activeTab.startsWith('blog-')) {
-        const id = activeTab.replace('blog-', '');
-        const p = blogPosts.find(post => post.id === id);
-        title = `${p ? p.title.hi : 'आध्यात्मिक लेख'} | त्र्यंबकेश्वर ब्लॉग`;
+        title = 'आध्यात्मिक लेख | त्र्यंबकेश्वर ब्लॉग';
       } else if (activeTab === 'faq') title = 'अक्सर पूछे जाने वाले सवाल-जवाब | त्र्यंबकेश्वर';
     }
     if (title) document.title = title;
@@ -98,17 +97,21 @@ export default function App() {
   useEffect(() => {
     const handleHash = () => {
       const hash = window.location.hash.replace('#/', '');
+      const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
       if (hash) {
-        if (['kaal-sarp-puja', 'kaal-sarp-puja-trimbakeshwar', 'kaalsarp-puja', 'kaalsarp-puja-trimbakeshwar', 'kaal-sarp'].includes(hash)) {
+        if (NARAYAN_ROUTES.includes(hash)) {
+          setActiveTab('narayan-nagbali-home');
+          return;
+        }
+        if (KAALSARP_ROUTES.includes(hash)) {
           setActiveTab('home');
           return;
         }
         setActiveTab(hash);
-      } else {
-        const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
-        if (['kaal-sarp-puja-trimbakeshwar', 'kaal-sarp-puja', 'kaalsarp-puja', 'kaalsarp-puja-trimbakeshwar'].includes(path)) {
-          setActiveTab('home');
-        }
+      } else if (NARAYAN_ROUTES.includes(path)) {
+        setActiveTab('narayan-nagbali-home');
+      } else if (KAALSARP_ROUTES.includes(path)) {
+        setActiveTab('home');
       }
     };
     window.addEventListener('hashchange', handleHash);
@@ -118,7 +121,7 @@ export default function App() {
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    window.location.hash = `#/${tab}`;
+    window.location.hash = tab === 'narayan-nagbali-home' ? '#/narayan-nagbali-puja-trimbakeshwar' : `#/${tab}`;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -134,22 +137,15 @@ export default function App() {
   };
 
   const handleSelectPost = (post: BlogPost) => {
-    setSelectedPost(post);
     handleTabChange(`blog-${post.id}`);
   };
 
   const renderContent = () => {
     if (activeTab.startsWith('service-')) {
-      const id = activeTab.replace('service-', '');
-      const selectedService = servicesData.find(s => s.id === id);
-      if (selectedService) {
-        return <ServiceDetail service={selectedService} lang={lang} onBack={() => handleTabChange('services')} />;
-      }
+      return <ServiceDetailRoute id={activeTab.replace('service-', '')} lang={lang} onBack={() => handleTabChange('services')} />;
     }
     if (activeTab.startsWith('blog-')) {
-      const id = activeTab.replace('blog-', '');
-      const post = blogPosts.find(p => p.id === id) || selectedPost || blogPosts[0];
-      return <BlogDetail post={post} lang={lang} onBack={() => handleTabChange('blog')} onSelectPost={handleSelectPost} />;
+      return <BlogDetailRoute id={activeTab.replace('blog-', '')} lang={lang} onBack={() => handleTabChange('blog')} onSelectPost={handleSelectPost} />;
     }
     switch (activeTab) {
       case 'trimbakeshwar':
@@ -178,11 +174,7 @@ export default function App() {
                 </p>
                 <TempleDivider />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {servicesData.map(service => (
-                  <ServiceCard key={service.id} service={service} lang={lang} onSelect={handleSelectService} />
-                ))}
-              </div>
+              <ServicesGrid lang={lang} onSelect={handleSelectService} />
             </div>
             <ContactSection lang={lang} />
           </section>
@@ -223,20 +215,22 @@ export default function App() {
             <ContactPage lang={lang} />
           </section>
         );
+      case 'narayan-nagbali-home':
+        return <KaalSarpLanding lang={lang} variant="narayan-nagbali" />;
       case 'home':
       case 'kaal-sarp-puja':
       case 'kaal-sarp-puja-trimbakeshwar':
       case 'kaalsarp-puja':
       case 'kaalsarp-puja-trimbakeshwar':
       default:
-        return <KaalSarpLanding lang={lang} />;
+        return <KaalSarpLanding lang={lang} variant="kaalsarp" />;
     }
   };
 
   return (
     <div className="min-h-screen bg-[#FFFDF7] selection:bg-[#E88921]/20 selection:text-[#7A1E1E] flex flex-col justify-between overflow-x-hidden">
       <Navbar lang={lang} setLang={handleLanguageChange} activeTab={activeTab} setActiveTab={handleTabChange} />
-      <main className="flex-1">{renderContent()}</main>
+      <main className="flex-1"><Suspense fallback={<div className="min-h-[60vh]" />}>{renderContent()}</Suspense></main>
       <FloatingButtons lang={lang} />
       <Footer lang={lang} activeTab={activeTab} setActiveTab={handleTabChange} />
     </div>
