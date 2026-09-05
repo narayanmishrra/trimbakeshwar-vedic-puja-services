@@ -2,30 +2,14 @@
 <html lang="en">
 
 <head>
-  <!-- Analytics loaded after first paint (idle) so they never block LCP -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18301107881"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
     gtag('config', 'AW-18301107881');
-    (function () {
-      var loaded = false;
-      function loadAnalytics() {
-        if (loaded) return; loaded = true;
-        var g = document.createElement('script');
-        g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18301107881';
-        document.head.appendChild(g);
-        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var j = document.createElement('script');
-        j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PQW7R6N9';
-        document.head.appendChild(j);
-      }
-      ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (e) {
-        window.addEventListener(e, loadAnalytics, { once: true, passive: true });
-      });
-      if ('requestIdleCallback' in window) requestIdleCallback(loadAnalytics, { timeout: 4000 });
-      else window.addEventListener('load', function () { setTimeout(loadAnalytics, 2500); });
-    })();
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
