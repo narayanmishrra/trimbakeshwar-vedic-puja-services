@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { Phone, MessageSquare, ShieldCheck, HeartHandshake, Users, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Language } from '../types';
-import { businessConfig } from '../data';
+import { businessConfig } from '../business';
 import NarayanNaagbaliNote from './NarayanNaagbaliNote';
 
 interface HeroProps {
@@ -58,7 +58,7 @@ export default function Hero({ lang, setActiveTab }: HeroProps) {
     { src: '/images/kalsarp puja.jpeg', alt: 'Kalsarp Puja Ceremony' },
     { src: '/images/bramahagiri.webp', alt: 'Brahmagiri Hills Trimbakeshwar' },
     { src: '/images/online.jpeg', alt: 'Online Puja Darshan' },
-    { src: '/images/main-photo.png', alt: 'Shri Trimbakeshwar Jyotirlinga Temple' },
+    { src: '/images/main-photo.jpg', alt: 'Shri Trimbakeshwar Jyotirlinga Temple' },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);

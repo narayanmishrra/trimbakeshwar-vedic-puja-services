@@ -6,7 +6,8 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Calendar, Clock, User, Share2, Check, BookOpen, Tag } from 'lucide-react';
 import { BlogPost, Language } from '../types';
-import { blogPosts, businessConfig } from '../data';
+import { blogPosts } from '../data';
+import { businessConfig } from '../business';
 import TempleDivider from './TempleDivider';
 import NarayanNaagbaliNote from './NarayanNaagbaliNote';
 

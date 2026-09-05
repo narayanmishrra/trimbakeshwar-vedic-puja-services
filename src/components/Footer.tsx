@@ -5,9 +5,9 @@
 
 import React, { useState } from 'react';
 import { Landmark, Phone, Mail, Clock, X, ShieldCheck } from 'lucide-react';
-import { businessConfig, servicesData } from '../data';
+import { serviceIndex } from '../service-index';
+import { businessConfig } from '../business';
 import { Language } from '../types';
-import { motion, AnimatePresence } from 'motion/react';
 
 interface FooterProps {
   lang: Language;
@@ -18,7 +18,8 @@ interface FooterProps {
 export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
   const [legalModal, setLegalModal] = useState<'privacy' | 'terms' | null>(null);
   const quickLinks = [
-    { id: 'home', label: { en: 'Home', hi: 'मुख्य' } },
+    { id: 'home', label: { en: 'Kaalsarp Puja', hi: 'कालसर्प पूजा' } },
+    { id: 'narayan-nagbali-home', label: { en: 'Narayan Nagbali', hi: 'नारायण नागबली' } },
     { id: 'trimbakeshwar', label: { en: 'About Trimbakeshwar', hi: 'त्र्यंबकेश्वर परिचय' } },
     { id: 'services', label: { en: 'Our Puja Services', hi: 'पूजा सेवाएं' } },
     { id: 'about', label: { en: 'About Us', hi: 'हमारे बारे में' } },
@@ -28,7 +29,7 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
     { id: 'contact', label: { en: 'Contact Us', hi: 'संपर्क करें' } },
   ];
 
-  const topServices = servicesData.slice(0, 4);
+  const topServices = serviceIndex.slice(0, 4);
 
   const handleLinkClick = (id: string) => {
     setActiveTab(id);
@@ -261,19 +262,13 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
       </div>
 
       {/* Legal Modals Overlay */}
-      <AnimatePresence>
-        {legalModal !== null && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+      {/* CSS-only modal: no animation library in the shell bundle */}
+      {legalModal !== null && (
+          <div
             onClick={() => setLegalModal(null)}
-            className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 text-left"
+            className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 text-left animate-[fadeIn_.2s_ease-out]"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+            <div
               onClick={(e) => e.stopPropagation()}
               className="bg-[#FFFDF7] border-2 border-[#D4AF37]/40 text-[#1a1a1a] p-6 sm:p-8 rounded-sm max-w-lg w-full shadow-2xl relative max-h-[85vh] overflow-y-auto"
             >
@@ -398,10 +393,9 @@ export default function Footer({ lang, activeTab, setActiveTab }: FooterProps) {
               >
                 {lang === 'en' ? 'Close Window' : 'बंद करें'}
               </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </div>
+          </div>
+      )}
     </footer>
   );
 }

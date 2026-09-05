@@ -6,7 +6,7 @@
 import React from 'react';
 import { ShieldCheck, Calendar, Users, Star, Award, Compass, Heart, MapPin, Plane, Train, Car, Clock } from 'lucide-react';
 import { Language } from '../types';
-import { businessConfig } from '../data';
+import { businessConfig } from '../business';
 import TempleDivider from './TempleDivider';
 
 interface AboutUsSectionProps {
@@ -40,7 +40,7 @@ export default function AboutUsSection({ lang }: AboutUsSectionProps) {
   const profile = {
     role: { en: 'Head Vedic Priest (Acharya)', hi: 'मुख्य पुरोहित (आचार्य)' },
     name: { en: 'Pandit Bineet Shastriji', hi: 'पंडित बिनीत शास्त्रीजी' },
-    avatar: '/images/image.png',
+    avatar: '/images/avatar.jpg',
     bio: {
       en: 'Pandit Bineet Shastriji is a highly respected generational Vedic scholar who completed his traditional Shastras training in Varanasi (Kashi) and Nashik. Belonging to an ancient family of traditional priests in the holy town of Trimbakeshwar, he possesses decades of generational ancestral expertise. Shastriji specializes in conducting highly effective Vedic remedial rituals like Kalsarpa Shanti, Narayan Nagbali, Tripindi Shraddha, Mahamrityunjaya Japa, and Navagraha Shanti, ensuring absolute scriptural purity and perfect Sanskrit mantra pronunciations.',
       hi: 'पंडित बिनीत शास्त्रीजी काशी (वाराणसी) और नासिक के गुरुकुलों से दीक्षित एवं प्रशिक्षित एक अत्यंत सम्मानित पीढ़ीगत वैदिक पुरोहित हैं। त्र्यंबकेश्वर के पारंपरिक पुरोहितों के प्राचीन वंश से जुड़े होने के कारण उन्हें पीढ़ियों से चली आ रही प्रामाणिक पूजा पद्धतियों का गहन ज्ञान प्राप्त है। शास्त्रीजी कालसर्प शांति, नारायण नागबलि, त्रिपिंडी श्राद्ध, महामृत्युंजय जाप और नवग्रह शांति जैसे सभी दोष निवारक वैदिक अनुष्ठानों को पूर्ण शास्त्रीय मर्यादा, शुचिता और शुद्ध संस्कृत मंत्रोच्चार के साथ संपन्न कराने में सिद्धहस्त हैं।'

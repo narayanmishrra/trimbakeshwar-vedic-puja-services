@@ -2,25 +2,31 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18301107881"></script>
+  <!-- Analytics loaded after first paint (idle) so they never block LCP -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'AW-18301107881');
+    (function () {
+      var loaded = false;
+      function loadAnalytics() {
+        if (loaded) return; loaded = true;
+        var g = document.createElement('script');
+        g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18301107881';
+        document.head.appendChild(g);
+        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var j = document.createElement('script');
+        j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PQW7R6N9';
+        document.head.appendChild(j);
+      }
+      ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (e) {
+        window.addEventListener(e, loadAnalytics, { once: true, passive: true });
+      });
+      if ('requestIdleCallback' in window) requestIdleCallback(loadAnalytics, { timeout: 4000 });
+      else window.addEventListener('load', function () { setTimeout(loadAnalytics, 2500); });
+    })();
   </script>
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PQW7R6N9');</script>
-  <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Book Kaal Sarp Puja in Trimbakeshwar, Nashik. Get puja details, availability and booking assistance from experienced Pandit Ji. Clear process, direct contact." />
@@ -32,13 +38,13 @@
   <meta property="og:description" content="Book Kaal Sarp Puja in Trimbakeshwar, Nashik. Get puja details, availability and booking assistance from experienced Pandit Ji." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://trimbakeshwarpanditji.in/" />
-  <meta property="og:image" content="https://trimbakeshwarpanditji.in/images/main-photo.png" />
+  <meta property="og:image" content="https://trimbakeshwarpanditji.in/images/main-photo.jpg" />
   
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kaal Sarp Puja in Trimbakeshwar | Trimbakeshwar Vedic Puja Services" />
   <meta name="twitter:description" content="Book Kaal Sarp Puja in Trimbakeshwar, Nashik. Get puja details, availability and booking assistance from experienced Pandit Ji." />
-  <meta name="twitter:image" content="https://trimbakeshwarpanditji.in/images/main-photo.png" />
+  <meta name="twitter:image" content="https://trimbakeshwarpanditji.in/images/main-photo.jpg" />
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://trimbakeshwarpanditji.in/" />
@@ -50,8 +56,7 @@
 
   <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
   <!-- LCP hero: portrait cinematic temple image on mobile, ritual photo on desktop -->
-  <link rel="preload" as="image" href="/images/hero-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high" />
-  <link rel="preload" as="image" href="/images/kalsarp%20puja.jpeg" media="(min-width: 768px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/images/gallery1.jpeg" fetchpriority="high" />
   <title>Kaal Sarp Puja in Trimbakeshwar | Trimbakeshwar Vedic Puja Services</title>
 
   <!-- LocalBusiness Structured Data -->
@@ -60,7 +65,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Trimbakeshwar Vedic Puja Services",
-    "image": "https://trimbakeshwarpanditji.in/images/main-photo.png",
+    "image": "https://trimbakeshwarpanditji.in/images/main-photo.jpg",
     "@id": "https://trimbakeshwarpanditji.in/",
     "url": "https://trimbakeshwarpanditji.in/",
     "telephone": "+917020682622",
@@ -239,18 +244,11 @@
       opacity: 0.7;
     }
 
-    /* FOUC Guard - hide content until loading screen is hidden */
-    .fouc-guard {
-      visibility: hidden;
-    }
-
-    .fouc-guard #loading-screen {
-      visibility: visible;
-    }
+    /* Loading screen fades out as soon as React mounts; content is never hidden. */
   </style>
 </head>
 
-<body class="fouc-guard">
+<body>
   <!-- Loading Screen (shown before React loads) -->
   <div id="loading-screen">
     <div class="logo-container">

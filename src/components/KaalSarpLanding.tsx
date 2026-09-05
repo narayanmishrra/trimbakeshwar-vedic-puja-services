@@ -4,13 +4,44 @@
  */
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, CheckCircle2, MapPin, MessageCircle, Phone } from 'lucide-react';
-import { businessConfig } from '../data';
+import { businessConfig } from '../business';
 import { Language } from '../types';
 import NarayanNaagbaliNote from './NarayanNaagbaliNote';
 
+export type LandingVariant = 'kaalsarp' | 'narayan-nagbali';
+
 interface KaalSarpLandingProps {
   lang: Language;
+  variant?: LandingVariant;
 }
+
+/** Hero copy/SEO differs per landing page; every section below the hero is shared. */
+const variantContent = {
+  kaalsarp: {
+    titleHi: 'त्र्यंबकेश्वर में कालसर्प पूजा',
+    titleEn: 'Kaalsarp Puja in Trimbakeshwar',
+    introHi:
+      'कुंडली में राहु-केतु से बनने वाले कालसर्प दोष की शांति हेतु अनुभवी वैदिक पंडितों के मार्गदर्शन में त्र्यंबकेश्वर तीर्थ क्षेत्र में शास्त्रोक्त पूजा विधि। Get clear guidance for Kaalsarp Puja muhurat, samagri, ritual duration and direct booking support.',
+    showNote: false,
+    docTitle: 'त्र्यंबकेश्वर में कालसर्प पूजा | Kaalsarp Puja in Trimbakeshwar',
+    metaDescription:
+      'Call now for Kaalsarp Puja in Trimbakeshwar. Authentic Vedic Kaal Sarp Dosh Shanti rituals, direct Pandit guidance, samagri and booking assistance.',
+    whatsappText: 'Namaste, I want to enquire about Kaalsarp Puja at Trimbakeshwar.',
+    canonical: 'https://trimbakeshwarpanditji.in/',
+  },
+  'narayan-nagbali': {
+    titleHi: 'त्र्यंबकेश्वर में नारायण नागबली',
+    titleEn: 'Narayan Nagbali Puja in Trimbakeshwar',
+    introHi:
+      'पितृ दोष, अपूर्ण इच्छाओं एवं नाग हत्या दोष की शांति हेतु त्र्यंबकेश्वर में तीन दिवसीय शास्त्रोक्त नारायण नागबली पूजा। Get clear guidance for Narayan Nagbali muhurat, samagri, three-day ritual schedule and direct booking support.',
+    showNote: true,
+    docTitle: 'त्र्यंबकेश्वर में नारायण नागबली | Narayan Nagbali Puja in Trimbakeshwar',
+    metaDescription:
+      'Call now for Narayan Nagbali Puja in Trimbakeshwar. Three-day scriptural ritual at the designated ghats, direct Pandit guidance, samagri and booking assistance.',
+    whatsappText: 'Namaste, I want to enquire about Narayan Nagbali Puja at Trimbakeshwar.',
+    canonical: 'https://trimbakeshwarpanditji.in/narayan-nagbali-puja-trimbakeshwar',
+  },
+} as const;
 
 const heroSlides = [
   {
@@ -58,24 +89,27 @@ const questionCards = [
   'What arrangements and samagri are provided?',
 ];
 
-export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
+export default function KaalSarpLanding({ lang, variant = 'kaalsarp' }: KaalSarpLandingProps) {
   const [activeSlide, setActiveSlide] = useState(0);
-  const whatsappHref = `https://wa.me/${businessConfig.whatsapp}?text=${encodeURIComponent(
-    'Namaste, I want to enquire about Kaalsarp Puja and Narayan Nagbali Puja at Trimbakeshwar.'
-  )}`;
+  const content = variantContent[variant];
+  const whatsappHref = `https://wa.me/${businessConfig.whatsapp}?text=${encodeURIComponent(content.whatsappText)}`;
 
   useEffect(() => {
-    const title = 'त्र्यंबकेश्वर में कालसर्प पूजा एवं नारायण नागबली पूजा | Trimbakeshwar Vedic Puja Services';
-    document.title = title;
+    document.title = content.docTitle;
 
     const meta = document.querySelector('meta[name="description"]') || document.createElement('meta');
     meta.setAttribute('name', 'description');
-    meta.setAttribute(
-      'content',
-      'Call now for Kaalsarp Puja and Narayan Nagbali Puja at Trimbakeshwar. Authentic Vedic rituals, direct Pandit guidance, samagri and booking assistance.'
-    );
+    meta.setAttribute('content', content.metaDescription);
     if (!meta.parentElement) document.head.appendChild(meta);
-  }, []);
+
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = content.canonical;
+  }, [content]);
 
   useEffect(() => {
     const interval = window.setInterval(() => {
@@ -96,7 +130,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
 
   return (
     <article className="bg-[#FFFDF7] text-[#1f1b16] overflow-x-hidden">
-      <section className="relative min-h-[92svh] pt-28 pb-12 flex items-end md:items-center overflow-hidden" aria-labelledby="landing-heading">
+      <section className="relative min-h-[100svh] pt-24 pb-8 flex items-start lg:items-center overflow-hidden" aria-labelledby="landing-heading">
         <div className="absolute inset-0 bg-[#2a1710]" aria-hidden="true">
           {heroSlides.map((slide, index) => (
             <img
@@ -107,6 +141,7 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
               height={960}
               loading={index === 0 ? 'eager' : 'lazy'}
               fetchPriority={index === 0 ? 'high' : 'auto'}
+              decoding={index === 0 ? 'sync' : 'async'}
               className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
                 activeSlide === index ? 'opacity-100' : 'opacity-0'
               }`}
@@ -119,25 +154,22 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-2 bg-white/10 border border-[#D4AF37]/45 text-[#F5E3C0] backdrop-blur-sm px-3 py-2 text-[11px] font-bold tracking-[0.22em] uppercase">
+            <p className="inline-flex items-center gap-2 bg-white/10 border border-[#D4AF37]/45 text-[#F5E3C0] backdrop-blur-sm px-3 py-1.5 text-[10px] sm:text-[11px] font-bold tracking-[0.2em] uppercase">
               <MapPin className="h-3.5 w-3.5 text-[#E88921]" /> Trimbakeshwar • Nashik • Jyotirlinga Kshetra
             </p>
 
-            <h1 id="landing-heading" className="mt-5 font-serif text-[2.2rem] sm:text-5xl lg:text-6xl font-bold leading-[1.05] text-white drop-shadow-lg">
-              त्र्यंबकेश्वर में कालसर्प पूजा एवं नारायण नागबली पूजा
+            <h1 id="landing-heading" className="mt-3 sm:mt-5 font-serif text-[2rem] sm:text-5xl lg:text-6xl font-bold leading-[1.08] text-white drop-shadow-lg">
+              {content.titleHi}
             </h1>
-            <h2 className="mt-3 font-serif text-xl sm:text-2xl lg:text-3xl font-semibold text-[#F0A94A]">
-              Kaalsarp Puja & Narayan Nagbali Puja at Trimbakeshwar
+            <h2 className="mt-2 sm:mt-3 font-serif text-lg sm:text-2xl lg:text-3xl font-semibold text-[#F0A94A]">
+              {content.titleEn}
             </h2>
-            <p className="mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-white/86 font-medium">
-              अनुभवी वैदिक पंडितों के मार्गदर्शन में त्र्यंबकेश्वर तीर्थ क्षेत्र में शास्त्रोक्त पूजा विधि। Get clear guidance for muhurat, samagri, ritual duration and direct booking support.
-            </p>
-            <NarayanNaagbaliNote compact onDark className="mt-5 max-w-2xl" />
 
-            <div className="mt-7 flex flex-col sm:flex-row gap-3">
+            {/* CTAs sit directly under the headline so Call + View Services are visible without any scroll */}
+            <div className="mt-5 flex flex-col sm:flex-row gap-3">
               <a
                 href="tel:+917020682622"
-                className="inline-flex min-h-14 items-center justify-center gap-3 bg-[#E88921] hover:bg-[#cf7618] text-white px-6 py-4 font-bold text-base shadow-xl border border-[#D4AF37]/50 transition-colors"
+                className="inline-flex min-h-13 sm:min-h-14 items-center justify-center gap-3 bg-[#E88921] hover:bg-[#cf7618] text-white px-6 py-3.5 font-bold text-base shadow-xl border border-[#D4AF37]/50 transition-colors"
                 aria-label={`Call Now ${businessConfig.phoneDisplay}`}
               >
                 <Phone className="pointer-events-none h-5 w-5 fill-current" /> Call Now: {businessConfig.phoneDisplay}
@@ -145,13 +177,18 @@ export default function KaalSarpLanding({ lang }: KaalSarpLandingProps) {
               <a
                 href="#services"
                 onClick={smoothScroll('services')}
-                className="inline-flex min-h-14 items-center justify-center gap-2 bg-white/95 hover:bg-white text-[#7A1E1E] px-6 py-4 font-bold text-sm shadow-lg border border-white/40 transition-colors"
+                className="inline-flex min-h-13 sm:min-h-14 items-center justify-center gap-2 bg-white/95 hover:bg-white text-[#7A1E1E] px-6 py-3.5 font-bold text-sm shadow-lg border border-white/40 transition-colors"
               >
                 View Puja Services <ArrowRight className="h-4 w-4" />
               </a>
             </div>
 
-            <div className="mt-7 flex items-center gap-2" aria-label="Hero image carousel status">
+            <p className="mt-5 max-w-2xl text-sm sm:text-lg leading-relaxed text-white/86 font-medium">
+              {content.introHi}
+            </p>
+            {content.showNote && <NarayanNaagbaliNote compact onDark className="mt-4 max-w-2xl" />}
+
+            <div className="mt-5 flex items-center gap-2" aria-label="Hero image carousel status">
               {heroSlides.map((slide, index) => (
                 <button
                   key={slide.label}

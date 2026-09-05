@@ -7,7 +7,7 @@ import React from 'react';
 import { Sparkles, Calendar, Clock, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Service, Language } from '../types';
-import { businessConfig } from '../data';
+import { businessConfig } from '../business';
 import NarayanNaagbaliNote from './NarayanNaagbaliNote';
 
 interface ServiceCardProps {

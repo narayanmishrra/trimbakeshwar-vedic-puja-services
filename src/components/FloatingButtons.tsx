@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { MessageCircle, Phone } from 'lucide-react';
-import { businessConfig } from '../data';
+import { businessConfig } from '../business';
 import { Language } from '../types';
 
 interface FloatingButtonsProps {
